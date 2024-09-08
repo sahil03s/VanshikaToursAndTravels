@@ -1,4 +1,4 @@
-.active {
+.active-tab {
     background-color: black;
     color: white;
 }
@@ -22,4 +22,12 @@
     bottom: -0.1875rem; /* Adjust based on the distance you want from the text */
     width: 50%; /* This controls how much of the text is underlined */
     height: 0.16rem/* Adjust the thickness of the underline */
+}
+
+.search-icon {
+    margin-right: 1.5rem;
+}
+
+ul li {
+    list-style-type: disc;
 }

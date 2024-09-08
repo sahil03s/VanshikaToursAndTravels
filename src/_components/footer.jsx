@@ -15,19 +15,19 @@ export default function Footer() {
                     <div className='flex mb-1'>
                         <LocationOnIcon/>
                         <div className='ml-4'>
-                            <div className='text-lg font-semibold'>Rudra Tours & Travels</div>
-                            <div className='text-base'>Varanasi - 221001</div>
+                            <div className='text-lg font-semibold'>Vanshika Tours & Travels</div>
+                            <div className='text-base'>S-26/42 K.C. Plot No-67 <br/> Ashok Puram Colony, <br/> Meerapur Basahi,<br/> Cantt, Varanasi<br/> Uttar Pradesh - 221002</div>
                         </div>
                     </div>
 
                     <div className='flex mb-1'>
                         <PhoneAndroidIcon/>
-                        <div className='ml-4 text-base'> 9625140013 </div>
+                        <div className='ml-4 text-base'> +91 9151705010 </div>
                     </div>
 
                     <div className='flex'>
                         <MailIcon/>
-                        <div className='ml-4 text-base'> rudratours@gmail.com </div>
+                        <div className='ml-4 text-base'> vanshikatours@gmail.com </div>
                     </div>
                         
                 </div>
@@ -38,7 +38,7 @@ export default function Footer() {
 
             {/* Footer Bottom */}
             <div>
-                <h1 className='text-center text-sm'>&copy;2024 | Rudra Tours & Travels</h1>
+                <h1 className='text-center text-sm'>&copy;2024 | Vanshika Tours & Travels</h1>
             </div>
         </footer>
         

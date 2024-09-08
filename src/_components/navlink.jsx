@@ -8,7 +8,7 @@ export default function Navlink({href, title}) {
     const pathname = usePathname();
     const isActive = pathname === href;
     return (
-        <Link href={href} className={`p-2 ${isActive ? 'active' : ''}`}>
+        <Link href={href} className={`p-2 ${isActive ? 'active-tab' : ''}`}>
             {title}
         </Link>
     );

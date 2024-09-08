@@ -8,11 +8,11 @@ export default function ContactDetails() {
         <div className='flex items-center h-full space-x-4 ml-16'>
             <div className='flex space-x-1'>
                 <MailIcon/>
-                <p>rudratours@gmail.com</p>
+                <p>vanshikatours@gmail.com</p>
             </div>
             <div className='flex space-x-1'>
                 <PhoneAndroidIcon/>
-                <p>+91 9625140013</p>
+                <p>+91 9151705010</p>
             </div>
         </div>
         </div>
