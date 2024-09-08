@@ -8,3 +8,18 @@
     height: 24rem;
     transition: opacity 0.5s ease-in-out;
 }
+
+.underline-half {
+    position: relative;
+    display: inline-block;
+}
+
+.underline-half::after {
+    content: '';
+    position: absolute;
+    background-color: currentColor;
+    left: 0;
+    bottom: -0.1875rem; /* Adjust based on the distance you want from the text */
+    width: 50%; /* This controls how much of the text is underlined */
+    height: 0.16rem/* Adjust the thickness of the underline */
+}

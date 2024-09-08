@@ -28,8 +28,7 @@ export default function Carousel() {
         images.length && setCurrIndex((prevIndex) => ((prevIndex+1) % images.length));
     }
       
-    
-      //Go to the previous slide
+    //Go to the previous slide
     const prevSlide = () => {
         console.log(currIndex);
         setCurrIndex((prevIndex) => (prevIndex+images.length-1) % images.length);
