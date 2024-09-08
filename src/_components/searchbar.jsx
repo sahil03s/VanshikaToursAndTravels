@@ -2,9 +2,7 @@
 
 import { useEffect, useState } from "react";
 import axios from "axios";
-import FmdGoodIcon from '@mui/icons-material/FmdGood';
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import SearchBox from "./searchbox";
 import './styles.css';
 
 export default function SearchBar() {
@@ -25,45 +23,11 @@ export default function SearchBar() {
         });
     }
 
-    function toggleArrow() {
-        console.log('Arrow');
-    }
-
     return (
         <div className='flex items-center bg-lilac h-16 mx-8 px-4 mb-8'>
-            <div className='search-icon relative basis-1/5 flex items-center bg-white h-2/3'>
-                <FmdGoodIcon className=" ml-2 mr-3"/>
-                <div className='basis-2/3'>
-                    <input type='text' 
-                    value={info.origin}
-                    name='origin'
-                    className='w-full outline-none'
-                    onChange={handleChange}
-                    placeholder='Origin'
-                    autoComplete='off'></input>
-                </div>
-                <ExpandMoreIcon 
-                className=' absolute right-2'
-                onClick={toggleArrow}
-                />
-            </div>
+            <SearchBox name='origin' value={info.origin} handleChange={handleChange}/>
+            <SearchBox name='destination' value={info.destination} handleChange={handleChange}/>
 
-            <div className='search-icon relative basis-1/5 flex items-center bg-white h-2/3'>
-                <FmdGoodIcon className=" ml-2 mr-3"/>
-                <div className='basis-2/3'>
-                    <input type='text'
-                    value={info.destination}
-                    name='destination'
-                    className='w-full outline-none'
-                    onChange={handleChange}
-                    placeholder='Destination'
-                    autoComplete='off'></input>
-                </div>
-                <ExpandMoreIcon 
-                className=' absolute right-2'
-                onClick={toggleArrow}
-                />
-            </div>
        </div>
     );
 }
