@@ -1,0 +1,10 @@
+.active {
+    background-color: black;
+    color: white;
+}
+
+.slide {
+    width: 100%;
+    height: 24rem;
+    transition: opacity 0.5s ease-in-out;
+}
