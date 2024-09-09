@@ -22,22 +22,14 @@ export default function SearchBar() {
     }, []);
 
     // handles change in origin or destination search box
-    function handleChange(event)
+    function handleChange(input, name)
     {
-        if(event.target.tagName === 'LI')
-        {
-            setInfo({
-                ...info, 
-                [event.target.dataset.name] : event.target.dataset.value
-            });
-        }
-        else if(event.target.tagName === 'INPUT')
-        {
-            setInfo({
-                ...info, 
-                [event.target.name] : event.target.value
-            });
-        }
+        console.log('Val = ', input);
+        console.log('Name  = ', name);
+        setInfo({
+            ...info, 
+            [name] : input
+        });
     }
 
     return (

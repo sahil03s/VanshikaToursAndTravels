@@ -10,13 +10,17 @@ import '@/app/globals.css';
 
 export default function SearchBox({ name, value, handleChange, list }) {
     //indicates whether drop down is to be expanded or collapsed
+    const [input, setInput] = useState('');
     const [expand, setExpand] = useState(false); 
+    
 
     // refs to input text so that it could be focussed
     const inputRef = useRef(null);  
 
     // refs to outermost div to detect outside click and collapse the drop down
     const containerRef = useRef(null); 
+
+    const filteredList = list.filter((val) => val.toLowerCase().includes(input.toLowerCase()));
 
     //detects any outside click so that drop down could be collapsed
     useEffect(() => {
@@ -25,7 +29,10 @@ export default function SearchBox({ name, value, handleChange, list }) {
 
             // if expand icons are not target and container does not contain the target, set expand to false
             if(!event.target.closest('.expand-icon') && containerRef.current && !containerRef.current.contains(event.target))
+            {
+                setInput('');
                 setExpand(false);
+            }
         } 
         
         // Add event listener for clicks outside the div
@@ -48,7 +55,8 @@ export default function SearchBox({ name, value, handleChange, list }) {
         if(event.target.closest('.expand-icon'))
         {
             setExpand((prev) =>!prev );
-            if(inputRef.current)
+            setInput('');
+            if(!expand && inputRef.current)
                 inputRef.current.focus();
         }
 
@@ -56,7 +64,8 @@ export default function SearchBox({ name, value, handleChange, list }) {
         else if(event.target.closest('.selection-list'))
         {
             setExpand(false);
-            handleChange(event);
+            setInput('');
+            handleChange(event.target.dataset.value, name);
         }
 
         // for any other place inside div, just set expand state to be true and focus on input
@@ -65,6 +74,8 @@ export default function SearchBox({ name, value, handleChange, list }) {
             inputRef.current.focus();
         }
     }
+
+    const updateInput = (event) => setInput(event.target.value);
 
     return (
         <div ref={containerRef} className='search-icon relative bg-white h-2/3 cursor-pointer'>
@@ -77,10 +88,10 @@ export default function SearchBox({ name, value, handleChange, list }) {
                 <div className='basis-2/3'>
                     <input type='text'
                     ref={inputRef} 
-                    value={value}
+                    value={expand ? input : value}
                     name={name}
                     className='w-full outline-none cursor-pointer focus:cursor-auto'
-                    onChange={handleChange}       
+                    onChange={updateInput}       
                     placeholder={value ? value : name[0].toUpperCase() + name.substr(1)}    // capitalise placeholder
                     autoComplete='off'
                     ></input>                                     
@@ -89,12 +100,10 @@ export default function SearchBox({ name, value, handleChange, list }) {
                 { expand 
                     ?  <ExpandLessIcon 
                         className='expand-icon absolute right-2 cursor-pointer'
-                        id={1}
                         onClick={handleInputFocus}
                         />
                     :   <ExpandMoreIcon
                         className='expand-icon absolute right-2 cursor-pointer'
-                        name='expand'
                         onClick={handleInputFocus}
                         />
                 }
@@ -103,14 +112,13 @@ export default function SearchBox({ name, value, handleChange, list }) {
                  
                  <div className='absolute top-12 left-4 w-5/6 bg-white rounded-md'>
                     <ul className='list-none mt-2'>
-                        {list.filter((val) => val.search(value)!=-1)
+                        {filteredList
                         .map((val, index) => (
                             <li 
                             key={index} 
                             id={index}
-                            data-name={name}
                             data-value={val} 
-                            className={`mb-1 pl-2 ${value && index===0 ? 'bg-lilac' : ''} hover:bg-lilac selection-list`}
+                            className={`mb-1 pl-2 ${val && index===0 ? 'bg-lilac' : ''} hover:bg-lilac selection-list`}
                             onClick={handleInputFocus}
                             >
                             {val}
