@@ -8,7 +8,7 @@ export default function ContactDetails() {
         <div className='flex items-center h-full space-x-4 ml-16'>
             <div className='flex space-x-1'>
                 <MailIcon/>
-                <p>vanshikatours@gmail.com</p>
+                <p>vanshika.travelinfo@gmail.com</p>
             </div>
             <div className='flex space-x-1'>
                 <PhoneAndroidIcon/>

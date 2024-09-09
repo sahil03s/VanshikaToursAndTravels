@@ -1,5 +1,9 @@
+ul {
+    list-style-type: disc;
+}
+
 .active-tab {
-    background-color: black;
+    background-color: #735DA5;
     color: white;
 }
 
@@ -26,8 +30,4 @@
 
 .search-icon {
     margin-right: 1.5rem;
-}
-
-ul li {
-    list-style-type: disc;
 }

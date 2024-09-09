@@ -27,7 +27,7 @@ export default function Footer() {
 
                     <div className='flex'>
                         <MailIcon/>
-                        <div className='ml-4 text-base'> vanshikatours@gmail.com </div>
+                        <div className='ml-4 text-base'> vanshika.travelinfo@gmail.com </div>
                     </div>
                         
                 </div>
@@ -38,7 +38,7 @@ export default function Footer() {
 
             {/* Footer Bottom */}
             <div>
-                <h1 className='text-center text-sm'>&copy;2024 | Vanshika Tours & Travels</h1>
+                <h1 className='text-center text-sm'>&copy;  { new Date().getFullYear()} All rights reserved | Vanshika Tours & Travels</h1>
             </div>
         </footer>
         

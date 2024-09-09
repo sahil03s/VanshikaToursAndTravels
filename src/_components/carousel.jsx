@@ -13,7 +13,7 @@ export default function Carousel() {
 
     // fetches image objects list from images.json on initial render
     useEffect(() => {
-        axios.get('/images/images.json')
+        axios.get('/images/carousel/images.json')
         .then((res) => setImages(res.data))
         .catch((err) => console.error('Error in fetching images', err));
     }, []);
@@ -30,13 +30,12 @@ export default function Carousel() {
       
     //Go to the previous slide
     const prevSlide = () => {
-        console.log(currIndex);
         setCurrIndex((prevIndex) => (prevIndex+images.length-1) % images.length);
     }
 
 
   return (
-      <div className="relative w-full my-4 h-96">
+      <div className="relative w-full mt-4 h-96">
         {images.map((image, index) => (
             <div 
             key={index}
