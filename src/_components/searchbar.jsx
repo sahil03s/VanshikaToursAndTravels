@@ -13,6 +13,11 @@ export default function SearchBar() {
     useEffect(() => {
         axios.get('/origin.json')
         .then((res) => setOriginList(res.data))
+        .then(() => setOriginList((prev) => {
+            const list = prev;
+            list.sort();
+            return list;
+        }))
         .catch((err) => console.error("Error fetching Origin List", err));
     }, []);
 

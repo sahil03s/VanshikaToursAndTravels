@@ -81,7 +81,7 @@ export default function SearchBox({ name, value, handleChange, list }) {
                     name={name}
                     className='w-full outline-none cursor-pointer focus:cursor-auto'
                     onChange={handleChange}       
-                    placeholder={name[0].toUpperCase() + name.substr(1)}    // capitalise placeholder
+                    placeholder={value ? value : name[0].toUpperCase() + name.substr(1)}    // capitalise placeholder
                     autoComplete='off'
                     ></input>                                     
                 </div>
@@ -103,12 +103,14 @@ export default function SearchBox({ name, value, handleChange, list }) {
                  
                  <div className='absolute top-12 left-4 w-5/6 bg-white rounded-md'>
                     <ul className='list-none mt-2'>
-                        {list.map((val, index) => (
+                        {list.filter((val) => val.search(value)!=-1)
+                        .map((val, index) => (
                             <li 
                             key={index} 
+                            id={index}
                             data-name={name}
                             data-value={val} 
-                            className='mb-1 pl-2 hover:bg-lilac selection-list'
+                            className={`mb-1 pl-2 ${value && index===0 ? 'bg-lilac' : ''} hover:bg-lilac selection-list`}
                             onClick={handleInputFocus}
                             >
                             {val}
