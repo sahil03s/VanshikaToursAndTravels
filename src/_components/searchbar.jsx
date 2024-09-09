@@ -37,12 +37,14 @@ export default function SearchBar() {
             <SearchBox 
             name='origin' 
             value={info.origin} 
+            alternate={info.destination}
             handleChange={handleChange} 
             list={originList}/>
 
             <SearchBox 
             name='destination' 
             value={info.destination} 
+            alternate={info.origin}
             handleChange={handleChange} 
             list={originList}/>
 

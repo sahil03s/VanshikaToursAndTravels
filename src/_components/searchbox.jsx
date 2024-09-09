@@ -5,10 +5,14 @@ import { useState, useRef, useEffect } from 'react';
 import FmdGoodIcon from '@mui/icons-material/FmdGood';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Toaster, toast } from 'react-hot-toast';
 import './styles.css';
 import '@/app/globals.css';
 
-export default function SearchBox({ name, value, handleChange, list }) {
+
+const notify = (message) => toast.error(message);
+
+export default function SearchBox({ name, value, handleChange, list, alternate }) {
     //indicates whether drop down is to be expanded or collapsed
     const [input, setInput] = useState('');
     const [expand, setExpand] = useState(false); 
@@ -65,7 +69,13 @@ export default function SearchBox({ name, value, handleChange, list }) {
         {
             setExpand(false);
             setInput('');
-            handleChange(event.target.dataset.value, name);
+            if(event.target.dataset.value !== alternate)
+                handleChange(event.target.dataset.value, name);
+            else
+            {
+                handleChange('', name);
+                notify('Origin and Destination can not be same');
+            }
         }
 
         // for any other place inside div, just set expand state to be true and focus on input
@@ -79,6 +89,7 @@ export default function SearchBox({ name, value, handleChange, list }) {
 
     return (
         <div ref={containerRef} className='search-icon relative bg-white h-2/3 cursor-pointer'>
+            <Toaster/>
             <div 
             className='flex items-center basis-1/5 relative h-full'
             onClick={handleInputFocus}
