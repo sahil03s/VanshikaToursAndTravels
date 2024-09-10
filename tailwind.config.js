@@ -13,7 +13,8 @@ module.exports = {
         foreground: "var(--foreground)",
         'lilac' : '#D3C5E5',
         'periwinkle' : '#735DA5',
-        'lightblue' : '#E9F1FA',
+        'black' : '#3c4043',
+        'red' : '#d93025'
       },
     },
   },

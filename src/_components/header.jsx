@@ -14,11 +14,7 @@ export default function Header() {
             </div>
             <div className='flex flex-row items-center h-full space-x-2 mr-16 p-8'>
                 <Navlink href='/' title='Home'/>
-                <Navlink href='/bookings' title='Manage Bookings'/>
-                <Navlink href='/packages' title='Packages'/>
-                <Navlink href='/gallery' title='Gallery'/>
-                <Navlink href='/contact' title='Contact'/>
-                <Navlink href='/about' title='About Us'/>
+                <Navlink href='/contact-us' title='Contact'/>
             </div>
         </div>
     );

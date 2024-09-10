@@ -31,3 +31,8 @@ ul {
 .search-icon {
     margin-right: 1.5rem;
 }
+
+.container {
+    background-color: #735da5;
+    background-image: url("https://www.transparenttextures.com/patterns/swirl.png");
+}
