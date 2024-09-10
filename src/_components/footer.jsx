@@ -3,10 +3,15 @@ import './styles.css';
 import MailIcon from '@mui/icons-material/Mail';
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import Link from 'next/link';
 
 export default function Footer() {
     return (
         <footer className='bg-periwinkle text-white h-fit pt-8 pb-4'>
+        <div className='float-whatsapp-icon fixed right-12 bottom-12 flex justify-center p-2 rounded-full cursor-pointer z-1000'>
+        <Link href={`https://wa.me/9984777941?text=I'm%20interested%20to%20book%20cab`} target='_blank'><WhatsAppIcon/></Link>
+        </div>
         <div className='grid mx-8'>
             {/* Contact Section */}
             <div>

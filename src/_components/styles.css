@@ -36,3 +36,8 @@ ul {
     background-color: #735da5;
     background-image: url("https://www.transparenttextures.com/patterns/swirl.png");
 }
+
+.float-whatsapp-icon {
+    background-color: #4dc247;
+    transform: scale(1.5);
+}
