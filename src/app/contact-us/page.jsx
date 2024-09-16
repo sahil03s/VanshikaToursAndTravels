@@ -41,6 +41,10 @@ export default function Contact() {
         {
             await fetch('/api/sendWhatsapp', {
                 method: 'POST',
+                headers: {
+                    'Content-type' : 'application/json',
+                },
+                body : JSON.stringify(details)
             });
             router.push('/thank-you');
         }
