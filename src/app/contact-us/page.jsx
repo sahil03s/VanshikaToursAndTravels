@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function Contact() {
@@ -38,7 +38,12 @@ export default function Contact() {
         setIsSubmitted(true);
         const err = formValidation(details);
         if(Object.keys(err).length === 0)
+        {
+            await fetch('/api/sendWhatsapp', {
+                method: 'POST',
+            });
             router.push('/thank-you');
+        }
     }
 
     const handleChange = (event) =>{
@@ -134,7 +139,7 @@ export default function Contact() {
                             </div>
                         </div>
                         <div>
-                            <button type="submit" className='bg-periwinkle text-white my-4 px-6 py-2 rounded-full'>Submit</button>
+                            <button type="submit" className='bg-periwinkle text-white my-4 px-6 py-2 rounded-full'>Get in Touch</button>
                         </div>
                     </div>
                     </form>
