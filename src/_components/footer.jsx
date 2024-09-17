@@ -10,9 +10,9 @@ export default function Footer() {
     return (
         <footer className='bg-periwinkle text-white h-fit pt-3 pb-1'>
         <div className='float-whatsapp-icon fixed right-12 bottom-12 flex justify-center p-2 rounded-full cursor-pointer z-1000'>
-        <Link href={`https://wa.me/9984777941?text=I'm%20interested%20to%20book%20cab`} target='_blank'><WhatsAppIcon/></Link>
+        <Link href={`https://wa.me/9151705010?text=I'm%20interested%20to%20book%20cab`} target='_blank'><WhatsAppIcon/></Link>
         </div>
-        <div className='grid mx-8'>
+        <div className='grid grid-cols-3 mx-8'>
             {/* Contact Section */}
             <div>
                 <h1 className='font-medium mb-4 relative underline-half'>CONTACT</h1>
@@ -36,6 +36,16 @@ export default function Footer() {
                     </div>
                         
                 </div>
+            </div>
+
+            {/* Quick Links Section */}
+            <div>
+                <h1 className='font-medium mb-4 relative underline-half'>QUICK LINKS</h1>
+            </div>
+
+            {/* Quick Links Section */}
+            <div>
+                <h1 className='font-medium mb-4 relative underline-half'>FOLLOW US:</h1>
             </div>
         </div>  
 
