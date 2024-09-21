@@ -13,7 +13,7 @@ export default function Carousel() {
 
     // fetches image objects list from images.json on initial render
     useEffect(() => {
-        axios.get('/images/carousel/images.json')
+        axios.get('/images/caros/images.json')
         .then((res) => setImages(res.data))
         .catch((err) => console.error('Error in fetching images', err));
     }, []);

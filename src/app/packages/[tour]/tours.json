@@ -1,0 +1,32 @@
+{
+    "amazing-kashi-tour" : {
+        "heading" : "Amazing Kashi Tour",
+        "overview" : ["Discover the enchanting and mystical city of Varanasi, often referred to as Kashi, with our thoughtfully crafted Kashi Tour Packages. Varanasi is one of the oldest continuously inhabited cities in the world and is renowned for its profound spiritual significance, captivating rituals, and timeless traditions." , 
+        
+        "Explore the spiritual heart of India with our Kashi Tour Packages. Varanasi, also known as Kashi, is a city steeped in history, spirituality, and culture. Our packages offer a captivating experience of this ancient city, including:",
+        
+        "Witnessing the mesmerizing Ganga Aarti at the ghats. Visiting iconic temples like Kashi Vishwanath and Sankat Mochan. Serene boat rides on the sacred Ganges River. Exploring Sarnath, where Lord Buddha gave his first sermon. Shopping for exquisite Banarasi silk sarees and handicrafts. Immersing Varanasi's rich cultural offerings." ],
+        
+        "duration" : "2 Nights / 3 Days",
+        "route" : "Varanasi",
+        "image" : {
+            "src" : "/images/packages/amazing-kashi-tour/ghat.jpeg",
+            "alt" : "Ghat"
+        }
+    },
+    "kashi-tour" : {
+        "heading" : "Kashi Tour",
+        "overview" : ["Discover the enchanting and mystical city of Varanasi, often referred to as Kashi, with our thoughtfully crafted Kashi Tour Packages. Varanasi is one of the oldest continuously inhabited cities in the world and is renowned for its profound spiritual significance, captivating rituals, and timeless traditions." , 
+
+        "Explore the spiritual heart of India with our Kashi Tour Packages. Varanasi, also known as Kashi, is a city steeped in history, spirituality, and culture. Our packages offer a captivating experience of this ancient city, including:",
+    
+        "Witnessing the mesmerizing Ganga Aarti at the ghats. Visiting iconic temples like Kashi Vishwanath and Sankat Mochan. Serene boat rides on the sacred Ganges River. Exploring Sarnath, where Lord Buddha gave his first sermon. Shopping for exquisite Banarasi silk sarees and handicrafts. Immersing Varanasi's rich cultural offerings." ],
+        
+        "duration" : "5 Nights / 6 Days",
+        "route" : "Varanasi -> Ayodhya -> Mathura",
+        "image" : {
+            "src" : "/images/packages/amazing-kashi-tour/ghat.jpeg",
+            "alt" : "Ghat"
+        }
+    }
+}

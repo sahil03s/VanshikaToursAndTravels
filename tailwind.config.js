@@ -14,7 +14,8 @@ module.exports = {
         'lilac' : '#D3C5E5',
         'periwinkle' : '#735DA5',
         'black' : '#3c4043',
-        'red' : '#d93025'
+        'red' : '#d93025',
+        'custom-grey':'#f7f7f7'
       },
     },
   },

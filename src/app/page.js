@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
       <Carousel/> 
-      <SearchBar/>
+      <SearchBar/>  
       <div className='mx-8 px-16'>
       <br/><br/>
       <h1 className='text-3xl font-bold'>Car Rental in Varanasi - Hire a Taxi for City Tours and Airport Transfers</h1> <br/>
