@@ -1,17 +1,27 @@
 import '@/app/globals.css';
 import Carousel from "@/_components/carousel";
 import SearchBar from "@/_components/searchbar";
+import Link from 'next/link';
 
 export default function Home() {
   return (
     <div>
       <Carousel/> 
-      <SearchBar/>  
-      <div className='mx-8 px-16'>
+      {/* <SearchBar/>   */}
+      <div className='mx-8 px-16 border-box'>
       <br/><br/>
-      <h1 className='text-3xl font-bold'>Car Rental in Varanasi - Hire a Taxi for City Tours and Airport Transfers</h1> <br/>
-
-      <p className='mb-6'> Welcome to Vanshika Tour and Travels, your trusted partner for hassle-free car rental services in Varanasi. Whether you need a ride for a city tour, an airport transfer, or a sightseeing adventure, we've got you covered. Our fleet includes a wide range of vehicles, from luxury AC cars to economy cars, all available at competitive and reasonable rates.</p>
+      <div className='flex'>
+        <div className='w-2/5'>
+            <img 
+            src='/images/caros/Vns_ghats1.png' 
+            alt='Ghats'/>
+        </div>
+        <div className='ml-6 w-3/5'>
+          <h1 className='text-3xl font-bold'>Car Rental in Varanasi - Hire a Taxi for City Tours and Airport Transfers</h1> <br/>
+          
+          <p className='mb-6'> Welcome to Vanshika Tour and Travels, your trusted partner for hassle-free car rental services in Varanasi. Whether you need a ride for a city tour, an airport transfer, or a sightseeing adventure, we've got you covered. Our fleet includes a wide range of vehicles, from luxury AC cars to economy cars, all available at competitive and reasonable rates.</p>
+        </div>
+      </div>
 
 
       <p>At Vanshika Tour and Travels, we pride ourselves on being a reliable and professional taxi service provider. Our experienced drivers know the best routes in and around Varanasi, ensuring a smooth and comfortable journey. We offer tailored services to meet all your travel needs, including: </p>
@@ -47,7 +57,10 @@ export default function Home() {
         Book your ride today with Vanshika Tour and Travels and experience the best in affordable and convenient travel.
         </p> <br/>
 
-        <h2 className='text-xl font-semibold'>Looking for a taxi service in Varanasi? Explore our 10 budget cab options available to meet your needs! </h2><br/>
+        <p><Link href='/contact-us' className='underline text-blue-600 font-semibold'>Contact us</Link> today to learn more about how we can turn your travel dreams into reality.</p><br/>
+
+        <h2 className='text-lg font-semibold'>Vanshika Tour & Travels – Your Trusted Travel Partner.
+        </h2><br/>
 
       </div>
     </div>
