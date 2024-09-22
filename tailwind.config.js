@@ -1,3 +1,5 @@
+const { Square } = require('@mui/icons-material');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -8,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      listStyleType : {
+        square:'square',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
