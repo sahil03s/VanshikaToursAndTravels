@@ -1,19 +1,48 @@
 'use client'
+
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function Contact() {
+
+    // useSearchParams hook lets us read the current URL's query string
+    const searchParams = useSearchParams();
+
+
+    // parses the URL's query parameters and store it in tour object
+    const tour = {
+        heading:searchParams.get('package'),
+        duration:searchParams.get('duration')
+    };
+
+
+    // useRouter hook helps to redirect to thank-you page after form is submitted successfully
     const router = useRouter();
+
     const initialValue = {fname:'', lname:'', phone:'', mail:'', date:'', duration:'', passengers:'', comment:''};
+
+    
+    //regular expressions to check the validity of first name, last name and phone no.
     const pattern = {
         fname: /^[A-Za-z]+[ ]*[A-Za-z]*$/,
         lname: /^[A-Za-z]*[ ]*[A-Za-z]*$/,
         phone: /^[0-0]{0,1}[1-9]{1,1}[0-9]{9,9}$/
     };
+
+    
+    // details helps to track the data filled in form, initially it is empty
     const [details, setDetails] = useState(initialValue);
+
+
+    // isSubmitted indicates whether submit button has been clicked at least once or not
     const [isSubmitted, setIsSubmitted] = useState(false);
+
+
+    // formErrors keeps track of errors in input of form data, for example, putting characters in number field, formErrors.phone will contain detail of this error
     const [formErrors, setFormErrors] = useState({});
 
+
+    // formValidation validates the necessary fields to be valid using regular expressions in pattern object declared above and setFormErrors accordingly, if any.
     const formValidation = (obj) => {
         const errors = {};
         if(!obj.fname)
@@ -33,6 +62,7 @@ export default function Contact() {
         return errors;
     }
 
+    // on submitting a form, this function validates the user's input, if no errors are there, api call is made to notify the user on whatsapp with brochure and then user is redirected to thank-you page
     const handleForm = async (event) => {
         event.preventDefault();
         setIsSubmitted(true);
@@ -50,6 +80,7 @@ export default function Contact() {
         }
     }
 
+    // handles any change in user's input in form
     const handleChange = (event) =>{
         const updated = { ...details, [event.target.name] : event.target.value};
         
@@ -59,20 +90,32 @@ export default function Contact() {
         setDetails(updated); 
     } 
 
+
+    // this function marks the border as red for those input fields which have errors on form submission
     const checkBorderColor = (name) => {
         return isSubmitted && Object.keys(formErrors).includes(name)  ? 'border-red' : 'border-black';
     }
+    
 
+    // this function marks the label color as red for those input fields which have errors on form submission
     const checkLabelColor = (name) => {
         return isSubmitted && Object.keys(formErrors).includes(name)  ? 'text-red' : 'text-black';
     }
 
+
     return (
         <div className='container flex items-center justify-center w-full h-fit py-16'>
+
+            {/* Heading of contact section, based on whether user is redirected from contact link or enquire now link */}
             <div className=' h-fit bg-white py-4 px-8'>
-                <h1 className='w-fit font-bold text-3xl mb-4'>Enquire This Trip</h1>
-                <span>Amazing Kashi Tour </span><span className='text-xs text-red-400 ml-2'>2N/3D</span>
-                <div className='mt-4 w-11/12'>
+                <h1 className='w-fit font-bold text-3xl mb-1'>{tour.heading ? 'Enquire This Trip' : 'Leave us your info'}</h1>
+                {tour.heading
+                ? <div><span className='text-lg'>{tour.heading} </span><span className='text-xs text-red ml-1'>{tour.duration}</span></div>
+                : <div><span>We will get back to you.</span></div>
+                }
+                
+                {/* form section */}
+                <div className='mt-6 w-11/12'>
                     <form onSubmit={handleForm}>
                     <div className="flex flex-col w-auto">
                         <div className="flex flex-col lg:flex-row mb-1">

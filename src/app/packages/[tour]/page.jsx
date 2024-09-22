@@ -56,7 +56,7 @@ export default async function Page({ params }) {
                     <h3 className='mr-4 text-red font-semibold'>Price on Request</h3>
                     <Link 
                     className='px-4 py-1 border-2 border-periwinkle rounded-full mr-4 text-sm bg-periwinkle hover:bg-white text-white hover:text-periwinkle duration-300' 
-                    href='/'>Enquire Now</Link>
+                    href={`/contact-us?package=${tour.heading}&duration=${tour.duration}`}>Enquire Now</Link>
                     </div>
                 </div>
                 <Overview tour={tour}/>
