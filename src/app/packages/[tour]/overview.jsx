@@ -1,22 +1,37 @@
 'use client'
 
-import { useState } from "react";
+import { useState, useRef } from "react";
+import './overview.css';
 
 // This component exports the div containing overview description for tour packages
 export default function Overview({tour}) {
 
     // keeps track of whether div is expanded or collapsed. Initially it is collapsed.
     const [isExpanded, setIsExpanded] = useState(false);
+    
+    const contentRef = useRef();
 
     // toggles between expanded and collapsed.
-    const toggleReadMore = () => setIsExpanded(!isExpanded);
+    const toggleReadMore = () => {
+        const contentElement = contentRef.current;
+        const height = contentElement.scrollHeight;
+        setIsExpanded((prev) => {
+            if(!prev)
+                contentElement.style.maxHeight = `${height}px`;
+            else
+                contentElement.style.maxHeight = `140px`;
+            
+            return !prev;
+        });
+    }
+
 
     return (
         // container for Overview
-        <div className="mt-4 bg-custom-grey pt-1 pl-2 pr-4 ">
+        <div className="mt-4 relative bg-custom-grey pt-1 pl-2 pr-4">
 
         {/* if expanded, no clamping of text happens, but if in collapsed state, text will be clamped to specified no. of lines */}
-        <div className={isExpanded ? 'line-clamp-none' : 'line-clamp-5'}>
+        <div ref={contentRef} className={`${isExpanded ? 'expand-overview' : 'collapse-overview'}`}>
 
             <h2 className='font-bold text-xl mb-2'>Overview</h2>
 

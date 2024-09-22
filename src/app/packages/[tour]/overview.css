@@ -1,0 +1,10 @@
+.expand-overview {
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.collapse-overview {
+    max-height: 140px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
