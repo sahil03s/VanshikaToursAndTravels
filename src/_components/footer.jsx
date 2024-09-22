@@ -41,6 +41,10 @@ export default function Footer() {
             {/* Quick Links Section */}
             <div>
                 <h1 className='font-medium mb-4 relative underline-half'>QUICK LINKS</h1>
+                <div className='flex flex-col'>
+                <Link className='hover:text-yellow-gold' href='/about'>About</Link>
+                <Link className='hover:text-yellow-gold' href='/contact-us'>Get in Touch</Link>
+                </div>
             </div>
 
             {/* Quick Links Section */}

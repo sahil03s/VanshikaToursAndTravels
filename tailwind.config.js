@@ -20,6 +20,7 @@ module.exports = {
         'periwinkle' : '#735DA5',
         'black' : '#3c4043',
         'red' : '#d93025',
+        'yellow-gold': '#d0b807',
         'custom-grey':'#f7f7f7'
       },
     },
