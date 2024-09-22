@@ -1,7 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import Link from "next/link";
-import Overview from '../overview';
+import Overview from './overview';
+import Policy from './policy';
 
 // Fetch the JSON file data
 async function getTourData() {
@@ -35,16 +36,16 @@ export default async function Page({ params }) {
 
     //Parsing and Displaying details about the tour
     return (
-        <div>
-        <div className='flex flex-row  bg-white py-2 box-border'>
-            <div className='w-2/5 bg-white my-4 ml-4 mr-2'>
+        <div className='px-4'>
+        <div className='flex flex-row bg-white py-2 box-border'>
+            <div className='w-2/5 bg-white my-4 mr-2'>
                 <img 
                 src={tour.image.src}
                 alt={tour.image.alt}/>
             </div>
-            <div className='w-3/5 my-4 mx-2 px-2'>
+            <div className='w-3/5 my-4 mx-2'>
                 <div className='flex items-center'>
-                    <h1 className='font-bold text-xl mr-2'>{tour.heading}</h1>
+                    <h1 className='font-bold text-3xl mr-2'>{tour.heading}</h1>
                     <span className='text-red text-sm'>{tour.duration}</span>
                 </div>
                 <div>
@@ -59,6 +60,16 @@ export default async function Page({ params }) {
                     </div>
                 </div>
                 <Overview tour={tour}/>
+            </div>
+        </div>
+
+        
+        <div className='flex py-2'>
+            <div className='w-8/12 mr-8'>
+                <Policy/>
+            </div>
+            <div>
+                <h1>Form will go here</h1>
             </div>
         </div>
         </div>
