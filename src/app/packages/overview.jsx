@@ -51,7 +51,7 @@ export default function Overview({tour}) {
         </div>
 
             {/* Option clicking on which user can toggle between Read More and Read less */}
-            <div className={`text-blue-500 cursor-pointer ${isExpanded ? '' : 'mt-4'}`} onClick={toggleReadMore}>{isExpanded ? 'Read Less' : 'Read More'}</div>
+            <div className={`text-periwinkle hover:text-red cursor-pointer ${isExpanded ? '' : 'mt-4'}`} onClick={toggleReadMore}>{isExpanded ? 'Read Less' : 'Read More'}</div>
         </div>
     );
 }
