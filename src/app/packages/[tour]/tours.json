@@ -1,31 +1,88 @@
 {
-    "amazing-kashi-tour" : {
-        "heading" : "Amazing Kashi Tour",
-        "overview" : ["Discover the enchanting and mystical city of Varanasi, often referred to as Kashi, with our thoughtfully crafted Kashi Tour Packages. Varanasi is one of the oldest continuously inhabited cities in the world and is renowned for its profound spiritual significance, captivating rituals, and timeless traditions." , 
-        
-        "Explore the spiritual heart of India with our Kashi Tour Packages. Varanasi, also known as Kashi, is a city steeped in history, spirituality, and culture. Our packages offer a captivating experience of this ancient city, including:",
-        
-        "Witnessing the mesmerizing Ganga Aarti at the ghats. Visiting iconic temples like Kashi Vishwanath and Sankat Mochan. Serene boat rides on the sacred Ganges River. Exploring Sarnath, where Lord Buddha gave his first sermon. Shopping for exquisite Banarasi silk sarees and handicrafts. Immersing Varanasi's rich cultural offerings." ],
-        
-        "duration" : "2 Nights / 3 Days",
+    "kashi-tour" : {
+        "heading" : "Kashi Tour",
+        "overview" : [
+            {
+                "type" : "heading",
+                "content" : "Discover the Spiritual Heart of India - Kashi"
+            }, 
+            {
+                "type":"paragraph",
+                "content":[
+                    {"text" : "Embark on a journey of spiritual enlightenment and cultural immersion with Vanshika Travels' thoughtfully curated Kashi Tour Packages. Varanasi, also known as Kashi, is one of the oldest continuously inhabited cities in the world, renowned for its profound spiritual significance, captivating rituals, and timeless traditions."}
+                ]
+            },
+            {
+                "type":"paragraph",
+                "content":[
+                    {"text" : "Experience the Essence of Varanasi:", "bold" : true},
+                    {"text" : "Our Kashi Tour Packages offer an unforgettable experience of this ancient city, including:"}
+                ]
+            },
+            {
+                "type":"unordered-list",
+                "content": [
+                    {"text":"Witness the Divine: ", "description":"Experience the mesmerizing Ganga Aarti at the ghats, a breathtaking spectacle of light, sound, and devotion."},
+                    {"text":"Explore Iconic Temples: ", "description":"Visit renowned temples like Kashi Vishwanath, a revered Hindu temple dedicated to Lord Shiva, and Sankat Mochan, a temple dedicated to Lord Hanuman."},
+                    {"text":"Serene Boat Rides: ", "description":"Glide peacefully on the sacred Ganges River, taking in the breathtaking views of the ghats and immersing yourself in the serene atmosphere."},
+                    {"text":"Discover Buddha's Legacy: ", "description":"Explore Sarnath, the site where Lord Buddha gave his first sermon, and witness the magnificent Ashoka Pillar and Dhamek Stupa."},
+                    {"text":"Indulge in Shopping: ", "description":"Shop for exquisite Banarasi silk sarees, intricate handicrafts, and other local treasures."},
+                    {"text":"Immerse in Varanasi's Culture: ", "description":"Experience the vibrant culture of Varanasi through its music, dance, and traditional arts."}
+                ]
+            },
+            {
+                "type":"paragraph",
+                "content":[
+                    {"text":"With Vanshika Travels, your Kashi pilgrimage will be an unforgettable experience filled with spiritual awakening and cultural enrichment.", "bold":true}
+                ]
+            }
+        ],
+        "duration" : "2N/3D",
         "route" : "Varanasi",
         "image" : {
-            "src" : "/images/packages/amazing-kashi-tour/ghat.jpeg",
+            "src" : "/images/packages/kashi-tour/ghat.jpeg",
             "alt" : "Ghat"
         }
     },
-    "kashi-tour" : {
-        "heading" : "Kashi Tour",
-        "overview" : ["Discover the enchanting and mystical city of Varanasi, often referred to as Kashi, with our thoughtfully crafted Kashi Tour Packages. Varanasi is one of the oldest continuously inhabited cities in the world and is renowned for its profound spiritual significance, captivating rituals, and timeless traditions." , 
-
-        "Explore the spiritual heart of India with our Kashi Tour Packages. Varanasi, also known as Kashi, is a city steeped in history, spirituality, and culture. Our packages offer a captivating experience of this ancient city, including:",
     
-        "Witnessing the mesmerizing Ganga Aarti at the ghats. Visiting iconic temples like Kashi Vishwanath and Sankat Mochan. Serene boat rides on the sacred Ganges River. Exploring Sarnath, where Lord Buddha gave his first sermon. Shopping for exquisite Banarasi silk sarees and handicrafts. Immersing Varanasi's rich cultural offerings." ],
-        
-        "duration" : "5 Nights / 6 Days",
-        "route" : "Varanasi -> Ayodhya -> Mathura",
+    "varanasi-bodhgaya-rajgir-nalanda-and-patna" : {
+        "heading" : "Varanasi, Bodhgaya, Rajgir, Nalanda, and Patna",
+        "overview" : [
+            {
+                "type":"paragraph",
+                "content":[
+                    {"text":"Explore the Spiritual Roots of Buddhism with Vanshika Tour & Travels"}
+                ]
+            },
+            {
+                "type":"paragraph",
+                "content":[
+                    {"text":"Buddhism has profound historical and spiritual roots in Varanasi and Bihar, two of India’s most sacred regions. Varanasi, also known as Sarnath in Buddhist texts, is the revered location where Lord Buddha delivered his first sermon after attaining enlightenment, unveiling the timeless truths of the Four Noble Truths and the Eightfold Path."}
+                ]
+            },
+            {
+                "type":"paragraph",
+                "content":[
+                    {"text":"Sarnath’s Dhamek Stupa, along with its ancient monastic ruins, attracts pilgrims and scholars seeking to connect with the wisdom of the Buddha. Just a short distance away in Bihar lies Bodhgaya, the holiest site of all, where Siddhartha Gautama achieved enlightenment under the legendary Bodhi tree, marking the birth of Buddhism. Close by, the ancient Nalanda University was once the pinnacle of Buddhist education, while Rajgir stands as a location of significant discourses delivered by Buddha."}
+                ]
+            },
+            {
+                "type":"paragraph",
+                "content":[
+                    {"text":"At Vanshika Tour & Travels, we invite you to embark on this transformative journey to explore these sacred sites, where the teachings of Buddha continue to inspire millions around the world."}
+                ]
+            },
+            {
+                "type":"paragraph",
+                "content":[
+                    {"text":"With Vanshika Travels, your Kashi to Patna pilgrimage will be an unforgettable experience filled with spiritual awakening and cultural enrichment.", "bold":true}
+                ]
+            }
+        ],
+        "duration" : "4N/5D",
+        "route" : "Varanasi->Bodhgaya->Rajgir->Nalanda->Patna",
         "image" : {
-            "src" : "/images/packages/amazing-kashi-tour/ghat.jpeg",
+            "src" : "/images/packages/kashi-tour/ghat.jpeg",
             "alt" : "Ghat"
         }
     }

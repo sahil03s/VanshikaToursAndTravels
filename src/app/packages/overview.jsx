@@ -1,0 +1,57 @@
+'use client'
+
+import { useState } from "react";
+
+// This component exports the div containing overview description for tour packages
+export default function Overview({tour}) {
+
+    // keeps track of whether div is expanded or collapsed. Initially it is collapsed.
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    // toggles between expanded and collapsed.
+    const toggleReadMore = () => setIsExpanded(!isExpanded);
+
+    return (
+        // container for Overview
+        <div className="mt-4 bg-custom-grey pt-1 pl-2 pr-4 ">
+
+        {/* if expanded, no clamping of text happens, but if in collapsed state, text will be clamped to specified no. of lines */}
+        <div className={isExpanded ? 'line-clamp-none' : 'line-clamp-5'}>
+
+            <h2 className='font-bold text-xl mb-2'>Overview</h2>
+
+            {/* Parsing and showing content from tour.overview according to its type ('heading','paragraph', etc) */}
+            <div>
+                {tour.overview.map((ele, index) => {
+                    return (
+                        <div key={index}>
+
+                            {/* For heading return content in h2 tag */}
+                            {ele.type === 'heading' && <h2 className='font-semibold text-sm mb-2'>{ele.content}</h2>}
+                            
+                            {/* For paragraph, parse it further to display data in span and set its font weight according to its bold property */}
+                            {ele.type === 'paragraph' && <><p className='text-sm'>
+                                {ele.content.map((obj, idx) => {
+                                    return obj.bold ? <span key={idx} className='font-semibold'>{obj.text}</span> : <span key={idx}> {obj.text} </span>
+                                })}
+                            </p><br/></>}
+
+                            {/* For unordered list, display the list, making subheading of each list item to be bold, followed by its description */}
+                            {ele.type === 'unordered-list' && <ul className='text-sm pl-8 mb-4 list-disc'>
+                                {ele.content.map((obj, idx) => {
+                                    return <li key={idx}><span className='font-semibold'>{obj.text}</span>{obj.description}</li>
+                                })}
+                            </ul>}
+
+
+                        </div>
+                    );
+                })}
+            </div>
+        </div>
+
+            {/* Option clicking on which user can toggle between Read More and Read less */}
+            <div className={`text-blue-500 cursor-pointer ${isExpanded ? '' : 'mt-4'}`} onClick={toggleReadMore}>{isExpanded ? 'Read Less' : 'Read More'}</div>
+        </div>
+    );
+}

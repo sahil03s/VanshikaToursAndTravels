@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import Link from "next/link";
+import Overview from '../overview';
 
 // Fetch the JSON file data
 async function getTourData() {
@@ -9,7 +10,7 @@ async function getTourData() {
     return JSON.parse(data);
 }
 
-// // Generate dynamic routes for each tour based on the JSON keys
+// Generate dynamic routes for each tour based on the JSON keys. It fetches data at build time. This data is used to pre-render the page once, and then page is served as a static HTML file to users, making its performance extremely fast
 export async function generateStaticParams() {
     const tours = await getTourData();
 
@@ -18,16 +19,21 @@ export async function generateStaticParams() {
     }));
 }
 
+// Page Content
 export default async function Page({ params }) {
-
+    //Fetch the tour package data from JSON file
     const tours = await getTourData();
+    
+    //Extracting tour package data according to url params.
     const tour = tours[params.tour];
 
+    // If data is not found, return Tour not found  
     if(!tour)
     {
         return <div>Tour not found</div>;
     }
 
+    //Parsing and Displaying details about the tour
     return (
         <div>
         <div className='flex flex-row  bg-white py-2 box-border'>
@@ -52,12 +58,7 @@ export default async function Page({ params }) {
                     href='/'>Enquire Now</Link>
                     </div>
                 </div>
-                <div className='mt-4 bg-custom-grey pt-1'>
-                    <h2 className='font-bold text-xl'>Overview</h2>
-                    <div>
-                        {tour.overview.map((ele, index) => <div key={index}><p className='text-sm'>{ele}</p><br/></div>)}
-                    </div>
-                </div>
+                <Overview tour={tour}/>
             </div>
         </div>
         </div>

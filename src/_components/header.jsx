@@ -30,12 +30,8 @@ export default function Header() {
                             <KeyboardArrowDownIcon/>   
                         </div>
                         <ul className='absolute hidden group-hover:flex flex-col w-52 z-50 cursor-pointer list-none text-start text-white bg-periwinkle'>
-                            <Link href={parsePath('Amazing Kashi Tour')}><li className='px-2 py-2 hover:bg-black text-sm'>Amazing Kashi Tour</li></Link>
                             <Link href={parsePath('Kashi Tour')}><li className='px-2 py-2 hover:bg-black text-sm'>Kashi Tour</li></Link>
-                            <Link href={parsePath('Prayagraj, Ayodhya, Varanasi & Bodhgaya Tour')}><li className='px-2 py-2 hover:bg-black text-sm'>Prayagraj, Ayodhya, Varanasi & Bodhgaya Tour</li></Link>
-                            <Link href={parsePath('Sawan in vibrant Varanasi')}><li className='px-2 py-2 hover:bg-black text-sm'>Sawan in vibrant Varanasi</li></Link>
-                            <li className='px-2 py-2 hover:bg-black text-sm'>Amazing Kashi Tour</li>
-                            <li className='px-2 py-2 hover:bg-black text-sm'>Kashi Tour</li>
+                            <Link href={parsePath('Varanasi, Bodhgaya, Rajgir, Nalanda, and Patna')}><li className='px-2 py-2 hover:bg-black text-sm'>Varanasi, Bodhgaya, Rajgir, Nalanda, and Patna</li></Link>
                         </ul>
                     </li>
                     <li className='group cursor-pointer'>Domestic Tour<KeyboardArrowDownIcon/></li>
