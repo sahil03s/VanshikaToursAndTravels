@@ -42,7 +42,72 @@
         "image" : {
             "src" : "/images/packages/kashi-tour/ghat.jpeg",
             "alt" : "Ghat"
-        }
+        },
+        "itinerary" : [
+            {
+                "day" : "Day1",
+                "heading" : "Arrival and Evening Bliss",
+                "desc" : [
+                    {
+                        "text" : "Arrival:",
+                        "description" : "Arrive in Varanasi and check into your hotel."
+                    },
+                    {
+                        "text" : "Ganga Aarti:",
+                        "description" : "Witness the mesmerizing Ganga Aarti at Dashashwamedh Ghat, a spiritual spectacle of light, sound, and devotion."
+                    },
+                    {
+                        "text" : "Dinner:",
+                        "description" : "Enjoy a delicious North Indian dinner at a local restaurant."
+                    }
+                ]
+            },
+            {
+                "day" : "Day2",
+                "heading" : "Exploring the Spiritual Heart of Varanasi",
+                "desc" : [
+                    {
+                        "text" : "Morning:",
+                        "description" : "Visit the iconic Kashi Vishwanath Temple, one of the twelve Jyotirlingas of Lord Shiva."
+                    },
+                    {
+                        "text" : "Lunch:",
+                        "description" : "Have a traditional Indian lunch at a local restaurant."
+                    },
+                    {
+                        "text" : "Boat Ride:",
+                        "description" : "Take a serene boat ride on the Ganges River, enjoying the breathtaking views of the ghats."
+                    },
+                    {
+                        "text" : "Evening:",
+                        "description" : "Visit Sarnath, the site of Lord Buddha's first sermon, and explore the Ashoka Pillar and Dhamek Stupa."
+                    }
+                ]
+            },
+            {
+                "day" : "Day3",
+                "heading" : "Cultural Immersion and Departure",
+                "desc" : [
+                    {
+                        "text" : "Morning:",
+                        "description" : "Visit the Sankat Mochan Temple, dedicated to Lord Hanuman."
+                    },
+                    {
+                        "text" : "Shopping:",
+                        "description" : "Explore the local markets for Banarasi silk sarees, handicrafts, and other souvenirs."
+                    },
+                    {
+                        "text" : "Lunch:",
+                        "description" : "Enjoy a farewell lunch at a local restaurant."
+                    },
+                    {
+                        "text" : "Departure:",
+                        "description" : "Check out of your hotel and depart for your onward journey."
+                    }
+                ]
+            }
+
+        ]
     },
     
     "varanasi-bodhgaya-rajgir-nalanda-and-patna" : {
@@ -84,6 +149,95 @@
         "image" : {
             "src" : "/images/packages/kashi-tour/ghat.jpeg",
             "alt" : "Ghat"
-        }
+        },
+        "itinerary" : [
+            {
+                "day" : "Day1",
+                "heading" : "Arrival in Varanasi and Ganga Aarti",
+                "desc" : [
+                    {
+                        "text" : "Arrival:",
+                        "description" : "Arrive in Varanasi and check into your hotel."
+                    },
+                    {
+                        "text" : "Evening:",
+                        "description" : "Witness the mesmerizing Ganga Aarti at Dashashwamedh Ghat, a spiritual spectacle of light, sound, and devotion."
+                    }
+                ]
+            },
+            {
+                "day" : "Day2",
+                "heading" : "Exploring Varanasi",
+                "desc" : [
+                    {
+                        "text" : "Morning:",
+                        "description" : "Visit the iconic Kashi Vishwanath Temple, one of the twelve Jyotirlingas of Lord Shiva."
+                    },
+                    {
+                        "text" : "Afternoon:",
+                        "description" : "Take a serene boat ride on the Ganges River."
+                    },
+                    {
+                        "text" : "Evening:",
+                        "description" : "Explore Sarnath, the site of Lord Buddha's first sermon, and witness the Ashoka Pillar and Dhamek Stupa."
+                    }
+                ]
+            },
+            {
+                "day" : "Day3",
+                "heading" : "Bodhgaya and Rajgir",
+                "desc" : [
+                    {
+                        "text" : "Morning:",
+                        "description" : "Depart for Bodhgaya, the place of Buddha's enlightenment."
+                    },
+                    {
+                        "text" : "Afternoon:",
+                        "description" : "Visit the Mahabodhi Temple, a UNESCO World Heritage Site, and the Bodhi Tree under which Buddha attained enlightenment."
+                    },
+                    {
+                        "text" : "Evening:",
+                        "description" : "Proceed to Rajgir, an ancient city with historical significance."
+                    }
+                ]
+            },
+            {
+                "day" : "Day4",
+                "heading" : "Rajgir and Nalanda",
+                "desc" : [
+                    {
+                        "text" : "Morning:",
+                        "description" : "Explore the ancient ruins of Rajgir, including the Griddha Kutta Hill and the hot springs."
+                    },
+                    {
+                        "text" : "Afternoon:",
+                        "description" : "Visit Nalanda University, one of the world's oldest universities."
+                    },
+                    {
+                        "text" : "Evening:",
+                        "description" : "Begin Journey to Patna."
+                    }
+                ]
+            },
+            {
+                "day" : "Day5",
+                "heading" : "Patna and Departure",
+                "desc" : [
+                    {
+                        "text" : "Morning:",
+                        "description" : "Visit the Patna Museum, which houses a vast collection of artifacts from ancient India."
+                    },
+                    {
+                        "text" : "Afternoon:",
+                        "description" : "Explore other historical sites in Patna, such as the Golghar and the Gandhi Maidan."
+                    },
+                    {
+                        "text" : "Evening:",
+                        "description" : "Depart for your onward journey."
+                    }
+                ]
+            }
+
+        ]
     }
 }

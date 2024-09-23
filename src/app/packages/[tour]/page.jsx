@@ -3,6 +3,7 @@ import path from 'path';
 import Link from "next/link";
 import Overview from './overview';
 import Policy from './policy';
+import Itinerary from './itinerary';
 
 // Fetch the JSON file data
 async function getTourData() {
@@ -45,8 +46,8 @@ export default async function Page({ params }) {
             </div>
             <div className='w-3/5 my-4 mx-2'>
                 <div className='flex items-center'>
-                    <h1 className='font-bold text-3xl mr-2'>{tour.heading}</h1>
-                    <span className='text-red text-sm'>{tour.duration}</span>
+                    <h1 className='font-bold text-3xl align-content-middle'>{tour.heading}<span className='text-red text-sm ml-3 align-middle'>{tour.duration}</span></h1>
+                    
                 </div>
                 <div>
                     <span className='text-sm'>{tour.route}</span>
@@ -65,9 +66,23 @@ export default async function Page({ params }) {
 
         
         <div className='flex py-2'>
+
+            {/* Left Side section containing Tour Itinerary and Policy */}
             <div className='w-8/12 mr-8'>
+
+            {/* Tour Itinerary Section */}
+            <div className='mb-4'>
+                <Itinerary tour={tour}/>
+            </div>
+
+            {/* Policy Section */}
+            <div>
                 <Policy/>
             </div>
+
+            </div>
+
+            {/* Right Side container containing Form Section*/}
             <div>
                 <h1>Form will go here</h1>
             </div>
