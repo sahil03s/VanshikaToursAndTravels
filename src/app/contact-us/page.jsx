@@ -2,6 +2,18 @@
 
 import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import Link from "next/link";
+
+
+// parses and retrieves the url of tour package based on its heading. Here, It helps to redirect back to the tour package page when back button is clicked 
+function parsePath(s)
+{
+    let res = '/packages/' + s.toLowerCase().replaceAll(' ', '-');
+    res = res.replace(/[^a-zA-Z0-9/&\-]/g, '');
+    return res;
+}
+
 
 export default function Contact() {
 
@@ -104,87 +116,141 @@ export default function Contact() {
 
 
     return (
-        <div className='container flex items-center justify-center w-full h-fit py-16'>
+        // Outer container for the page 
+        <div className='container flex items-center justify-center min-w-full h-fit py-16'>
+        
+            {/* Inner container for the page with the white background colour  */}
+            <div className='w-4/5 md:w-3/5 lg:w-1/2 h-fit bg-white py-4 px-8'>
 
-            {/* Heading of contact section, based on whether user is redirected from contact link or enquire now link */}
-            <div className=' h-fit bg-white py-4 px-8'>
-                <h1 className='w-fit font-bold text-3xl mb-1'>{tour.heading ? 'Enquire This Trip' : 'Leave us your info'}</h1>
-                {tour.heading
-                ? <div><span className='text-lg'>{tour.heading} </span><span className='text-xs text-red ml-1'>{tour.duration}</span></div>
-                : <div><span>We will get back to you.</span></div>
-                }
+
+                {/* Heading of contact section, based on whether user is redirected from contact link or enquire now link */}
+                <div>
+                    <div className='flex relative items-center'>
+                    <h1 className='w-fit font-bold text-3xl mb-1'>{tour.heading ? 'Enquire This Trip' : 'Leave us your info'}</h1>
+
+                    {/* Back button functionality for contact page, only when contact page is accessed from tour package page's enquire now button */}
+                    {tour.heading &&
+                    <div className='flex absolute right-0 items-center'>
+                        <Link href={parsePath(tour.heading)}>
+                            <ArrowBackIcon 
+                            className='border-box px-1.5 text-3xl bg-periwinkle rounded-full text-white'
+                            />
+                        </Link>
+                        <div className='font-semibold text-lg ml-1.5'>Back</div>
+                    </div> }
+
+                </div>
+
+                    {tour.heading
+                    ? <div><span className='text-lg'>{tour.heading} </span><span className='text-xs text-red ml-1'>{tour.duration}</span></div>
+                    : <div><span>We will get back to you.</span></div>
+                    }
+
+                </div>
                 
                 {/* form section */}
-                <div className='mt-6 w-11/12'>
+                <div className='mt-6'>
                     <form onSubmit={handleForm}>
-                    <div className="flex flex-col w-auto">
-                        <div className="flex flex-col lg:flex-row mb-1">
-                            <div className='relative h-12 my-2 mr-32'>
+
+                    {/* outer container for form */}
+                    <div className="flex flex-col w-full">
+
+                        {/* This div contains pairs of input fields which are displayed side by side (flex-row) for large screens one down the other (flex-other for very small screens)  */}
+                        <div className="flex flex-col sm:flex-row mb-1 w-full">
+
+                            {/* First Name input field */}
+                            <div className='relative w-2/5 h-12 my-2 mr-24'>
                             <span 
                             className={`absolute -top-2 left-3 z-50 text-xs bg-white px-0.5 ${checkLabelColor('fname')}`}>
                             First Name*
                             </span>
                             <input type="text" name='fname' value={details.fname} autoComplete="off"
-                                className={`h-full p-3 outline-none border rounded ${checkBorderColor('fname')}`}
+                                className={`h-full w-full p-3 outline-none border rounded ${checkBorderColor('fname')}`}
                                 onChange={handleChange}
                             />
                             </div>
-                            <div className='flex relative h-12 my-2'>
+
+                            {/* Last Name input field */}
+                            <div className='flex relative w-2/5 h-12 my-2'>
                             <span className={`absolute -top-2 left-3 z-50 text-xs bg-white px-0.5 ${checkLabelColor('lname')}`}>Last Name</span>
                             <input type="text" name='lname' value={details.lname} autoComplete="off"
-                                className={`h-full p-3 outline-none border rounded ${checkBorderColor('lname')}`}
+                                className={`h-full w-full p-3 outline-none border rounded ${checkBorderColor('lname')}`}
                                 onChange={handleChange}
                             />
                             </div>
+                            
                         </div>
-                        <div className="flex flex-col lg:flex-row mb-1">
-                            <div className='relative h-12 my-2 mr-32'>
+
+                        {/* This div contains pairs of input fields which are displayed side by side (flex-row) for large screens one down the other (flex-other for very small screens)  */}
+                        <div className="flex flex-col sm:flex-row mb-1">
+
+                            {/* Phone no. input field */}
+                            <div className='relative w-2/5 h-12 my-2 mr-24'>
                             <span className={`absolute -top-2 left-3 z-50 text-xs bg-white px-0.5 ${checkLabelColor('phone')}`}>Phone Number*</span>
                             <input type="tel" name='phone' value={details.phone} autoComplete="off"
-                                className={`h-full p-3 outline-none border rounded ${checkBorderColor('phone')}`}
+                                className={`h-full w-full p-3 outline-none border rounded ${checkBorderColor('phone')}`}
                                 onChange={handleChange}
                             />
                             </div>
-                            <div className='relative h-12 my-2 mr-32'>
+
+                            {/* Email input field */}
+                            <div className='relative w-2/5 h-12 my-2'>
                             <span className={`absolute -top-2 left-3 z-50 text-xs bg-white px-0.5 ${checkLabelColor('mail')}`}>Email</span>
                             <input type="text" name='mail' value={details.mail} autoComplete="off"
-                                className={`h-full p-3 outline-none border rounded ${checkBorderColor('mail')}`}
+                                className={`h-full w-full p-3 outline-none border rounded ${checkBorderColor('mail')}`}
                                 onChange={handleChange}
                             />
                             </div>
+
                         </div>
-                        <div className="flex flex-col lg:flex-row mb-1">
-                            <div className='relative h-12 my-2 mr-32'>
+
+                        {/* This div contains pairs of input fields which are displayed side by side (flex-row) for large screens one down the other (flex-other for very small screens)  */}
+                        <div className="flex flex-col sm:flex-row mb-1">
+
+                            {/* When do you want to travel input field */}
+                            <div className='relative w-2/5 h-12 my-2 mr-24'>
                             <span className={`absolute -top-2 left-3 z-50 text-xs bg-white px-0.5 ${checkLabelColor('date')}`}>When do you want to travel?</span>
                             <input type="text" name='date' value={details.date} autoComplete="off"
-                                className={`h-full p-3 outline-none border rounded ${checkBorderColor('date')}`}
+                                className={`h-full w-full p-3 outline-none border rounded ${checkBorderColor('date')}`}
                                 onChange={handleChange}
                             />
                             </div>
-                            <div className='relative h-12 my-2 mr-32'>
+
+                            {/* No. of passengers input field */}
+                            <div className='relative w-2/5 h-12 my-2'>
                             <span className={`absolute -top-2 left-3 z-50 text-xs bg-white px-0.5 ${checkLabelColor('passengers')}`}>No. of Passengers</span>
                             <input type="text" name='passengers' value={details.passengers} autoComplete="off"
-                                className={`h-full p-3 outline-none border rounded ${checkBorderColor('passengers')}`}
+                                className={`h-full w-full p-3 outline-none border rounded ${checkBorderColor('passengers')}`}
                                 onChange={handleChange}
                             />
                             </div>
+
                         </div>
-                        <div className="flex flex-col lg:flex-row mb-1">
-                            <div className='relative h-12 my-2 mr-32'>
+
+                        {/* This div contains pairs of input fields which are displayed side by side (flex-row) for large screens one down the other (flex-other for very small screens)  */}
+                        <div className="flex flex-col sm:flex-row mb-1">
+
+                            {/* Duration of Stay input field */}
+                            <div className='relative w-2/5 h-12 my-2 mr-24'>
                             <span className={`absolute -top-2 left-3 z-50 text-xs bg-white px-0.5 ${checkLabelColor('duration')}`}>Duration of Stay (in days)</span>
                             <input type="text" name='duration' value={details.duration} autoComplete="off"
-                                className={`h-full p-3 outline-none border rounded ${checkBorderColor('duration')}`}
+                                className={`h-full w-full p-3 outline-none border rounded ${checkBorderColor('duration')}`}
                                 onChange={handleChange}
                             />
                             </div>
-                            <div className='relative h-12 my-2 mr-32'>
+
+                            {/* Comments input field */}
+                            <div className='relative w-2/5 h-12 my-2'>
                             <span className={`absolute -top-2 left-3 z-50 text-xs bg-white px-0.5 ${checkLabelColor('comment')}`}>Comments</span>
                             <input type="text" name='comment' value={details.comment} autoComplete="off"
-                                className={`h-full p-3 outline-none border rounded ${checkBorderColor('comment')}`}
+                                className={`h-full w-full p-3 outline-none border rounded ${checkBorderColor('comment')}`}
                                 onChange={handleChange}
                             />
                             </div>
+
                         </div>
+
+                        {/* Submit button */}
                         <div>
                             <button type="submit" className='bg-periwinkle text-white my-4 px-6 py-2 rounded-full'>Get in Touch</button>
                         </div>
