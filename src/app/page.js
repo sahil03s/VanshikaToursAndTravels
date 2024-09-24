@@ -14,7 +14,7 @@ export default function Home() {
       <div className='flex'>
         <div className='w-2/5'>
             <Image
-            src='/images/Caros/Vns_ghats1.png' 
+            src='/images/carousel/Vns_ghats1.png' 
             alt='Ghats'
             width={1000}
             height={1000}
