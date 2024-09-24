@@ -3,6 +3,7 @@ import './styles.css';
 import Link from 'next/link';
 import Navlink from './navlink';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import Image from 'next/image';
 
 function parsePath(s)
 {
@@ -15,9 +16,11 @@ export default function Header() {
     return (
         <div className="flex items-center h-18">
             <div className='flex-auto flex items-center h-18 ml-10 mt-2'>
-                <img 
+                <Image 
                 src='/images/logo.png' 
                 alt='Logo'
+                height={100}
+                width={100}
                 className='h-14 scale-150'
                 />
             </div>

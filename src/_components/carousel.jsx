@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 import axios from "axios";
 import '@/app/globals.css';
 import './styles.css';
@@ -13,26 +14,27 @@ export default function Carousel() {
 
     // fetches image objects list from images.json on initial render
     useEffect(() => {
-        axios.get('/images/caros/images.json')
+        axios.get('/images/Caros/images.json')
         .then((res) => setImages(res.data))
         .catch((err) => console.error('Error in fetching images', err));
     }, []);
 
+
+    // Memoize nextSlide function to avoid recreating it on every render
+    const nextSlide = useCallback(() => {
+        images.length && setCurrIndex((prevIndex) => ((prevIndex+1) % images.length));
+    }, [images]); // dependency array means this function will only be created when images change
+    
+
+    // Memoize prevSlide function to avoid recreating it on every render
+    const prevSlide = useCallback(() => {
+        setCurrIndex((prevIndex) => (prevIndex+images.length-1) % images.length);
+    }, [images]); // dependency array means this function will only be created when images change
+
     useEffect(() => {
         const interval = setInterval(() => nextSlide(), 3000); //change image every 3 seconds
         return () => clearInterval(interval);   // cleanup the interval on unmount
-    }, [currIndex, images.length, nextSlide]);
-
-    //Go to the next slide  
-    const nextSlide = () => {
-        images.length && setCurrIndex((prevIndex) => ((prevIndex+1) % images.length));
-    }
-      
-    //Go to the previous slide
-    const prevSlide = () => {
-        setCurrIndex((prevIndex) => (prevIndex+images.length-1) % images.length);
-    }
-
+    }, [nextSlide, currIndex]);
 
   return (
       <div className="relative w-full mt-4 h-96">
@@ -40,9 +42,11 @@ export default function Carousel() {
             <div 
             key={index}
             className='absolute top-0 left-0 w-full'>
-                {index === currIndex && (<img 
+                {index === currIndex && (<Image 
                                             src={image.src} 
                                             alt={image.alt}
+                                            width={500}
+                                            height={500}
                                             className={index === currIndex ? 'slide active-image' : 'slide'}/>)}
             </div>
         ))}

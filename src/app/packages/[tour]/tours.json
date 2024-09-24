@@ -40,7 +40,7 @@
         "duration" : "2N/3D",
         "route" : "Varanasi",
         "image" : {
-            "src" : "/images/packages/kashi-tour/ghat.jpeg",
+            "src" : "/images/Packages/kashi-tour/ghat.jpeg",
             "alt" : "Ghat"
         },
         "itinerary" : [
@@ -147,7 +147,7 @@
         "duration" : "4N/5D",
         "route" : "Varanasi->Bodhgaya->Rajgir->Nalanda->Patna",
         "image" : {
-            "src" : "/images/packages/kashi-tour/ghat.jpeg",
+            "src" : "/images/Packages/kashi-tour/ghat.jpeg",
             "alt" : "Ghat"
         },
         "itinerary" : [

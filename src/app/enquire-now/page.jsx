@@ -8,5 +8,5 @@ const ContactWithNoSSR = dynamic(
 export default function Page() {
     return (
         <ContactWithNoSSR/>
-    )
+    );
 }

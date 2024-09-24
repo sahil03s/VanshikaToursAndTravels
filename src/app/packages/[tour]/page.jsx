@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import Link from "next/link";
+import Image from 'next/image';
 import Overview from './overview';
 import Policy from './policy';
 import Itinerary from './itinerary';
@@ -41,9 +42,12 @@ export default async function Page({ params }) {
         <div className='px-4'>
         <div className='flex flex-row bg-white py-2 box-border'>
             <div className='w-2/5 bg-white my-4 mr-2'>
-                <img 
+                <Image
                 src={tour.image.src}
-                alt={tour.image.alt}/>
+                alt={tour.image.alt}
+                width={1000}
+                height={1000}
+                />
             </div>
             <div className='w-3/5 my-4 mx-2'>
                 <div className='flex items-center'>
@@ -58,7 +62,7 @@ export default async function Page({ params }) {
                     <h3 className='mr-4 text-red font-semibold'>Price on Request</h3>
                     <Link 
                     className='px-4 py-1 border-2 border-periwinkle rounded-full mr-4 text-sm bg-periwinkle hover:bg-white text-white hover:text-periwinkle duration-300' 
-                    href={`/contact-us?package=${tour.heading}&duration=${tour.duration}`}>Enquire Now</Link>
+                    href={`/enquire-now?package=${tour.heading}&duration=${tour.duration}`}>Enquire Now</Link>
                     </div>
                 </div>
                 <Overview tour={tour}/>

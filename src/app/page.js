@@ -2,6 +2,7 @@ import '@/app/globals.css';
 import Carousel from "@/_components/carousel";
 import SearchBar from "@/_components/searchbar";
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -12,14 +13,17 @@ export default function Home() {
       <br/><br/>
       <div className='flex'>
         <div className='w-2/5'>
-            <img 
-            src='/images/caros/Vns_ghats1.png' 
-            alt='Ghats'/>
+            <Image
+            src='/images/Caros/Vns_ghats1.png' 
+            alt='Ghats'
+            width={1000}
+            height={1000}
+            />
         </div>
         <div className='ml-6 w-3/5'>
           <h1 className='text-3xl font-bold'>Car Rental in Varanasi - Hire a Taxi for City Tours and Airport Transfers</h1> <br/>
           
-          <p className='mb-6'> Welcome to Vanshika Tour and Travels, your trusted partner for hassle-free car rental services in Varanasi. Whether you need a ride for a city tour, an airport transfer, or a sightseeing adventure, we've got you covered. Our fleet includes a wide range of vehicles, from luxury AC cars to economy cars, all available at competitive and reasonable rates.</p>
+          <p className='mb-6'> Welcome to Vanshika Tour and Travels, your trusted partner for hassle-free car rental services in Varanasi. Whether you need a ride for a city tour, an airport transfer, or a sightseeing adventure, we&apos;ve got you covered. Our fleet includes a wide range of vehicles, from luxury AC cars to economy cars, all available at competitive and reasonable rates.</p>
         </div>
       </div>
 
@@ -36,7 +40,7 @@ export default function Home() {
 
     
 
-      <p>As the leading tour operator and travel agency in Varanasi, Vanshika Tour and Travels is your top choice for car and Tempo Traveller rentals. Whether you're seeking a luxury ride or an affordable economy car, we have the perfect solution. We also provide tours and rentals to nearby popular destinations such as: </p>
+      <p>As the leading tour operator and travel agency in Varanasi, Vanshika Tour and Travels is your top choice for car and Tempo Traveller rentals. Whether you&apos;re seeking a luxury ride or an affordable economy car, we have the perfect solution. We also provide tours and rentals to nearby popular destinations such as: </p>
 
       <ul className='ml-8 mb-6 mt-2'>
         <li>Vindhyachal</li>
