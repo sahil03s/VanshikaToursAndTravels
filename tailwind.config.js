@@ -18,10 +18,10 @@ module.exports = {
         foreground: "var(--foreground)",
         'lilac' : '#D3C5E5',
         'periwinkle' : '#735DA5',
-        'black' : '#3c4043',
-        'red' : '#d93025',
+        'black' : '#000000',
+        'red' : '#ff0000',
         'yellow-gold': '#d0b807',
-        'custom-grey':'#f7f7f7'
+        'custom-grey':'#f2f2f2'
       },
     },
   },

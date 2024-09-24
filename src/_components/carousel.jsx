@@ -21,7 +21,7 @@ export default function Carousel() {
     useEffect(() => {
         const interval = setInterval(() => nextSlide(), 3000); //change image every 3 seconds
         return () => clearInterval(interval);   // cleanup the interval on unmount
-    }, [currIndex, images.length]);
+    }, [currIndex, images.length, nextSlide]);
 
     //Go to the next slide  
     const nextSlide = () => {

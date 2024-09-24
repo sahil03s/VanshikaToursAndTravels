@@ -1,6 +1,6 @@
 'use client'
 
-import './policy.css';
+import './tour.css';
 import { useState, useRef } from 'react';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 

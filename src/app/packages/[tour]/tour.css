@@ -1,0 +1,77 @@
+.open
+{
+    transform: rotate(-90deg);
+    transition: transform 0.2s linear;
+}
+
+.close
+{
+    transform: rotate(0deg);
+    transition: transform 0.2s linear;
+}
+
+.hidden-div {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.show-div {
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.policy-subheading {
+    background-color: #ededed;
+}
+
+.policy-list li {
+    margin: 0.75rem 0;
+}
+
+.form-container input {
+    margin-bottom: 1rem;
+    width: 90%;
+}
+
+
+.MuiFormControl-root {
+    height: 1.7rem;
+    width: 90%;
+    /* outline-color: #d1d5db;  */
+    outline-color: #f2f2f2; 
+}
+
+.MuiFormLabel-root {
+    overflow: hidden;
+    height: 1.7rem;
+    width: fit-content;
+    top:-0.8rem;
+    font-size: small;
+    color: #a19ea3;
+}
+
+.Mui-focused {
+    top: 0;
+}
+
+
+.MuiInputBase-root {
+    height: 100%;
+}
+
+.MuiInputBase-input {
+    position: unset;
+    padding: 0.1rem 1rem;
+    max-height: 1.7rem;
+    align-self: baseline;
+    /* outline: 2px solid black;
+    border: 2px solid black; */
+}
+
+.MuiInputAdornment-root {
+}
+
+.MuiButtonBase-root {
+
+}

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Link from "next/link";
+import Preference from "../packages/[tour]/preference";
 
 
 // parses and retrieves the url of tour package based on its heading. Here, It helps to redirect back to the tour package page when back button is clicked 
@@ -117,10 +118,10 @@ export default function Contact() {
 
     return (
         // Outer container for the page 
-        <div className='container flex items-center justify-center min-w-full h-fit py-16'>
+        <div className='container flex items-center justify-center min-w-full min-h-fit py-16'>
         
             {/* Inner container for the page with the white background colour  */}
-            <div className='w-4/5 md:w-3/5 lg:w-1/2 h-fit bg-white py-4 px-8'>
+            <div className={`w-4/5 md:w-3/5 lg:w-1/2 h-fit bg-white py-4 px-8`}>
 
 
                 {/* Heading of contact section, based on whether user is redirected from contact link or enquire now link */}
