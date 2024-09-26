@@ -1,10 +1,7 @@
 'use client'
 
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import DatePicker from '@/_components/datepicker';
 import './tour.css'
-import { TextField } from '@mui/material';
 
 
 export default function Preference() {
@@ -26,18 +23,8 @@ export default function Preference() {
                         className='px-4 py-1 text-sm outline outline-1 outline-gray-300 focus:outline-black rounded-sm'
                     />
 
-                    <div className='mb-4'>
-                    <LocalizationProvider dateAdapter={AdapterDayjs}>
-                    <div className='flex items-center'>
-                        <DatePicker 
-                            className='bg-white'
-                            label="Select Date of Departure"
-                            format='DD-MM-YYYY'
-                            disablePast
-                            disableHighlightToday
-                        />
-                    </div>
-                    </LocalizationProvider>
+                    <div className='mb-4 w-full pr-9'>
+                        <DatePicker/>
                     </div>
 
 
