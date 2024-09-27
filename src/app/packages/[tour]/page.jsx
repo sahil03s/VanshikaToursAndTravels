@@ -6,6 +6,7 @@ import Overview from './overview';
 import Policy from './policy';
 import Itinerary from './itinerary';
 import Preference from './preference';
+import EastIcon from '@mui/icons-material/East';
 
 // Fetch the JSON file data
 async function getTourData() {
@@ -55,7 +56,12 @@ export default async function Page({ params }) {
                     
                 </div>
                 <div>
-                    <span className='text-sm'>{tour.route}</span>
+                    {tour.route.map((ele, index) => {
+                        return index 
+                        ? <span key={index} className='text-sm'><EastIcon fontSize=''/>{ele}</span> 
+                        : <span key={index} className='text-sm'>{ele}</span>
+                    })}
+                    
                 </div>
                 <div className='mt-4'>
                     <div className='flex w-fit border-box border-periwinkle rounded-sm border-2 items-center px-2 py-1.5'>
