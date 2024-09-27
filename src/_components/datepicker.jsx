@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { addDays, format } from "date-fns"
+import { format } from "date-fns"
 import { Calendar as CalendarIcon } from "lucide-react"
 
 import { cn } from "@/shadcn/lib/utils"
@@ -13,12 +13,14 @@ import {
   PopoverTrigger,
 } from "@/shadcn/components/ui/popover"
 
-export default function DatePicker() {
-  const [date, setDate] = React.useState();
+export default function DatePicker({details, setDetails}) {
   const [open, setOpen] = React.useState(false);
 
   const handleInput = (val) => {
-    setDate(val);
+    setDetails({
+        ...details,
+        date:val 
+    })
     setOpen(false);
   }
 
@@ -28,18 +30,22 @@ export default function DatePicker() {
         <Button
           variant={"outline"}
           className={cn(
-            "w-full h-8 justify-between text-left font-normal",
-            !date && "text-muted-foreground"
+            "w-full h-8 justify-start text-left font-normal focus:border-black hover:border-black",
+            !details.date && "text-muted-foreground"
           )}
         >
-          {date ? format(date, "PPP") : <span className='text-gray-400'>Start Date of Journey</span>}
-          <CalendarIcon className="mr-2 h-4 w-4" />
+          {details.date ? format(details.date, "PPP") : <span>Start date of Journey</span>}
+          <CalendarIcon className="mr-2 h-4 w-4 absolute right-20" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="flex w-auto flex-col space-y-2 p-2">
-        <div className="rounded-md border">
-          <Calendar mode="single" selected={date} onSelect={handleInput} />
-        </div>
+      <PopoverContent className="w-auto p-0">
+        <Calendar
+          mode="single"
+          selected={details.date}
+          onSelect={handleInput}
+          initialFocus
+          captionLayout='dropdown'
+        />
       </PopoverContent>
     </Popover>
   )

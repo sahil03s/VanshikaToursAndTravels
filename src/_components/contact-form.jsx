@@ -81,7 +81,7 @@ export default function Contact() {
         const err = formValidation(details);
         if(Object.keys(err).length === 0)
         {
-            await fetch('/api/sendWhatsapp', {
+            fetch('/api/sendWhatsapp', {
                 method: 'POST',
                 headers: {
                     'Content-type' : 'application/json',
