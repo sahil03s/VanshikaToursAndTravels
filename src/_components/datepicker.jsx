@@ -30,13 +30,13 @@ export default function DatePicker({details, setDetails, calendarIconRight, heig
         <Button
           variant={"outline"}
           className={cn(
-            "w-full justify-start text-left font-normal focus:border-black hover:border-black",
+            "w-full relative justify-start text-left font-normal focus:border-black hover:border-black",
             !details.date && "text-muted-foreground",
             preferenceFlag ? 'h-8' : 'h-12 border-black',
           )}
         >
           {details.date ? format(details.date, "PPP") : <span>Start date of Journey</span>}
-          <CalendarIcon className={`mr-${preferenceFlag ? '20' : '2'} h-4 w-4 absolute right-2 `} />
+          <CalendarIcon className={`mr-2 h-4 w-4 absolute right-2 `} />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-auto p-0">
