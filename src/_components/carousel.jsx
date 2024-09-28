@@ -37,7 +37,7 @@ export default function Carousel() {
     }, [nextSlide, currIndex]);
 
   return (
-      <div className="relative w-full mt-4 h-96">
+      <div className="relative mt-4 w-full h-64 sm:h-72 md:h-80 lg:h-96 justify-center">
         {images.map((image, index) => (
             <div 
             key={index}
@@ -47,12 +47,12 @@ export default function Carousel() {
                                             alt={image.alt}
                                             width={500}
                                             height={500}
-                                            className={index === currIndex ? 'slide active-image' : 'slide'}/>)}
+                                            className={`rounded-2xl w-full h-64 sm:h-72 md:h-80 lg:h-96 transition-opacity duration-500 ease-in-out ${index === currIndex ? 'active-image' : ''}`}/>)}
             </div>
         ))}
         <div className='flex items-center absolute top-0 left-0 w-full h-full'>
-        <ArrowBackIosNewIcon className='absolute left-10 text-red-500' onClick={prevSlide}/>
-        <ArrowForwardIosIcon className='absolute right-10 text-red-500' onClick={nextSlide}/>
+        <ArrowBackIosNewIcon className='absolute left-4 lg:left-10 text-white' onClick={prevSlide}/>
+        <ArrowForwardIosIcon className='absolute right-4 lg:right-10 text-white' onClick={nextSlide}/>
         </div> 
       </div>
   )

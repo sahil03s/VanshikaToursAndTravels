@@ -1,11 +1,13 @@
 'use client'
+
+import { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import Navlink from './navlink';
 import '@/app/globals.css';
 import './styles.css';
-import Link from 'next/link';
-import Navlink from './navlink';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import Image from 'next/image';
-import { useState } from 'react';
+import MenuIcon from '@mui/icons-material/Menu';
 
 function parsePath(s)
 {
@@ -16,25 +18,28 @@ function parsePath(s)
 
 export default function Header() {
     const [open, setOpen] = useState(0);
+    const [navMenuOpen, setNavMenuOpen] = useState(false);
 
     const handleClose = () => setOpen(0);
-    const handleOpen = (id) => setOpen(id)
+    const handleOpen = (id) => setOpen(id);
+    const handleMenu = () => setNavMenuOpen((prev) => !prev);
     
 
     return (
-        <div className="flex items-center h-18">
-            <div className='flex-auto flex items-center h-18 ml-10 mt-2'>
+        <div className="flex items-center h-16 mb-2">
+            <div className='flex-auto flex items-center h-14 ml-10 mt-2'>
                 <Image 
                 src='/images/logo.png' 
                 alt='Logo'
                 height={100}
                 width={100}
-                className='h-14 w-auto scale-150'
+                className='h-12 w-auto sm:scale-110 md:scale-150'
                 />
             </div>
-            <div className='flex flex-row items-center h-full space-x-6 mr-16 p-8'>
+            <MenuIcon className='md:hidden mr-6 hover:bg-black rounded-sm hover:text-white' onClick={handleMenu}/>
+            <div className={`${navMenuOpen ? '' : 'hidden'} md:flex flex-col md:flex-row items-center h-full space-x-2 lg:space-x-6 p-8`}>
                 <Navlink href='/' title='Home'/>
-                <ul className='list-none flex space-x-6 text-center'>
+                <ul className='list-none flex flex-col md:flex-row space-x-6 text-center'>
                     <li className='relative group cursor-pointer' onMouseEnter={()=>handleOpen(1)} onMouseLeave={handleClose}>
                         <div>
                             <span>Varanasi Tour</span>
