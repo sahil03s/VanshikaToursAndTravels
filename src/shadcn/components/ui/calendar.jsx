@@ -14,14 +14,16 @@ function Calendar({
 }) {
 
   const today = new Date();
+  const startMonth = new Date(today.getFullYear(), 0);
   const endMonth = new Date(today.getFullYear()+5, 11);
 
   return (
     (<DayPicker
       showOutsideDays={showOutsideDays}
-      startMonth={today}
+      defaultMonth={today}
+      startMonth={startMonth}
       endMonth={endMonth}
-      disabled={{ before: new Date() }}
+      disabled={{ before: today }}
       className={cn("p-3", className)}
       classNames={{
         months: "flex flex-col pt-2 space-y-4 sm:space-x-4 sm:space-y-0",
