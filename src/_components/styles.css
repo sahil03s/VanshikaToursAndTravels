@@ -39,5 +39,8 @@ ul {
 
 .float-whatsapp-icon {
     background-color: #4dc247;
-    transform: scale(1.5);
+}
+
+.float-calling-icon {
+    background-color: #2222d8;
 }
