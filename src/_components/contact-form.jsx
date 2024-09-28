@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Link from "next/link";
+import DatePicker from "./datepicker";
 
 
 // parses and retrieves the url of tour package based on its heading. Here, It helps to redirect back to the tour package page when back button is clicked 
@@ -210,10 +211,7 @@ export default function Contact() {
                             {/* When do you want to travel input field */}
                             <div className='relative w-2/5 h-12 my-2 mr-24'>
                             <span className={`absolute -top-2 left-3 z-50 text-xs bg-white px-0.5 ${checkLabelColor('date')}`}>When do you want to travel?</span>
-                            <input type="text" name='date' value={details.date} autoComplete="off"
-                                className={`h-full w-full p-3 outline-none border rounded ${checkBorderColor('date')}`}
-                                onChange={handleChange}
-                            />
+                            <DatePicker details={details} setDetails={setDetails} preferenceFlag={false} />
                             </div>
 
                             {/* No. of passengers input field */}

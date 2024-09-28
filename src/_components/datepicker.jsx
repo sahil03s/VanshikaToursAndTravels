@@ -13,7 +13,7 @@ import {
   PopoverTrigger,
 } from "@/shadcn/components/ui/popover"
 
-export default function DatePicker({details, setDetails}) {
+export default function DatePicker({details, setDetails, calendarIconRight, height, preferenceFlag}) {
   const [open, setOpen] = React.useState(false);
 
   const handleInput = (val) => {
@@ -30,12 +30,13 @@ export default function DatePicker({details, setDetails}) {
         <Button
           variant={"outline"}
           className={cn(
-            "w-full h-8 justify-start text-left font-normal focus:border-black hover:border-black",
-            !details.date && "text-muted-foreground"
+            "w-full justify-start text-left font-normal focus:border-black hover:border-black",
+            !details.date && "text-muted-foreground",
+            preferenceFlag ? 'h-8' : 'h-12 border-black',
           )}
         >
           {details.date ? format(details.date, "PPP") : <span>Start date of Journey</span>}
-          <CalendarIcon className="mr-2 h-4 w-4 absolute right-20" />
+          <CalendarIcon className={`mr-${preferenceFlag ? '20' : '2'} h-4 w-4 absolute right-2 `} />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-auto p-0">

@@ -126,7 +126,7 @@ export default function Preference() {
                     />
 
                     <div className='mb-4 w-full pr-9 max-w-xl flex flex-row gap-4'>
-                       <DatePicker details={details} setDetails={setDetails}/>
+                       <DatePicker details={details} setDetails={setDetails} preferenceFlag={true} />
                     </div>
 
                     <input type="input" name="duration" value={details.duration} autoComplete="off" placeholder="Duration of Stay (in Days)"
