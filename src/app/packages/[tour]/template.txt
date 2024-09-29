@@ -1,0 +1,50 @@
+"lucknow-ayodhya-prayagraj-chitrakoot-and-varanasi" : {
+        "heading" : "",
+        "overview" : [
+            {
+                "type" : "heading",
+                "content" : ""
+            }, 
+            {
+                "type":"paragraph",
+                "content":[
+                    {"text" : "", "bold" : true},
+                    {"text" : ""}
+                ]
+            },
+            {
+                "type":"unordered-list",
+                "content": [
+                    {"text":"", "description":""},
+                    {"text":"", "description":""},
+                    {"text":"", "description":""}
+                ]
+            }
+        ],
+        "duration" : "",
+        "route" : [],
+        "image" : {
+            "src" : "/images/packages/kashi-tour/ghat.jpeg",
+            "alt" : "Ghat"
+        },
+        "itinerary" : [
+            {
+                "day" : "Day1",
+                "heading" : "",
+                "desc" : [
+                    {
+                        "text" : "",
+                        "description" : ""
+                    },
+                    {
+                        "text" : "",
+                        "description" : ""
+                    },
+                    {
+                        "text" : "",
+                        "description" : ""
+                    }
+                ]
+            }
+        ]
+    }

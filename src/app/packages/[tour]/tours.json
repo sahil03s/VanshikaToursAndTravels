@@ -1,6 +1,6 @@
 {
     "kashi-tour" : {
-        "heading" : "Kashi Tour",
+        "heading" : "Kashi/Varanasi Tour",
         "overview" : [
             {
                 "type" : "heading",
@@ -238,6 +238,455 @@
                 ]
             }
 
+        ]
+    },
+
+    "lucknow-ayodhya-prayagraj-chitrakoot-and-varanasi" : {
+        "heading" : "Lucknow, Ayodhya, Prayagraj, Chitrakoot and Varanasi",
+        "overview" : [],
+        "duration" : "6N/7D",
+        "route" : ["Lucknow", "Ayodhya", "Prayagraj", "Chitrakoot", "Varanasi"],
+        "image" : {
+            "src" : "/images/packages/kashi-tour/ghat.jpeg",
+            "alt" : "Ghat"
+        },
+        "itinerary" : [
+            {
+                "day" : "Day1",
+                "heading" : "Arrival in Lucknow",
+                "desc" : [
+                    {
+                        "text" : "",
+                        "description" : "Check-in to your hotel."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Explore the city's rich history and culture through visits to the Bara Imambara, Chota Imambara, and the Lucknow Residency."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Enjoy a Nawabi dinner at a local restaurant."
+                    }
+                ]
+            },
+            {
+                "day" : "Day2",
+                "heading" : "Lucknow to Ayodhya",
+                "desc" : [
+                    {
+                        "text" : "",
+                        "description" : "Drive to Ayodhya, the birthplace of Lord Rama."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Visit the Ram Janmabhoomi Temple complex, Hanuman Garhi, and the banks of the Sarayu River."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Attend the evening Aarti at the ghats."
+                    }
+                ]
+            },
+            {
+                "day" : "Day3",
+                "heading" : "Ayodhya to Prayagraj",
+                "desc" : [
+                    {
+                        "text" : "",
+                        "description" : "Continue your journey to Prayagraj (Allahabad), the confluence of the Ganga, Yamuna, and Saraswati rivers."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Visit the Triveni Sangam, where the three rivers meet."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Explore the Allahabad Fort and the Kumbh Mela ground."
+                    }
+                ]
+            },
+            {
+                "day" : "Day4",
+                "heading" : "Prayagraj to Chitrakoot",
+                "desc" : [
+                    {
+                        "text" : "",
+                        "description" : "Drive to Chitrakoot, a serene hill station known for its mythological significance."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Visit the Ramghat, Hanuman Dhara, and Bharat Milap Mandir."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Enjoy a boat ride on the Mandakini River."
+                    }
+                ]
+            },
+            {
+                "day" : "Day5",
+                "heading" : "Chitrakoot to Varanasi",
+                "desc" : [
+                    {
+                        "text" : "",
+                        "description" : "Drive to Varanasi, one of the holiest cities in India."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Take a boat ride on the Ganges at sunrise to witness the Ganga Aarti."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Explore the ghats, temples, and narrow alleys of the old city."
+                    }
+                ]
+            },
+            {
+                "day" : "Day6",
+                "heading" : "Varanasi",
+                "desc" : [
+                    {
+                        "text" : "",
+                        "description" : "Visit Sarnath, where Buddha gave his first sermon."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Explore the Ashoka Pillar and the Dhamekh Stupa."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Attend the evening Ganga Aarti at Dashashwamedh Ghat."
+                    }
+                ]
+            },
+            {
+                "day" : "Day7",
+                "heading" : "Departure from Varanasi",
+                "desc" : [
+                    {
+                        "text" : "",
+                        "description" : "Check out from your hotel and depart for your onward journey."
+                    }
+                ]
+            }
+        ],
+        "tips" : [
+            {
+                "text" : "Best time to visit:",
+                "description" : "October to March is the ideal time to visit these cities, as the weather is pleasant."
+            },
+            {
+                "text" : "Accommodation:",
+                "description" : "Choose hotels or guesthouses near the main attractions for convenience."
+            },
+            {
+                "text" : "Food:",
+                "description" : "Enjoy local delicacies like Awadhi cuisine in Lucknow, chaat in Varanasi, and street food in Prayagraj."
+            },
+            {
+                "text" : "Transportation:",
+                "description" : "Renting a car or hiring a taxi is the most convenient way to travel between cities."
+            },
+            {
+                "text" : "Spiritual experiences:",
+                "description" : "Attend religious ceremonies, meditation sessions, or yoga classes to deepen your spiritual experience."
+            }
+        ] 
+    },
+
+    "kashi" : {
+        "heading" : "Kashi/Varanasi",
+        "overview" : [],
+        "duration" : "1N/2D",
+        "route" : ["Varanasi"],
+        "image" : {
+            "src" : "/images/packages/kashi-tour/ghat.jpeg",
+            "alt" : "Ghat"
+        },
+        "itinerary" : [
+            {
+                "day" : "Day1",
+                "heading" : "Arrival and Evening Aarti",
+                "desc" : [
+                    {
+                        "text" : "Arrival:",
+                        "description" : "Arrive at Varanasi Airport or Railway Station. Check into your hotel."
+                    },
+                    {
+                        "text" : "Afternoon Exploration:",
+                        "description" : "Visit the iconic Kashi Vishwanath Temple, dedicated to Lord Shiva. Explore the narrow lanes around the temple, experiencing the vibrant local culture."
+                    },
+                    {
+                        "text" : "Evening Aarti:",
+                        "description" : "Witness the mesmerizing Ganga Aarti at Dashashwamedh Ghat. The spectacle of hundreds of lamps being lit on the banks of the Ganges is a truly unforgettable experience."
+                    },
+                    {
+                        "text" : "Dinner:",
+                        "description" : "Enjoy a delicious meal at a local restaurant, savoring the flavors of Varanasi's cuisine."
+                    }
+                ]
+            },
+            {
+                "day" : "Day2",
+                "heading" : "Spiritual and Cultural Immersion",
+                "desc" : [
+                    {
+                        "text" : "Morning Boat Ride:",
+                        "description" : "Start your day with a serene boat ride on the Ganges. Explore the various ghats, witnessing the daily life of the locals."
+                    },
+                    {
+                        "text" : "Temple Hopping:",
+                        "description" : "Visit other significant temples like Annapurna Temple, Kal Bhairav Temple, and Tulsi Manas Mandir."
+                    },
+                    {
+                        "text" : "Sarnath:",
+                        "description" : "Take a half-day excursion to Sarnath, the site of Lord Buddha's first sermon. Explore the Dhamek Stupa, the Chaukhandi Stupa, and the Archaeological Museum."
+                    },
+                    {
+                        "text" : "Shopping:",
+                        "description" : "Visit the local markets to buy souvenirs, handicrafts, and traditional textiles."
+                    }
+                ]
+            }
+        ],
+        "tips" : [
+            {
+                "text" : "Early Morning:",
+                "description" : "To avoid crowds, consider visiting the temples and ghats early in the morning."
+            },
+            {
+                "text" : "Local Guide:",
+                "description" : "Hiring a local guide can provide valuable insights into the history, culture, and spiritual significance of Varanasi."
+            },
+            {
+                "text" : "Accommodation:",
+                "description" : "Choose a hotel near the ghats for easy access to the main attractions."
+            },
+            {
+                "text" : "Food:",
+                "description" : "Don't miss the opportunity to try local delicacies like chaat, kachori, and lassi."
+            }
+        ]
+    },
+    "varanasi-religious-tour-plan" : {
+        "heading" : "Varanasi Religious Tour Plan",
+        "overview" : [ 
+            {
+                "type":"paragraph",
+                "content":[
+                    {"text" : "Varanasi, one of India's most sacred cities, offers a profound spiritual experience for visitors. Nestled on the banks of the Ganges River, this ancient city is steeped in history and tradition."}
+                ]
+            },
+            {
+                "type":"paragraph",
+                "content":[
+                    {"text":"A pilgrimage to Varanasi often includes visits to iconic religious sites such as Kashi Vishwanath Temple, one of the holiest Hindu temples dedicated to Lord Shiva. The city is also home to Sarnath, the place where Buddha delivered his first sermon."}
+                ]
+            },
+            {
+                "type":"paragraph",
+                "content":[
+                    {"text":"Beyond religious sites, Varanasi offers a glimpse into India's rich cultural heritage. Witness the mesmerizing Ganga Aarti, a daily evening ritual on the banks of the Ganges River, and explore the vibrant local markets filled with handicrafts and traditional textiles."}
+                ]
+            },
+            {
+                "type":"paragraph",
+                "content":[
+                    {"text":"For those seeking a deeper spiritual connection, Varanasi provides opportunities for meditation, yoga, and spiritual discourses. The city's serene atmosphere and the constant chanting of mantras create a conducive environment for introspection."}
+                ]
+            },
+            {
+                "type":"paragraph",
+                "content":[
+                    {"text":"Whether you are a devout Hindu or simply seeking a spiritual experience, Varanasi offers a unique and transformative journey."}
+                ]
+            }
+        ],
+        "duration" : "2N/3D",
+        "route" : ["Varanasi"],
+        "image" : {
+            "src" : "/images/packages/kashi-tour/ghat.jpeg",
+            "alt" : "Ghat"
+        },
+        "itinerary" : [
+            {
+                "day" : "Day1",
+                "heading" : "Arrival and Spiritual Immersion",
+                "desc" : [
+                    {
+                        "text" : "Arrival:",
+                        "description" : "Arrive at Varanasi Airport or Railway Station."
+                    },
+                    {
+                        "text" : "Check-in:",
+                        "description" : "Transfer to your hotel and check-in."
+                    },
+                    {
+                        "text" : "Kashi Vishwanath Temple:",
+                        "description" : "Embark on a spiritual journey by visiting the Kashi Vishwanath Temple, one of the holiest Hindu temples dedicated to Lord Shiva."
+                    },
+                    {
+                        "text" : "Ganga Aarti:",
+                        "description" : "Witness the mesmerizing Ganga Aarti at Dasaswamedh Ghat, a spectacular evening ritual on the banks of the Ganges River."
+                    },
+                    {
+                        "text" : "Dinner:",
+                        "description" : "Enjoy a delicious dinner at a local restaurant, savoring the flavors of Varanasi's cuisine."
+                    }
+                ]
+            },
+            {
+                "day" : "Day2",
+                "heading" : "Exploring Sarnath and Local Culture",
+                "desc" : [
+                    {
+                        "text" : "Sarnath Tour:",
+                        "description" : "Visit Sarnath, the place where Buddha delivered his first sermon after attaining enlightenment. Explore the ancient Buddhist sites, including the Dhamek Stupa, Chaukhandi Stupa, and the Archaeological Museum."
+                    },
+                    {
+                        "text" : "Kashi Silk Handloom:",
+                        "description" : "Immerse yourself in the rich textile heritage of Varanasi by visiting a Kashi Silk Handloom center. Witness the intricate process of silk weaving and purchase exquisite silk products."
+                    },
+                    {
+                        "text" : "Evening Walk:",
+                        "description" : "Take a leisurely evening walk along the ghats of Varanasi, soaking in the serene atmosphere and vibrant culture."
+                    }
+                ]
+            },
+            {
+                "day" : "Day3",
+                "heading" : "Farewell to Varanasi",
+                "desc" : [
+                    {
+                        "text" : "Manikarnika Ghat:",
+                        "description" : "Visit Manikarnika Ghat, the cremation ground on the banks of the Ganges, where Hindus believe that death is a gateway to liberation."
+                    },
+                    {
+                        "text" : "Check-out:",
+                        "description" : "Check out from your hotel and transfer to the airport or railway station for your return journey."
+                    }
+                ]
+            }
+        ]
+    },
+
+    "varanasi-prayagraj-ayodhya-tour-package" : {
+        "heading" : "Varanasi, Prayagraj, Ayodhya Tour",
+        "overview" : [
+            {
+                "type":"paragraph",
+                "content":[
+                    {"text" : "This 4-day tour package offers a comprehensive exploration of three sacred cities in Uttar Pradesh, India: Varanasi, Prayagraj, and Ayodhya."}
+                ]
+            },
+            {
+                "type":"paragraph",
+                "content":[
+                    {"text" : "Begin your journey in Varanasi, one of the holiest Hindu cities, and immerse yourself in its spiritual atmosphere. Visit iconic sites like Kashi Vishwanath Temple and Sarnath, and witness the mesmerizing Ganga Aarti."}
+                ]
+            },
+            {
+                "type":"paragraph",
+                "content":[
+                    {"text" : "Continue your pilgrimage to Prayagraj, the confluence of three sacred rivers: Ganges, Yamuna, and Saraswati. Explore Triveni Sangam, the holy intersection of these rivers, and visit other historical sites like Allahabad Fort."}
+                ]
+            },
+            {
+                "type":"paragraph",
+                "content":[
+                    {"text" : "Your final destination is Ayodhya, the birthplace of Lord Rama. Visit Ram Janmabhoomi Temple, the site believed to be Lord Rama's birthplace, and explore other significant religious sites in the city."}
+                ]
+            },
+            {
+                "type":"paragraph",
+                "content":[
+                    {"text" : "This tour package provides a unique opportunity to delve into the rich spiritual and cultural heritage of these ancient cities. With comfortable accommodations, guided tours, and transportation included, you can focus on experiencing the profound spiritual significance of this journey."}
+                ]
+            }
+        ],
+        "duration" : "3N/4D",
+        "route" : ["Varanasi", "Prayagraj", "Ayodhya"],
+        "image" : {
+            "src" : "/images/packages/kashi-tour/ghat.jpeg",
+            "alt" : "Ghat"
+        },
+        "itinerary" : [
+            {
+                "day" : "Day1",
+                "heading" : "Arrival in Varanasi and Spiritual Immersion",
+                "desc" : [
+                    {
+                        "text" : "",
+                        "description" : "Arrive at Varanasi Airport or Railway Station."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Check-in at your hotel."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Visit Kashi Vishwanath Temple, one of the holiest Hindu temples dedicated to Lord Shiva."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Witness the mesmerizing Ganga Aarti at Dasaswamedh Ghat."
+                    }
+                ]
+            },
+            {
+                "day" : "Day2",
+                "heading" : "Exploring Sarnath and Local Culture",
+                "desc" : [
+                    {
+                        "text" : "",
+                        "description" : "Visit Sarnath, the place where Buddha delivered his first sermon."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Explore the ancient Buddhist sites."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Visit a Kashi Silk Handloom center."
+                    }
+                ]
+            },
+            {
+                "day" : "Day3",
+                "heading" : "Journey to Prayagraj",
+                "desc" : [
+                    {
+                        "text" : "",
+                        "description" : "Travel to Prayagraj, the confluence of the Ganges, Yamuna, and Saraswati rivers."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Visit Triveni Sangam, where the three rivers meet."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Explore the Allahabad Fort and the Allahabad High Court."
+                    }
+                ]
+            },
+            {
+                "day" : "Day4",
+                "heading" : "Pilgrimage to Ayodhya",
+                "desc" : [
+                    {
+                        "text" : "",
+                        "description" : "Travel to Ayodhya, the birthplace of Lord Rama."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Visit Ram Janmabhoomi Temple, the site where Lord Rama is believed to have been born."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Explore other religious sites like Hanuman Garhi and Nagesar Kund."
+                    }
+                ]
+            }
         ]
     }
 }

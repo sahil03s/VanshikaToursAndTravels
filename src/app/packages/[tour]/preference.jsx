@@ -125,13 +125,13 @@ export default function Preference() {
                         className='px-4 py-1 text-sm outline outline-1 outline-gray-300 focus:outline-black rounded-sm'
                     />
 
-                    <div className='mb-4 w-full pr-9 max-w-xl flex flex-row gap-4'>
+                    <div className='mb-4 w-11/12 flex flex-row pr-2 sm:pr-3 md:pr-1.5'>
                        <DatePicker details={details} setDetails={setDetails} preferenceFlag={true} />
                     </div>
 
                     <input type="input" name="duration" value={details.duration} autoComplete="off" placeholder="Duration of Stay (in Days)"
                         onChange={handleChange}
-                        className={`px-4 py-1 text-sm outline outline-1 ${checkOutlineColor('duration')} focus:${checkOutlineColorFocus('duration')} rounded-sm`}
+                        className={`px-4 py-1 w-full text-sm outline outline-1 ${checkOutlineColor('duration')} focus:${checkOutlineColorFocus('duration')} rounded-sm`}
                     />
 
                     <input type="input" name="passengers" value={details.passengers} autoComplete="off" placeholder="No. of Passengers"

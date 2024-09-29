@@ -41,20 +41,22 @@ export default async function Page({ params }) {
     //Parsing and Displaying details about the tour
     return (
         <div className='px-4'>
-        <div className='flex flex-row bg-white py-2 box-border'>
-            <div className='w-2/5 bg-white my-4 mr-2'>
+        <div className='grid sm:grid-cols-2 lg:grid-cols-5 bg-white py-2 box-border'>
+
+            <div className='row-start-2 lg:col-span-2 sm:row-span-3 lg:row-span-4 bg-white mt-4 lg:mb-4 mr-2'>
                 <Image
                 src={tour.image.src}
                 alt={tour.image.alt}
                 width={1000}
-                height={1000}
+                height={1000}   
                 />
             </div>
-            <div className='w-3/5 my-4 mx-2'>
-                <div className='flex items-center'>
-                    <h1 className='font-bold text-3xl align-content-middle'>{tour.heading}<span className='text-red text-sm ml-3 align-middle'>{tour.duration}</span></h1>
-                    
+
+            <div className='lg:col-span-3 mt-4 sm:mx-2 max-h-fit'>
+                <div className='flex items-center mb-2 sm:mb-0'>
+                    <h1 className='font-bold text-3xl sm:text-2xl md:text-3xl align-content-middle'>{tour.heading}<span className='text-red text-sm ml-3 align-middle'>{tour.duration}</span></h1>    
                 </div>
+
                 <div>
                     {tour.route.map((ele, index) => {
                         return index 
@@ -63,40 +65,61 @@ export default async function Page({ params }) {
                     })}
                     
                 </div>
-                <div className='mt-4'>
-                    <div className='flex w-fit border-box border-periwinkle rounded-sm border-2 items-center px-2 py-1.5'>
-                    <h3 className='mr-4 text-red font-semibold'>Price on Request</h3>
+            </div>
+
+            <div className='lg:col-span-3 sm:mx-2 sm:max-md:mt-2 mt-4 max-h-fit'>
+                <p className='text-sm'><span className='text-sm font-bold'>Note:</span> We can customize the package according to your preferences and interests.</p>
+            </div>
+                    
+            <div className='lg:col-span-3 sm:mx-2 mt-2 lg:mt-1 max-h-fit'>
+                <div className='flex w-fit border-box border-periwinkle rounded-sm border-2 items-center px-2 py-1 md:py-1.5'>
+                    <h3 className='sm:max-md:mr-2 mr-4 text-red sm:max-md:text-sm text-base font-semibold'>Price on Request</h3>
                     <Link 
-                    className='px-4 py-1 border-2 border-periwinkle rounded-full mr-4 text-sm bg-periwinkle hover:bg-white text-white hover:text-periwinkle duration-300' 
+                    className='px-4 py-1 border-2 border-periwinkle rounded-full mr-1 lg:mr-4 sm:max-md:text-xs text-sm bg-periwinkle hover:bg-white text-white hover:text-periwinkle duration-300' 
                     href={`/enquire-now?package=${tour.heading}&duration=${tour.duration}`}>Enquire Now</Link>
-                    </div>
                 </div>
-                <Overview tour={tour}/>
+            </div>
+
+            <div className='sm:col-span-2 lg:col-span-3 lg:mx-2'>
+                {tour.overview.length!==0 && <Overview tour={tour}/>}
             </div>
         </div>
 
         
-        <div className='flex py-2'>
-
-            {/* Left Side section containing Tour Itinerary and Policy */}
-            <div className='w-8/12 mr-4'>
+        <div className='grid md:grid-cols-5 lg:grid-cols-3 gap-x-4 py-2'>
 
             {/* Tour Itinerary Section */}
-            <div className='mb-4'>
+            <div className='md:col-span-3 lg:col-span-2 mb-4'>
                 <Itinerary tour={tour}/>
-            </div>
-
-            {/* Policy Section */}
-            <div>
-                <Policy/>
-            </div>
-
+                { tour.tips && 
+                    <div className='mb-4'>
+                        <h5 className='font-bold text-base'>Additional Tips:</h5>
+                        <ul className='list-disc list-inside'>
+                            {tour.tips.map((ele, index) => {
+                                return (
+                                    <li key={index}>
+                                        <span className='font-bold text-sm'>{ele.text}</span>
+                                        <span className='text-sm'>{ele.description}</span>
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </div>
+                }
+                <p className='text-sm md:text-base'><span className='text-base md:text-lg font-bold'>Note:</span> We can customize the package according to your preferences and interests.</p>
             </div>
 
             {/* Right Side container containing Form Section*/}
-            <div className='w-4/12'>
+            <div className='md:col-span-2 lg:col-span-1'>
                 <Preference/>
             </div>
+
+
+            {/* Policy Section */}
+            <div className='md:col-span-3 lg:col-span-2'>
+                <Policy/>
+            </div>
+
         </div>
         </div>
     );
