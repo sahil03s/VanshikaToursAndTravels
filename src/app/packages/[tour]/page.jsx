@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import Link from "next/link";
+import {redirect} from 'next/navigation'; 
 import Image from 'next/image';
 import Overview from './overview';
 import Policy from './policy';
@@ -36,6 +37,10 @@ export default async function Page({ params }) {
     if(!tour)
     {
         return <div>Tour not found</div>;
+    }
+
+    const handleEnquiry = () => {
+        redirect(`/enquire-now?package=${tour.heading}&duration=${tour.duration}`);
     }
 
     //Parsing and Displaying details about the tour
@@ -75,7 +80,7 @@ export default async function Page({ params }) {
                 <div className='flex w-fit border-box border-periwinkle rounded-sm border-2 items-center px-2 py-1 md:py-1.5'>
                     <h3 className='sm:max-md:mr-2 mr-4 text-red sm:max-md:text-sm text-base font-semibold'>Price on Request</h3>
                     <Link 
-                    className='px-4 py-1 border-2 border-periwinkle rounded-full mr-1 lg:mr-4 sm:max-md:text-xs text-sm bg-periwinkle hover:bg-white text-white hover:text-periwinkle duration-300' 
+                    className='px-4 py-1 border-2 border-periwinkle rounded-full mr-1 lg:mr-4 sm:max-md:text-xs text-sm font-bold bg-periwinkle hover:bg-white text-white hover:text-periwinkle duration-300' 
                     href={`/enquire-now?package=${tour.heading}&duration=${tour.duration}`}>Enquire Now</Link>
                 </div>
             </div>

@@ -250,7 +250,7 @@ export default function Contact() {
 
                         {/* Submit button */}
                         <div>
-                            <button type="submit" className='bg-periwinkle text-white my-4 px-6 py-2 rounded-full'>Get in Touch</button>
+                            <button type="submit" className='bg-periwinkle text-white font-bold my-4 px-6 py-2 rounded-full'>Get in Touch</button>
                         </div>
                     </div>
                     </form>

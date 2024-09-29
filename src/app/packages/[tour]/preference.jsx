@@ -146,7 +146,7 @@ export default function Preference() {
                     />
 
                     <div className='mx-4 mt-1 flex justify-center'>
-                        <button className='bg-periwinkle text-white text-sm rounded-full px-3 py-1' type="submit">Submit</button>
+                        <button className='bg-periwinkle text-white font-bold text-base rounded-full px-3 py-1' type="submit">Submit now</button>
                     </div>
                     
                 </form>
