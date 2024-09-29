@@ -11,17 +11,17 @@ export default function Footer() {
     return (
         <footer className='bg-periwinkle text-white h-fit pt-3 pb-1'>
             <div className='float-whatsapp-icon fixed right-6 bottom-4 md:bottom-12 flex justify-center border-box p-2 scale-125 md:scale-150 rounded-full cursor-pointer z-1000'>
-            <Link href={`https://wa.me/9151705010?text=I'm%20interested%20to%20book%20cab`} target='_blank'><WhatsAppIcon/></Link>
+            <Link href={`https://wa.me/9794604278?text=I'm%20interested%20to%20book%20cab`} target='_blank'><WhatsAppIcon/></Link>
             </div>
 
             <div className='float-calling-icon fixed right-24 bottom-4 md:bottom-12 flex justify-center p-2 scale-125 md:scale-150 rounded-full cursor-pointer z-1000'>
-            <Link href={`tel:+91 9151705010`} target='_blank'><CallIcon fontSize='small'/></Link>
+            <Link href={`tel:+91 9794604278`} target='_blank'><CallIcon fontSize='small'/></Link>
             </div>
 
-            <div className='grid grid-cols-3 sm:grid-cols-10 md:grid-cols-5 mx-8 lg:mx-12'>
+            <div className='grid grid-cols-1 tablet:grid-cols-3 sm:grid-cols-10 md:grid-cols-5 mx-8 lg:mx-12'>
 
                 {/* Contact Section */}
-                <div className='mb-4 sm:mb-0 col-span-2 sm:col-span-5 md:col-span-2'>
+                <div className='mb-6 tablet:mb-4 sm:mb-0 tablet:col-span-2 sm:col-span-5 md:col-span-2'>
                     <h1 className='font-medium mb-4 relative underline-half'>CONTACT</h1>
                     <div className='flex flex-col'>
                         <div className='flex mb-1'>
@@ -34,7 +34,7 @@ export default function Footer() {
 
                         <div className='flex mb-1'>
                             <PhoneAndroidIcon/>
-                            <div className='ml-4 text-sm'> +91 9151705010 </div>
+                            <div className='ml-4 text-sm'> +91 9794604278 </div>
                         </div>
 
                         <div className='flex'>
@@ -47,7 +47,7 @@ export default function Footer() {
 
 
                 {/* Quick Links Section */}
-                <div className='mb-4 sm:mb-0 sm:col-span-3 md:col-span-2'>
+                <div className='mb-6 tablet:mb-4 sm:mb-0 sm:col-span-3 md:col-span-2'>
                     <h1 className='font-medium mb-4 relative underline-half'>QUICK LINKS</h1>
                     <div className='flex flex-col'>
                     <Link className='hover:text-yellow-gold' href='/about'>About</Link>
@@ -63,11 +63,11 @@ export default function Footer() {
 
             </div>  
 
-            <div className='border-t mt-2 mx-10'></div>
+            <div className='border-t mt-2 mx-5 tablet:mx-10'></div>
 
             {/* Footer Bottom */}
             <div>
-                <h1 className='text-center text-sm'>&copy;  { new Date().getFullYear()} All rights reserved | Vanshika Tours & Travels</h1>
+                <h1 className='text-center text-xs sm:text-sm'>&copy;  { new Date().getFullYear()} All rights reserved | Vanshika Tours & Travels</h1>
             </div>
 
         </footer>

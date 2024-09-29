@@ -29,7 +29,7 @@ export default function Header() {
         <div className="flex items-center h-16 mb-2">
             <div className='flex-auto flex items-center h-14 ml-10 mt-2'>
                 <Image 
-                src='/images/logo.png' 
+                src='/images/logo/vans.png' 
                 alt='Logo'
                 height={100}
                 width={100}
@@ -48,6 +48,10 @@ export default function Header() {
                         <ul className={`absolute ${open===1 ? 'flex' : 'hidden'}  flex-col w-52 z-50 cursor-pointer list-none text-start text-white bg-periwinkle`}>
                             <Link href={parsePath('Kashi Tour')} onClick={handleClose}><li className='px-2 py-2 hover:bg-black text-sm'>Kashi Tour</li></Link>
                             <Link href={parsePath('Varanasi, Bodhgaya, Rajgir, Nalanda, and Patna')} onClick={handleClose}><li className='px-2 py-2 hover:bg-black text-sm'>Varanasi, Bodhgaya, Rajgir, Nalanda, and Patna</li></Link>
+                            <Link href={parsePath('Lucknow, Ayodhya, Prayagraj, Chitrakoot, and Varanasi')} onClick={handleClose}><li className='px-2 py-2 hover:bg-black text-sm'>Lucknow, Ayodhya, Prayagraj, Chitrakoot, and Varanasi</li></Link>
+                            <Link href={parsePath('Kashi')} onClick={handleClose}><li className='px-2 py-2 hover:bg-black text-sm'>Kashi</li></Link>
+                            <Link href={parsePath('Varanasi Religious Tour Plan')} onClick={handleClose}><li className='px-2 py-2 hover:bg-black text-sm'>Varanasi Religious Tour Plan</li></Link>
+                            <Link href={parsePath('Varanasi-Prayagraj-Ayodhya Tour Package')} onClick={handleClose}><li className='px-2 py-2 hover:bg-black text-sm'>Varanasi-Prayagraj-Ayodhya Tour Package</li></Link>
                         </ul>
                     </li>
 

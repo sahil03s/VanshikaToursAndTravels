@@ -14,7 +14,7 @@ export default function ThankYou() {
             {/* Further details informing user that he/she will be contacted. This too slides from left to right */}
             <div className='flex flex-col items-center'>
                 <p className='text-sm mb-2 typed-text2'>One of our executives will get in touch with you.</p>
-                <p className='text-sm mb-8 typed-text2'>In the meanwhile, you can call us at +91 9151705010</p>
+                <p className='text-sm mb-8 typed-text2'>In the meanwhile, you can call us at +91 9794604278</p>
             </div>
 
             {/* Button to redirect to home page */}
