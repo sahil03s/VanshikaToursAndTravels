@@ -7,10 +7,11 @@ export default function Home() {
   return (
     <div>
 
-      <div className='flex flex-col md:flex-row bg-custom-grey px-6 sm:px-8 md:px-8 lg:px-12 mb-4 md:mb-8'>
+      <div className='flex flex-col md:flex-row bg-custom-grey px-4 tablet:px-6 sm:px-8 md:px-8 lg:px-12 mb-4 md:mb-8'>
         <div className='w-full md:w-1/2 lg:w-2/5 pr-4 mr-4 mt-4 mb-4'>
           <h1 className='mb-4 font-bold text-3xl'>Vanshika Tour &amp; Travels</h1>
-          <p className='mb-6 md:mb-12'>At Vanshika Tour &amp; Travels, we are dedicated to making your travel experiences unforgettable. Based in Ashok Puram, Varanasi, we pride ourselves on being a premier tour and travel agency, serving both B2B and B2C clients with unmatched dedication and expertise. Whether you&apos;re planning a corporate retreat, a family vacation, or a personalized travel itinerary, our team is here to bring your travel dreams to life.</p>
+          <p className='mb-6 md:mb-12'>Discover the beauty of India with Vanshika Tours and Travels. We specialize in crafting unforgettable domestic travel experiences tailored to your preferences. From serene getaways to thrilling adventures, we have it all covered. Our comprehensive services include flight bookings, hotel accommodations, guided tours, and transportation arrangements. Let our experienced team ensure a hassle-free and enriching journey. <br/><br/>
+          Choose Vanshika Tours and Travels for your next Indian adventure.</p>
           <Link href='/contact-us' className='bg-periwinkle rounded-full text-white font-bold px-4 py-2'>Contact Us</Link>
         </div>
 
@@ -23,7 +24,7 @@ export default function Home() {
       </div>
       
       {/* Outer div containing lower section of home page */}
-      <div className='flex flex-col ml-2 pl-4 sm:pl-8 lg:pl-12 pr-6 sm:pr-10 lg:pr-14 border-box '>
+      <div className='flex flex-col ml-2 pl-2 tablet:pl-4 sm:pl-8 lg:pl-12 pr-6 sm:pr-10 lg:pr-14 border-box '>
           <div>
             <h2 className='text-lg font-semibold mb-2'>Why Choose Vanshika Tour &amp; Travels?</h2>
             <p>With over a decade of experience in the travel and tourism industry, Vanshika Tour &amp; Travels has established itself as a trusted name in the sector. Our commitment to excellence is reflected in every aspect of our operations. We have a dedicated team of more than 50 professionals, including seasoned travel consultants, tour operators, customer service specialists, and logistics experts, all working together to create seamless and memorable travel experiences.</p>
@@ -33,7 +34,7 @@ export default function Home() {
           <div>
             <h2 className='text-lg font-semibold mb-2'>Our Services</h2>
             <p>We offer a comprehensive range of travel services tailored to meet the unique needs of our clients:</p>
-            <ul className='list-inside mx-5 sm:mx-8 mt-2'>
+            <ul className='list-inside mx-1 tablet:mx-5 sm:mx-8 mt-2'>
               <li><span className='font-semibold'>Customized Travel Plans:</span> Tailor-made itineraries that cater to your specific preferences and requirements.</li>
               <li><span className='font-semibold'>Vacation Packages:</span> Curated packages for families, honeymooners, and corporate groups that offer exceptional value and unforgettable experiences.</li>
               <li><span className='font-semibold'>Corporate Travel Solutions:</span> Specialized services designed to meet the needs of businesses and organizations.</li>
