@@ -30,7 +30,7 @@ export default function Footer() {
                         <div className='flex mb-1'>
                             <LocationOnIcon/>
                             <div className='ml-4'>
-                                <div className='text-sm font-semibold'>Vanshika Tours & Travels</div>
+                                <div className='text-sm font-semibold'>Vanshika Tour & Travels</div>
                                 <div className='text-xs'>S-26/42 K.C. Plot No-67 <br/> Ashok Puram Colony, <br/> Meerapur Basahi,<br/> Cantt, Varanasi<br/> Uttar Pradesh - 221002</div>
                             </div>
                         </div>
@@ -75,7 +75,7 @@ export default function Footer() {
 
             {/* Footer Bottom */}
             <div>
-                <h1 className='text-center text-xs sm:text-sm'>&copy;  { new Date().getFullYear()} All rights reserved | Vanshika Tours & Travels</h1>
+                <h1 className='text-center text-xs sm:text-sm'>&copy;  { new Date().getFullYear()} All rights reserved | Vanshika Tour & Travels</h1>
             </div>
 
         </footer>

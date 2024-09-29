@@ -36,7 +36,7 @@ export default function Header() {
                 className='h-12 w-auto sm:scale-110 md:scale-150'
                 />
             </div>
-            <MenuIcon className='hidden mr-6 hover:bg-black rounded-sm hover:text-white' onClick={handleMenu}/>
+            {/* <MenuIcon className='hidden mr-6 hover:bg-black rounded-sm hover:text-white' onClick={handleMenu}/> */}
             <div className={`${navMenuOpen ? '' : 'hidden'} md:flex flex-col md:flex-row items-center h-full space-x-2 lg:space-x-6 p-8`}>
                 <Navlink href='/' title='Home'/>
                 <ul className='list-none flex flex-col md:flex-row space-x-6 text-center'>
