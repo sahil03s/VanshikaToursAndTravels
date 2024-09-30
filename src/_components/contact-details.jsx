@@ -4,7 +4,7 @@ import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 
 export default function ContactDetails() {
     return (
-        <div className="flex items-center bg-periwinkle text-white w-full h-12 text-xs tablet:text-sm lg:text-base">
+        <div className="flex items-center bg-periwinkle text-white w-full h-12 text-xs font-bold tablet:text-sm lg:text-base">
         <div className='flex items-center w-full h-full space-x-2 sm:space-x-4 ml-2 sm:ml-8 md:ml-16'>
             <div className='flex items-center space-x-1'>
                 <MailIcon/>

@@ -115,7 +115,7 @@ export default async function Page({ params }) {
             </div>
 
             {/* Right Side container containing Form Section*/}
-            <div className='md:col-span-2 lg:col-span-1'>
+            <div className='md:col-span-2 lg:col-span-1 md:row-span-2'>
                 <Preference/>
             </div>
 

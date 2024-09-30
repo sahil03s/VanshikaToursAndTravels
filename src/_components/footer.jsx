@@ -13,11 +13,11 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 export default function Footer() {
     return (
         <footer className='bg-periwinkle text-white h-fit pt-3 pb-1'>
-            <div className='float-whatsapp-icon fixed right-6 bottom-4 md:bottom-12 flex justify-center border-box p-2 scale-125 md:scale-150 rounded-full cursor-pointer z-1000'>
+            <div className='float-whatsapp-icon fixed right-5 sm:right-6 bottom-4 md:bottom-12 flex justify-center border-box p-2 scale-125 md:scale-150 rounded-full cursor-pointer z-1000'>
             <Link href={`https://wa.me/9794604278?text=I'm%20interested%20to%20book%20cab`} target='_blank'><WhatsAppIcon/></Link>
             </div>
 
-            <div className='float-calling-icon fixed right-24 bottom-4 md:bottom-12 flex justify-center p-2 scale-125 md:scale-150 rounded-full cursor-pointer z-1000'>
+            <div className='float-calling-icon fixed right-20 sm:right-24 bottom-4 md:bottom-12 flex justify-center p-2 scale-125 md:scale-150 rounded-full cursor-pointer z-1000'>
             <Link href={`tel:+91 9794604278`} target='_blank'><CallIcon fontSize='medium'/></Link>
             </div>
 

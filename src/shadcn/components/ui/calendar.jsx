@@ -26,20 +26,22 @@ function Calendar({
       disabled={{ before: today }}
       className={cn("p-3", className)}
       classNames={{
-        months: "flex flex-col pt-2 space-y-4 sm:space-x-4 sm:space-y-0",
+        months: "flex flex-col pt-2 space-y-4 sm:space-x-4 space-y-0",
         month: "space-y-4 flex flex-col items-center",
         month_caption: "flex justify-center pt-1 relative items-center max-w-fit mr-2",
         caption_label: "text-sm font-medium hidden",
         chevron:"h-4 w-auto",
         dropdowns:"text-sm",
+        months_dropdown:"mr-2",
+        years_dropdown:"",
         nav: "flex justify-center items-center ml-4",
         button_previous: cn(
           buttonVariants({ variant: "outline" }),
-          "absolute top-5 left-8 h-7 w-7 p-0 opacity-50 hover:opacity-100"
+          "absolute top-5 left-4 sm:left-8 h-7 w-7 p-0 opacity-50 hover:opacity-100"
         ),
         button_next: cn(
           buttonVariants({ variant: "outline" }),
-          "absolute top-5 right-6 h-7 w-7  p-0 opacity-50 hover:opacity-100",
+          "absolute top-5 right-6 h-7 w-7 p-0 opacity-50 hover:opacity-100",
         ),
         month_grid: "w-full space-y-1",
         weekdays: "flex",

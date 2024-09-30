@@ -4,7 +4,7 @@ export default function Page()
 {
     return (
         <div>
-            <div className='mx-8 px-16 border-box'>
+            <div className='mx-4 tablet:mx-6 sm:mx-8  sm:px-4 md:px-8 border-box'>
             <h1 className='font-bold text-3xl mb-4 mt-4'>About Us</h1>
             <p>
             Welcome to <span className='font-semibold'>Vanshika Tour & Travels</span>, your premier B2B partner in the travel and tourism industry. As one of the leading tour and travel agencies, we take immense pride in offering top-tier services that cater to the varied needs of our valued clients. Our commitment to delivering excellence, coupled with extensive industry experience, has positioned us as a trusted name in travel, ensuring unforgettable journeys for all. Founded with the vision of transforming the travel landscape, <span className='font-semibold'>Vanshika Tour & Travels</span> has grown steadily to become a reliable and well-known brand. Our journey is built on innovation, a client-centric focus, and an unwavering pursuit of perfection.

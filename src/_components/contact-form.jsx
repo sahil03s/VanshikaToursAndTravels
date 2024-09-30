@@ -118,10 +118,10 @@ export default function Contact() {
 
     return (
         // Outer container for the page 
-        <div className='container flex items-center justify-center min-w-full min-h-fit py-16'>
+        <div className='container flex items-center justify-center min-w-full min-h-fit py-8 sm:py-16'>
         
             {/* Inner container for the page with the white background colour  */}
-            <div className={`w-4/5 md:w-3/5 lg:w-1/2 h-fit bg-white py-4 px-8`}>
+            <div className={`w-4/5 tablet:w-3/4 md:w-2/3 lg:w-3/5 h-fit bg-white py-4 px-8`}>
 
 
                 {/* Heading of contact section, based on whether user is redirected from contact link or enquire now link */}
@@ -160,7 +160,7 @@ export default function Contact() {
                         <div className="flex flex-col sm:flex-row mb-1 w-full">
 
                             {/* First Name input field */}
-                            <div className='relative w-2/5 h-12 my-2 mr-24'>
+                            <div className='relative w-11/12 sm:w-3/5 md:w-2/5 h-12 my-2 sm:mr-6 md:mr-24'>
                             <span 
                             className={`absolute -top-2 left-3 z-50 text-xs bg-white px-0.5 ${checkLabelColor('fname')}`}>
                             First Name*
@@ -172,7 +172,7 @@ export default function Contact() {
                             </div>
 
                             {/* Last Name input field */}
-                            <div className='flex relative w-2/5 h-12 my-2'>
+                            <div className='flex relative w-11/12 sm:w-3/5 md:w-2/5 h-12 my-2'>
                             <span className={`absolute -top-2 left-3 z-50 text-xs bg-white px-0.5 ${checkLabelColor('lname')}`}>Last Name</span>
                             <input type="text" name='lname' value={details.lname} autoComplete="off"
                                 className={`h-full w-full p-3 outline-none border rounded ${checkBorderColor('lname')}`}
@@ -186,7 +186,7 @@ export default function Contact() {
                         <div className="flex flex-col sm:flex-row mb-1">
 
                             {/* Phone no. input field */}
-                            <div className='relative w-2/5 h-12 my-2 mr-24'>
+                            <div className='relative w-11/12 sm:w-3/5 md:w-2/5 h-12 my-2 sm:mr-6 md:mr-24'>
                             <span className={`absolute -top-2 left-3 z-50 text-xs bg-white px-0.5 ${checkLabelColor('phone')}`}>Phone Number*</span>
                             <input type="tel" name='phone' value={details.phone} autoComplete="off"
                                 className={`h-full w-full p-3 outline-none border rounded ${checkBorderColor('phone')}`}
@@ -195,7 +195,7 @@ export default function Contact() {
                             </div>
 
                             {/* Email input field */}
-                            <div className='relative w-2/5 h-12 my-2'>
+                            <div className='relative w-11/12 sm:w-3/5 md:w-2/5 h-12 my-2'>
                             <span className={`absolute -top-2 left-3 z-50 text-xs bg-white px-0.5 ${checkLabelColor('mail')}`}>Email</span>
                             <input type="text" name='mail' value={details.mail} autoComplete="off"
                                 className={`h-full w-full p-3 outline-none border rounded ${checkBorderColor('mail')}`}
@@ -209,13 +209,13 @@ export default function Contact() {
                         <div className="flex flex-col sm:flex-row mb-1">
 
                             {/* When do you want to travel input field */}
-                            <div className='relative w-2/5 h-12 my-2 mr-24'>
+                            <div className='relative w-11/12 sm:w-3/5 md:w-2/5 h-12 my-2 sm:mr-6 md:mr-24'>
                             <span className={`absolute -top-2 left-3 z-50 text-xs bg-white px-0.5 ${checkLabelColor('date')}`}>When do you want to travel?</span>
                             <DatePicker details={details} setDetails={setDetails} preferenceFlag={false} />
                             </div>
 
                             {/* No. of passengers input field */}
-                            <div className='relative w-2/5 h-12 my-2'>
+                            <div className='relative w-11/12 sm:w-3/5 md:w-2/5 h-12 my-2'>
                             <span className={`absolute -top-2 left-3 z-50 text-xs bg-white px-0.5 ${checkLabelColor('passengers')}`}>No. of Passengers</span>
                             <input type="text" name='passengers' value={details.passengers} autoComplete="off"
                                 className={`h-full w-full p-3 outline-none border rounded ${checkBorderColor('passengers')}`}
@@ -229,7 +229,7 @@ export default function Contact() {
                         <div className="flex flex-col sm:flex-row mb-1">
 
                             {/* Duration of Stay input field */}
-                            <div className='relative w-2/5 h-12 my-2 mr-24'>
+                            <div className='relative w-11/12 sm:w-3/5 md:w-2/5 h-12 my-2 sm:mr-6 md:mr-24'>
                             <span className={`absolute -top-2 left-3 z-50 text-xs bg-white px-0.5 ${checkLabelColor('duration')}`}>Duration of Stay (in days)</span>
                             <input type="text" name='duration' value={details.duration} autoComplete="off"
                                 className={`h-full w-full p-3 outline-none border rounded ${checkBorderColor('duration')}`}
@@ -238,7 +238,7 @@ export default function Contact() {
                             </div>
 
                             {/* Comments input field */}
-                            <div className='relative w-2/5 h-12 my-2'>
+                            <div className='relative w-11/12 sm:w-3/5 md:w-2/5 h-12 my-2'>
                             <span className={`absolute -top-2 left-3 z-50 text-xs bg-white px-0.5 ${checkLabelColor('comment')}`}>Comments</span>
                             <input type="text" name='comment' value={details.comment} autoComplete="off"
                                 className={`h-full w-full p-3 outline-none border rounded ${checkBorderColor('comment')}`}
