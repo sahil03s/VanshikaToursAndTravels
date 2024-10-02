@@ -6,7 +6,7 @@ module.exports = {
     content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/shadcn/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/_components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/_components/**/*.{js,ts,jsx,tsx,mdx,css}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {

@@ -688,5 +688,216 @@
                 ]
             }
         ]
+    },
+    "varanasi-prayagraj-chitrakoot-and-ayodhya-tour-package" : {
+        "heading" : "Varanasi, Prayagraj, Chitrakoot, and Ayodhya Tour Package",
+        "overview" : [
+            {
+                "type":"paragraph",
+                "content":[
+                    {"text" : "Varanasi, Prayagraj, Chitrakoot, and Ayodhya – these four sacred cities represent the rich religious and cultural heritage of India. Vanshika Tours and Travels brings you a unique and spiritual journey to these four cities."}
+                ]
+            }
+        ],
+        "duration" : "5N/6D",
+        "route" : ["Varanasi", "Prayagraj", "Chitrakoot", "Ayodhya"],
+        "image" : {
+            "src" : "/images/packages/kashi-tour/ghat.jpeg",
+            "alt" : "Ghat"
+        },
+        "itinerary" : [
+            {
+                "day" : "Day1",
+                "heading" : "Arrival in Varanasi",
+                "desc" : [
+                    {
+                        "text" : "",
+                        "description" : "Arrive at Varanasi Airport or Railway Station."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Check-in at your hotel."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Visit Kashi Vishwanath Temple."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Participate in the Ganga Aarti at Dashashwamedh Ghat in the evening."
+                    }
+                ]
+            },
+            {
+                "day" : "Day2",
+                "heading" : "Exploring Varanasi",
+                "desc" : [
+                    {
+                        "text" : "",
+                        "description" : "Boat ride on the Ganges River."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Visit Annapurna Temple, Kal Bhairav Temple, and Tulsi Manas Mandir."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Explore Sarnath, where Buddha delivered his first sermon."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Shopping at local markets."
+                    }
+                ]
+            },
+            {
+                "day" : "Day3",
+                "heading" : "Prayagraj",
+                "desc" : [
+                    {
+                        "text" : "",
+                        "description" : "Depart for Prayagraj."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Bath at Triveni Sangam."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Visit Allahabad Fort and Kumbh Mela ground."
+                    }
+                ]
+            },
+            {
+                "day" : "Day4",
+                "heading" : "Chitrakoot",
+                "desc" : [
+                    {
+                        "text" : "",
+                        "description" : "Depart for Chitrakoot."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Visit Ramghat, Kamadgiri, Bharat Milap, and Janaki Kund."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Boat ride on the Mandakini River."
+                    }
+                ]
+            },
+            {
+                "day" : "Day5",
+                "heading" : "Ayodhya",
+                "desc" : [
+                    {
+                        "text" : "",
+                        "description" : "Depart for Ayodhya."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Visit Ram Janmabhoomi Temple, Hanuman Garhi, and the banks of the Sarayu River."
+                    }
+                ]
+            },
+            {
+                "day" : "Day6",
+                "heading" : "Departure",
+                "desc" : [
+                    {
+                        "text" : "",
+                        "description" : "Depart for your destination."
+                    }
+                ]
+            }
+        ]
+    },
+    "prayagraj-kumbh-mela" : {
+        "heading" : "Prayagraj Kumbh Mela",
+        "overview" : [],
+        "duration" : "3N/4D",
+        "route" : ["Prayagraj"],
+        "image" : {
+            "src" : "/images/packages/kashi-tour/ghat.jpeg",
+            "alt" : "Ghat"
+        },
+        "itinerary" : [
+            {
+                "day" : "Day1",
+                "heading" : "Arrival in Prayagraj and Kumbh Mela Immersion",
+                "desc" : [
+                    {
+                        "text" : "",
+                        "description" : "Arrive at Prayagraj Airport or Railway Station."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Check-in at your hotel."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Visit the Kumbh Mela grounds and witness the bustling atmosphere."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Attend the evening Ganga Aarti at Triveni Sangam."
+                    }
+                ]
+            },
+            {
+                "day" : "Day2",
+                "heading" : "Sacred Bath and Cultural Exploration",
+                "desc" : [
+                    {
+                        "text" : "",
+                        "description" : "Take a holy dip in the Triveni Sangam, the confluence of the Ganges, Yamuna, and Saraswati rivers."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Explore the various religious sites within the Kumbh Mela grounds."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Witness the colorful processions and religious rituals."
+                    }
+                ]
+            },
+            {
+                "day" : "Day3",
+                "heading" : "Kumbh Mela Highlights",
+                "desc" : [
+                    {
+                        "text" : "",
+                        "description" : "Participate in the Shahi Snana, the Royal Bath, if it falls on this day."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Visit the Akhara Bagh, where the sadhus (ascetics) reside."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Explore the vibrant markets and fairs at the Kumbh Mela."
+                    }
+                ]
+            },
+            {
+                "day" : "Day4",
+                "heading" : "Cultural Experiences and Departure",
+                "desc" : [
+                    {
+                        "text" : "",
+                        "description" : "Attend a cultural program or performance showcasing the rich traditions of India."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Visit local temples and historical sites in Prayagraj."
+                    },
+                    {
+                        "text" : "",
+                        "description" : "Depart for your return journey."
+                    }
+                ]
+            }
+        ]
     }
 }
