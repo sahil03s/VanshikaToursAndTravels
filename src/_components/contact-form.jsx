@@ -10,7 +10,7 @@ import DatePicker from "./datepicker";
 // parses and retrieves the url of tour package based on its heading. Here, It helps to redirect back to the tour package page when back button is clicked 
 function parsePath(s)
 {
-    let res = '/packages/' + s.toLowerCase().replaceAll(' ', '-');
+    let res = '/packages/' + s.toLowerCase().replaceAll(' ', '-').replaceAll('/', '-');
     res = res.replace(/[^a-zA-Z0-9/&\-]/g, '');
     return res;
 }

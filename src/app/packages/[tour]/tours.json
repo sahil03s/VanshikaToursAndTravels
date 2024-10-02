@@ -1,5 +1,5 @@
 {
-    "kashi-tour" : {
+    "kashi-varanasi-tour" : {
         "heading" : "Kashi/Varanasi Tour",
         "overview" : [
             {
@@ -394,7 +394,7 @@
         ] 
     },
 
-    "kashi" : {
+    "kashi-varanasi" : {
         "heading" : "Kashi/Varanasi",
         "overview" : [],
         "duration" : "1N/2D",
@@ -570,7 +570,7 @@
         ]
     },
 
-    "varanasi-prayagraj-ayodhya-tour-package" : {
+    "varanasi-prayagraj-ayodhya-tour" : {
         "heading" : "Varanasi, Prayagraj, Ayodhya Tour",
         "overview" : [
             {
