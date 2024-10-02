@@ -8,7 +8,6 @@ module.exports = {
     "./src/_components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  safelist: ['open','close'],
   theme: {
 	screens : {
 		'tablet' : '440px',
