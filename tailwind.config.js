@@ -1,4 +1,3 @@
-const { Square } = require('@mui/icons-material');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -6,9 +5,10 @@ module.exports = {
     content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/shadcn/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/_components/**/*.{js,ts,jsx,tsx,mdx,css}",
+    "./src/_components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: ['open','close'],
   theme: {
 	screens : {
 		'tablet' : '440px',
