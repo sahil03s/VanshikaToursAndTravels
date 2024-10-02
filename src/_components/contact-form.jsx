@@ -127,7 +127,7 @@ export default function Contact() {
                 {/* Heading of contact section, based on whether user is redirected from contact link or enquire now link */}
                 <div>
                     <div className='flex relative items-center'>
-                    <h1 className='w-fit font-bold text-3xl mb-1'>{tour.heading ? 'Enquire This Trip' : 'Leave us your info'}</h1>
+                    <h3 className='w-fit font-bold text-3xl mb-1'>{tour.heading ? 'Enquire This Trip' : 'Leave us your info'}</h3>
 
                     {/* Back button functionality for contact page, only when contact page is accessed from tour package page's enquire now button */}
                     {tour.heading &&
@@ -143,7 +143,7 @@ export default function Contact() {
                 </div>
 
                     {tour.heading
-                    ? <div><span className='text-lg'>{tour.heading} </span><span className='text-xs text-red ml-1'>{tour.duration}</span></div>
+                    ? <div><h2 className='text-lg'>{tour.heading} </h2><span className='text-xs text-red ml-1'>{tour.duration}</span></div>
                     : <div><span>We will get back to you.</span></div>
                     }
 

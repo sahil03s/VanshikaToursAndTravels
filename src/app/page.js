@@ -1,7 +1,6 @@
 import '@/app/globals.css';
 import Carousel from "@/_components/carousel";
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -26,7 +25,7 @@ export default function Home() {
       {/* Outer div containing lower section of home page */}
       <div className='flex flex-col ml-2 pl-2 tablet:pl-4 sm:pl-8 lg:pl-12 pr-6 sm:pr-10 lg:pr-14 border-box '>
           <div>
-            <h2 className='text-lg font-semibold mb-2'>Why Choose Vanshika Tour &amp; Travels?</h2>
+            <h3 className='text-lg font-semibold mb-2'>Why Choose Vanshika Tour &amp; Travels?</h3>
             <p>With over a decade of experience in the travel and tourism industry, Vanshika Tour &amp; Travels has established itself as a trusted name in the sector. Our commitment to excellence is reflected in every aspect of our operations. We have a dedicated team of more than 50 professionals, including seasoned travel consultants, tour operators, customer service specialists, and logistics experts, all working together to create seamless and memorable travel experiences.</p>
           </div>
           <br/>
@@ -45,7 +44,7 @@ export default function Home() {
           <br/>
 
           <div>
-            <h2 className='text-lg font-semibold mb-2'>Our Fleet</h2>
+            <h3 className='text-lg font-semibold mb-2'>Our Fleet</h3>
             <p>We understand that comfort and safety are paramount when it comes to travel. Our extensive fleet of over 50 vehicles, including more than 10 Tempo Travellers, 10 Maharaja Tempo Travellers, and a variety of luxury cars, is maintained to the highest standards. Whether you&apos;re traveling with a small group or a large delegation, our vehicles ensure a smooth and comfortable journey.</p>
           </div>
           <br/>
@@ -57,7 +56,7 @@ export default function Home() {
           <br/>
 
           <div>
-            <h2 className='text-lg font-semibold mb-2'>Our commitment</h2>
+            <h3 className='text-lg font-semibold mb-2'>Our commitment</h3>
             <p>At Vanshika Tour &amp; Travels, our clients are at the heart of everything we do. We strive to exceed expectations by offering personalized services that cater to individual travel needs. Our team&apos;s passion for creating unforgettable travel memories is matched by our commitment to safety, reliability, and customer satisfaction.</p>
           </div>
           <br/>
@@ -72,7 +71,7 @@ export default function Home() {
           <br/>
 
           <div>
-            <h2 className='text-lg font-semibold'>Vanshika Tour &amp; Travels – Your Trusted Travel Partner.</h2><br/>
+            <h5 className='text-lg font-semibold'>Vanshika Tour &amp; Travels – Your Trusted Travel Partner.</h5><br/>
           </div>
           <br/>
 
@@ -81,7 +80,3 @@ export default function Home() {
     </div>
   );
 }
-
-
-{/* <p><Link href='/contact-us' className='underline text-blue-600 font-semibold'>Contact us</Link> today to learn more about how we can turn your travel dreams into reality.</p><br/> */}
-

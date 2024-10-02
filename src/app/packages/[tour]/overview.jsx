@@ -33,7 +33,7 @@ export default function Overview({tour}) {
         {/* if expanded, no clamping of text happens, but if in collapsed state, text will be clamped to specified no. of lines */}
         <div ref={contentRef} className={`${isExpanded ? 'expand-overview' : 'collapse-overview'}`}>
 
-            <h2 className='font-bold text-xl mb-2'>Overview</h2>
+            <h4 className='font-bold text-xl mb-2'>Overview</h4>
 
             {/* Parsing and showing content from tour.overview according to its type ('heading','paragraph', etc) */}
             <div>
@@ -42,7 +42,7 @@ export default function Overview({tour}) {
                         <div key={index}>
 
                             {/* For heading return content in h2 tag */}
-                            {ele.type === 'heading' && <h2 className='font-semibold text-sm mb-2'>{ele.content}</h2>}
+                            {ele.type === 'heading' && <h5 className='font-semibold text-sm mb-2'>{ele.content}</h5>}
                             
                             {/* For paragraph, parse it further to display data in span and set its font weight according to its bold property */}
                             {ele.type === 'paragraph' && <><p className='text-sm'>

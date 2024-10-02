@@ -8,7 +8,7 @@ export default function ThankYou() {
 
             {/* Thank you text sliding from left to right */}
             <div className="bg-red-400">
-                <h1 className="font-bold text-xl tablet:text-2xl sm:text-3xl md:text-4xl mb-4 typed-text w-fit bg-red-400">Thank You for connecting with us.</h1>
+                <h6 className="font-bold text-xl tablet:text-2xl sm:text-3xl md:text-4xl mb-4 typed-text w-fit bg-red-400">Thank You for connecting with us.</h6>
             </div>
 
             {/* Further details informing user that he/she will be contacted. This too slides from left to right */}

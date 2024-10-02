@@ -34,7 +34,7 @@ export default function Itinerary({tour}) {
     return (
         // outer div container for itinerary section
         <div>
-            <h2 className='font-bold text-2xl'>Tour Itinerary</h2>
+            <h3 className='font-bold text-2xl'>Tour Itinerary</h3>
 
             {/* inner container containing the unordered list */}
             <div className='mt-4 relative'>
@@ -64,7 +64,7 @@ export default function Itinerary({tour}) {
                                 {ele.desc.map((desc, idx) => {
                                     return (
                                         <li key={idx}>
-                                            <h5 className='inline font-semibold text-sm'>{desc.text} </h5> 
+                                            <h6 className='inline font-semibold text-sm'>{desc.text} </h6> 
                                             <span className='text-sm'>{desc.description}</span>
                                         </li>
                                     );

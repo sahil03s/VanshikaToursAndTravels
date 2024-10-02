@@ -25,7 +25,7 @@ export default function Footer() {
 
                 {/* Contact Section */}
                 <div className='mb-6 tablet:mb-4 sm:mb-0 tablet:col-span-2 sm:col-span-5 md:col-span-2'>
-                    <h1 className='font-medium mb-4 relative underline-half'>CONTACT</h1>
+                    <h2 className='font-medium mb-4 relative underline-half'>CONTACT</h2>
                     <div className='flex flex-col'>
                         <div className='flex mb-1'>
                             <LocationOnIcon/>
@@ -51,7 +51,7 @@ export default function Footer() {
 
                 {/* Quick Links Section */}
                 <div className='mb-6 tablet:mb-4 sm:mb-0 sm:col-span-3 md:col-span-2'>
-                    <h1 className='font-medium mb-4 relative underline-half'>QUICK LINKS</h1>
+                    <h2 className='font-medium mb-4 relative underline-half'>QUICK LINKS</h2>
                     <div className='flex flex-col'>
                     <Link className='hover:text-yellow-gold' href='/about'>About</Link>
                     <Link className='hover:text-yellow-gold' href='/contact-us'>Get in Touch</Link>
@@ -61,7 +61,7 @@ export default function Footer() {
 
                 {/* Follow Us Section */}
                 <div className='mb-4 sm:mb-0 sm:col-span-2 md:col-span-1'>
-                    <h1 className='font-medium mb-4 relative underline-half'>FOLLOW US:</h1>
+                    <h2 className='font-medium mb-4 relative underline-half'>FOLLOW US:</h2>
                     <div className='flex flex-row'>
                         <FacebookIcon className='mr-1'/>
                         <InstagramIcon className='mr-1'/>
@@ -75,7 +75,7 @@ export default function Footer() {
 
             {/* Footer Bottom */}
             <div>
-                <h1 className='text-center text-xs sm:text-sm'>&copy;  { new Date().getFullYear()} All rights reserved | Vanshika Tour & Travels</h1>
+                <h3 className='text-center text-xs sm:text-sm'>&copy;  { new Date().getFullYear()} All rights reserved | Vanshika Tour & Travels</h3>
             </div>
 
         </footer>

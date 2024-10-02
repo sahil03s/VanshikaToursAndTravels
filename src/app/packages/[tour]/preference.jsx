@@ -107,7 +107,7 @@ export default function Preference() {
     return (
         <div className='bg-custom-grey max-h-full h-fit w-full p-4'>
 
-            <h2 className='font-bold text-2xl'>Your Preference</h2>
+            <h3 className='font-bold text-2xl'>Your Preference</h3>
 
             <div className='form-container flex flex-col mt-4'>
                 <form onSubmit={handleForm}>

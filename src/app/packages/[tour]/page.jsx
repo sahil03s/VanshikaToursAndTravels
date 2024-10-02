@@ -3,6 +3,7 @@ import path from 'path';
 import Link from "next/link";
 import {redirect} from 'next/navigation'; 
 import Image from 'next/image';
+import Head from 'next/head';
 import Overview from './overview';
 import Policy from './policy';
 import Itinerary from './itinerary';
@@ -15,6 +16,17 @@ async function getTourData() {
     const data = await fs.promises.readFile(filePath, 'utf-8');
     return JSON.parse(data);
 }
+
+export async function generateMetadata({ params }) {
+    const tours = await getTourData();
+    const tour = tours[params.tour];
+  
+    return {
+      title: tour ? `${tour.heading} | Vanshika Tour & Travels` : "Tour Not Found | Vanshika Tour & Travels",
+      description: tour ? `${tour.heading} - ${tour.duration}. Explore India with customized tours and itineraries with Vanshika Tours and Travels.` : "Tour not found",
+    };
+}
+
 
 // Generate dynamic routes for each tour based on the JSON keys. It fetches data at build time. This data is used to pre-render the page once, and then page is served as a static HTML file to users, making its performance extremely fast
 export async function generateStaticParams() {
@@ -43,9 +55,19 @@ export default async function Page({ params }) {
         redirect(`/enquire-now?package=${tour.heading}&duration=${tour.duration}`);
     }
 
+    const canonicalUrl = `https://vanshika-tours-and-travels.vercel.app/packages/${params.tour}`;
+
     //Parsing and Displaying details about the tour
     return (
         <div className='px-4'>
+
+        {/* Head component for SEO, including canonical tag */}
+        <Head>
+            <link rel="canonical" href={canonicalUrl} />
+            <meta name="description" content={`${tour.heading} - Explore the best of ${tour.heading} with customized tours and itineraries with Vanshika Tour and Travels, Varanasi.`} />
+        </Head>
+
+
         <div className='grid sm:grid-cols-2 lg:grid-cols-5 bg-white py-2 box-border'>
 
             <div className='row-start-2 lg:col-span-2 sm:row-span-3 lg:row-span-4 bg-white mt-4 lg:mb-4 mr-2'>
@@ -59,7 +81,7 @@ export default async function Page({ params }) {
 
             <div className='lg:col-span-3 mt-4 sm:mx-2 max-h-fit'>
                 <div className='flex items-center mb-2 sm:mb-0'>
-                    <h1 className='font-bold text-3xl sm:text-2xl md:text-3xl align-content-middle'>{tour.heading}<span className='text-red text-sm ml-3 align-middle'>{tour.duration}</span></h1>    
+                    <h2 className='font-bold text-3xl sm:text-2xl md:text-3xl align-content-middle'>{tour.heading}<span className='text-red text-sm ml-3 align-middle'>{tour.duration}</span></h2>    
                 </div>
 
                 <div>
@@ -78,7 +100,7 @@ export default async function Page({ params }) {
                     
             <div className='lg:col-span-3 sm:mx-2 mt-2 lg:mt-1 max-h-fit'>
                 <div className='flex w-fit border-box border-periwinkle rounded-sm border-2 items-center px-2 py-1 md:py-1.5'>
-                    <h3 className='sm:max-md:mr-2 mr-4 text-red sm:max-md:text-sm text-base font-semibold'>Price on Request</h3>
+                    <h6 className='sm:max-md:mr-2 mr-4 text-red sm:max-md:text-sm text-base font-semibold'>Price on Request</h6>
                     <Link 
                     className='px-4 py-1 border-2 border-periwinkle rounded-full mr-1 lg:mr-4 sm:max-md:text-xs text-sm font-bold bg-periwinkle hover:bg-white text-white hover:text-periwinkle duration-300' 
                     href={`/enquire-now?package=${tour.heading}&duration=${tour.duration}`}>Enquire Now</Link>
@@ -98,7 +120,7 @@ export default async function Page({ params }) {
                 <Itinerary tour={tour}/>
                 { tour.tips && 
                     <div className='mb-4'>
-                        <h5 className='font-bold text-base'>Additional Tips:</h5>
+                        <h6 className='font-bold text-base'>Additional Tips:</h6>
                         <ul className='list-disc list-inside'>
                             {tour.tips.map((ele, index) => {
                                 return (

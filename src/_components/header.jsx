@@ -159,7 +159,7 @@ export default function Header() {
                         <li className='relative group cursor-pointer max-lg:border-b-2 border-black' onMouseEnter={isLargeScreen ? (event)=>handleOpen(event, 1) : null} onMouseLeave={isLargeScreen ? (event)=>handleClose(event) : null} onClick={(event) => handleOpen(event,1)}>
                             
                             <div className='max-lg:pl-8  max-lg:py-2'>
-                                <span>Varanasi Tour</span>
+                                <h2 className='inline-block'>Varanasi Tour</h2>
                                 <KeyboardArrowDownIcon className={`max-lg:absolute max-lg:right-3 ${open===1 ? 'open' : 'close'}`}/>   
                             </div>
 
@@ -180,7 +180,7 @@ export default function Header() {
                         <li className='relative group cursor-pointer max-lg:border-b-2 border-black' onMouseEnter={isLargeScreen ? (event)=>handleOpen(event,2) : null} onMouseLeave={isLargeScreen ? (event)=>handleClose(event) : null} onClick={(event) => handleOpen(event,2)}>
                             
                             <div className='max-lg:pl-8 max-lg:py-2'>
-                                <span>Domestic Tour</span>
+                            <h2 className='inline-block'>Domestic Tour</h2>
                                 <KeyboardArrowDownIcon className={`max-lg:absolute max-lg:right-3 ${open===2 ? 'open' : 'close'}`}/>
                             </div>
 
@@ -189,7 +189,7 @@ export default function Header() {
                         <li className='relative group cursor-pointer max-lg:border-b-2 border-black' onMouseEnter={isLargeScreen ? (event)=>handleOpen(event,3) : null} onMouseLeave={isLargeScreen ? (event)=>handleClose(event) : null} onClick={(event) => handleOpen(event,3)}>
                             
                             <div className='max-lg:pl-8 max-lg:py-2'>
-                                <span>Nepal Tour</span>
+                                <h2 className='inline-block'>Nepal Tour</h2>
                                 <KeyboardArrowDownIcon className={`max-lg:absolute max-lg:right-3 ${open===3 ? 'open' : 'close'}`}/>
                             </div>
 
@@ -198,7 +198,7 @@ export default function Header() {
                         <li className='relative group cursor-pointer max-lg:border-b-2 border-black' onMouseEnter={isLargeScreen ? (event)=>handleOpen(event,4) : null} onMouseLeave={isLargeScreen ? (event)=>handleClose(event) : null} onClick={(event) => handleOpen(event,4)}>
                             
                             <div className='max-lg:pl-8 max-lg:py-2'>
-                                <span>Kumbh</span>
+                                <h2 className='inline-block'>Kumbh</h2>
                                 <KeyboardArrowDownIcon className={`max-lg:absolute max-lg:right-3 ${open===4 ? 'open' : 'close'}`}/>
                             </div>
 
@@ -213,7 +213,7 @@ export default function Header() {
                         <li className='relative group cursor-pointer max-lg:border-b-2 border-black' onMouseEnter={isLargeScreen ? (event)=>handleOpen(event,5) : null} onMouseLeave={isLargeScreen ? (event)=>handleClose(event) : null} onClick={(event) => handleOpen(event,5)}>
                             
                             <div className='max-lg:pl-8 max-lg:py-2'>
-                                <span>Pind Daan</span>
+                                <h2 className='inline-block'>Pind Daan</h2>
                                 <KeyboardArrowDownIcon className={`max-lg:absolute max-lg:right-3 ${open===5 ? 'open' : 'close'}`}/>
                             </div>
                             

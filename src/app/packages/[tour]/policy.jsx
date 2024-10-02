@@ -47,7 +47,7 @@ export default function Policy() {
         <div>
 
             <div className='mb-2 w-3/5'>
-                <h2 className='font-bold text-2xl'>Policy</h2>
+                <h3 className='font-bold text-2xl'>Policy</h3>
             </div>
 
             <div>
@@ -56,7 +56,7 @@ export default function Policy() {
                 className="policy-subheading flex relative font-semibold text-sm mb-2 px-4 py-2"
                 onClick={() => toggleActive(1)}>
 
-                    <h3>Inclusions</h3>
+                    <h6>Inclusions</h6>
 
                     {/* Arrow is transitioned to rotate b/w 0 degree and -90 degree according to open and close   */}
                     <ExpandMoreIcon className={`absolute right-2 ${active===1 ? 'expand' : 'shrink'}`}/>
@@ -83,7 +83,7 @@ export default function Policy() {
                 className="policy-subheading flex relative font-semibold text-sm mb-2 px-4 py-2"
                 onClick={() => toggleActive(2)}>
 
-                    <h3>Exclusions</h3>
+                    <h6>Exclusions</h6>
 
                     {/* Arrow is transitioned to rotate b/w 0 degree and -90 degree according to open and close   */}
                     <ExpandMoreIcon className={`absolute right-2 ${active===2 ? 'expand' : 'shrink'}`}/>
@@ -114,7 +114,7 @@ export default function Policy() {
                 className="policy-subheading flex relative font-semibold text-sm mb-2 px-4 py-2"
                 onClick={() => toggleActive(3)}>
 
-                    <h3>Cancellation Policy</h3>
+                    <h4>Cancellation Policy</h4>
 
                     {/* Arrow is transitioned to rotate b/w 0 degree and -90 degree according to open and close   */}
                     <ExpandMoreIcon className={`absolute right-2 ${active===3 ? 'expand' : 'shrink'}`}/>
@@ -142,7 +142,7 @@ export default function Policy() {
                 className="policy-subheading flex relative font-semibold text-sm mb-2 px-4 py-2"
                 onClick={() => toggleActive(4)}>
 
-                    <h3>Terms & Conditions</h3>
+                    <h4>Terms & Conditions</h4>
 
                     {/* Arrow is transitioned to rotate b/w 0 degree and -90 degree according to open and close   */}
                     <ExpandMoreIcon className={`absolute right-2 ${active===4 ? 'expand' : 'shrink'}`}/>
