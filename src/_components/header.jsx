@@ -146,8 +146,8 @@ export default function Header() {
             </div>
 
                 
-            <CloseIcon className={`absolute left-4 lg:hidden mr-6 ${navMenuOpen ? 'navicon-visible' : 'navicon-hidden'} `} />
-            <MenuIcon className={`absolute left-4 lg:hidden mr-6 ${navMenuOpen ? 'navicon-hidden' : 'navicon-visible'} `} onClick={handleMenu}/>
+            <CloseIcon className={`absolute left-4 mr-6 ${navMenuOpen ? 'navicon-visible' : 'navicon-hidden'} lg:hidden`} />
+            <MenuIcon className={`absolute left-4 mr-6 ${navMenuOpen ? 'navicon-hidden' : 'navicon-visible'} lg:hidden`} onClick={handleMenu} />
             
 
             <div ref={menuRef} className={`${navMenuOpen ? 'max-lg:w-64 menu-appear' : 'menu-disappear'} box-border absolute top-28 left-0 h-fit lg:h-auto  lg:static lg:flex lg:p-8 z-50`}>
