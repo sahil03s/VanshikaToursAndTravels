@@ -59,7 +59,7 @@ export default function Policy() {
                     <h3>Inclusions</h3>
 
                     {/* Arrow is transitioned to rotate b/w 0 degree and -90 degree according to open and close   */}
-                    <ExpandMoreIcon className={`absolute right-2 ${active===1 ? 'open' : 'close'}`}/>
+                    <ExpandMoreIcon className={`absolute right-2 ${active===1 ? 'expand' : 'shrink'}`}/>
 
                 </div>
 
@@ -86,7 +86,7 @@ export default function Policy() {
                     <h3>Exclusions</h3>
 
                     {/* Arrow is transitioned to rotate b/w 0 degree and -90 degree according to open and close   */}
-                    <ExpandMoreIcon className={`absolute right-2 ${active===2 ? 'open' : 'close'}`}/>
+                    <ExpandMoreIcon className={`absolute right-2 ${active===2 ? 'expand' : 'shrink'}`}/>
 
                 </div>
 
@@ -117,7 +117,7 @@ export default function Policy() {
                     <h3>Cancellation Policy</h3>
 
                     {/* Arrow is transitioned to rotate b/w 0 degree and -90 degree according to open and close   */}
-                    <ExpandMoreIcon className={`absolute right-2 ${active===3 ? 'open' : 'close'}`}/>
+                    <ExpandMoreIcon className={`absolute right-2 ${active===3 ? 'expand' : 'shrink'}`}/>
 
                 </div>
 
@@ -145,7 +145,7 @@ export default function Policy() {
                     <h3>Terms & Conditions</h3>
 
                     {/* Arrow is transitioned to rotate b/w 0 degree and -90 degree according to open and close   */}
-                    <ExpandMoreIcon className={`absolute right-2 ${active===4 ? 'open' : 'close'}`}/>
+                    <ExpandMoreIcon className={`absolute right-2 ${active===4 ? 'expand' : 'shrink'}`}/>
                     
                 </div>
 

@@ -3,8 +3,8 @@ ul {
 }
 
 .active-tab {
-    background-color: #735DA5;
-    color: white;
+    /* background-color: #735DA5; */
+    color: #735DA5;
 }
 
 .underline-half {

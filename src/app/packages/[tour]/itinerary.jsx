@@ -54,11 +54,11 @@ export default function Itinerary({tour}) {
 
                             <div className='w-full cursor-pointer' onClick={() => handleActive(index)}>
                             <h3 className='inline font-semibold'>{ele.heading}</h3>
-                            <ExpandMoreIcon className={`absolute right-2 ${active.includes(index) ? 'open' : 'close'}`}/>
+                            <ExpandMoreIcon className={`absolute right-2 ${active.includes(index) ? 'expand' : 'shrink'}`}/>
                             </div>
                             </div>
 
-                            <div ref={(curr) => contentRef.current[index] =curr} className={`${active.includes(index) ? 'show-div' : 'hidden-div'}`}>
+                            <div ref={(curr) => contentRef.current[index] = curr} className={`${active.includes(index) ? 'show-div' : 'hidden-div'}`}>
                             <ul className='list-disc ml-16 mt-3'>
 
                                 {ele.desc.map((desc, idx) => {

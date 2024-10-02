@@ -162,7 +162,7 @@ export default function Contact() {
                             {/* First Name input field */}
                             <div className='relative w-11/12 sm:w-3/5 md:w-2/5 h-12 my-2 sm:mr-6 md:mr-24'>
                             <span 
-                            className={`absolute -top-2 left-3 z-50 text-xs bg-white px-0.5 ${checkLabelColor('fname')}`}>
+                            className={`absolute -top-2 left-3 z-40 text-xs bg-white px-0.5 ${checkLabelColor('fname')}`}>
                             First Name*
                             </span>
                             <input type="text" name='fname' value={details.fname} autoComplete="off"
@@ -173,7 +173,7 @@ export default function Contact() {
 
                             {/* Last Name input field */}
                             <div className='flex relative w-11/12 sm:w-3/5 md:w-2/5 h-12 my-2'>
-                            <span className={`absolute -top-2 left-3 z-50 text-xs bg-white px-0.5 ${checkLabelColor('lname')}`}>Last Name</span>
+                            <span className={`absolute -top-2 left-3 z-40 text-xs bg-white px-0.5 ${checkLabelColor('lname')}`}>Last Name</span>
                             <input type="text" name='lname' value={details.lname} autoComplete="off"
                                 className={`h-full w-full p-3 outline-none border rounded ${checkBorderColor('lname')}`}
                                 onChange={handleChange}
@@ -187,7 +187,7 @@ export default function Contact() {
 
                             {/* Phone no. input field */}
                             <div className='relative w-11/12 sm:w-3/5 md:w-2/5 h-12 my-2 sm:mr-6 md:mr-24'>
-                            <span className={`absolute -top-2 left-3 z-50 text-xs bg-white px-0.5 ${checkLabelColor('phone')}`}>Phone Number*</span>
+                            <span className={`absolute -top-2 left-3 z-40 text-xs bg-white px-0.5 ${checkLabelColor('phone')}`}>Phone Number*</span>
                             <input type="tel" name='phone' value={details.phone} autoComplete="off"
                                 className={`h-full w-full p-3 outline-none border rounded ${checkBorderColor('phone')}`}
                                 onChange={handleChange}
@@ -196,7 +196,7 @@ export default function Contact() {
 
                             {/* Email input field */}
                             <div className='relative w-11/12 sm:w-3/5 md:w-2/5 h-12 my-2'>
-                            <span className={`absolute -top-2 left-3 z-50 text-xs bg-white px-0.5 ${checkLabelColor('mail')}`}>Email</span>
+                            <span className={`absolute -top-2 left-3 z-40 text-xs bg-white px-0.5 ${checkLabelColor('mail')}`}>Email</span>
                             <input type="text" name='mail' value={details.mail} autoComplete="off"
                                 className={`h-full w-full p-3 outline-none border rounded ${checkBorderColor('mail')}`}
                                 onChange={handleChange}
@@ -210,13 +210,13 @@ export default function Contact() {
 
                             {/* When do you want to travel input field */}
                             <div className='relative w-11/12 sm:w-3/5 md:w-2/5 h-12 my-2 sm:mr-6 md:mr-24'>
-                            <span className={`absolute -top-2 left-3 z-50 text-xs bg-white px-0.5 ${checkLabelColor('date')}`}>When do you want to travel?</span>
+                            <span className={`absolute -top-2 left-3 z-40 text-xs bg-white px-0.5 ${checkLabelColor('date')}`}>When do you want to travel?</span>
                             <DatePicker details={details} setDetails={setDetails} preferenceFlag={false} />
                             </div>
 
                             {/* No. of passengers input field */}
                             <div className='relative w-11/12 sm:w-3/5 md:w-2/5 h-12 my-2'>
-                            <span className={`absolute -top-2 left-3 z-50 text-xs bg-white px-0.5 ${checkLabelColor('passengers')}`}>No. of Passengers</span>
+                            <span className={`absolute -top-2 left-3 z-40 text-xs bg-white px-0.5 ${checkLabelColor('passengers')}`}>No. of Passengers</span>
                             <input type="text" name='passengers' value={details.passengers} autoComplete="off"
                                 className={`h-full w-full p-3 outline-none border rounded ${checkBorderColor('passengers')}`}
                                 onChange={handleChange}
@@ -230,7 +230,7 @@ export default function Contact() {
 
                             {/* Duration of Stay input field */}
                             <div className='relative w-11/12 sm:w-3/5 md:w-2/5 h-12 my-2 sm:mr-6 md:mr-24'>
-                            <span className={`absolute -top-2 left-3 z-50 text-xs bg-white px-0.5 ${checkLabelColor('duration')}`}>Duration of Stay (in days)</span>
+                            <span className={`absolute -top-2 left-3 z-40 text-xs bg-white px-0.5 ${checkLabelColor('duration')}`}>Duration of Stay (in days)</span>
                             <input type="text" name='duration' value={details.duration} autoComplete="off"
                                 className={`h-full w-full p-3 outline-none border rounded ${checkBorderColor('duration')}`}
                                 onChange={handleChange}
@@ -239,7 +239,7 @@ export default function Contact() {
 
                             {/* Comments input field */}
                             <div className='relative w-11/12 sm:w-3/5 md:w-2/5 h-12 my-2'>
-                            <span className={`absolute -top-2 left-3 z-50 text-xs bg-white px-0.5 ${checkLabelColor('comment')}`}>Comments</span>
+                            <span className={`absolute -top-2 left-3 z-40 text-xs bg-white px-0.5 ${checkLabelColor('comment')}`}>Comments</span>
                             <input type="text" name='comment' value={details.comment} autoComplete="off"
                                 className={`h-full w-full p-3 outline-none border rounded ${checkBorderColor('comment')}`}
                                 onChange={handleChange}
