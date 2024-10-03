@@ -9,8 +9,8 @@ export default function Home() {
       <div className='flex flex-col md:flex-row bg-custom-grey px-4 tablet:px-6 sm:px-8 md:px-8 lg:px-12 mb-4 md:mb-8'>
         <div className='w-full md:w-1/2 lg:w-2/5 pr-4 mr-4 mt-4 mb-4'>
           <h1 className='mb-4 font-bold text-3xl'>Vanshika Tour &amp; Travels</h1>
-          <p className='mb-6 md:mb-12'>Discover the beauty of India with Vanshika Tours and Travels. We specialize in crafting unforgettable domestic travel experiences tailored to your preferences. From serene getaways to thrilling adventures, we have it all covered. Our comprehensive services include flight bookings, hotel accommodations, guided tours, and transportation arrangements. Let our experienced team ensure a hassle-free and enriching journey. <br/><br/>
-          Choose Vanshika Tours and Travels for your next Indian adventure.</p>
+          <p className='mb-6 md:mb-12'>Discover the beauty of India with Vanshika Tour and Travels. We specialize in crafting unforgettable domestic travel experiences tailored to your preferences. From serene getaways to thrilling adventures, we have it all covered. Our comprehensive services include flight bookings, hotel accommodations, guided tours, and transportation arrangements. Let our experienced team ensure a hassle-free and enriching journey. <br/><br/>
+          Choose Vanshika Tour and Travels for your next Indian adventure.</p>
           <Link href='/contact-us' className='bg-periwinkle rounded-full text-white font-bold px-4 py-2'>Contact Us</Link>
         </div>
 

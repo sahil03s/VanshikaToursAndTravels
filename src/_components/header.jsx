@@ -132,14 +132,14 @@ export default function Header() {
     return (
         <div className="flex items-center h-16 mb-2">
 
-            <div className='flex-auto flex justify-center lg:justify-normal items-center h-14 mt-2'>
+            <div className='flex-auto flex justify-center lg:justify-normal items-center h-14 mt-2 lg:ml-6'>
                 <Image 
-                src='/images/logo/vans.png' 
+                src='/images/logo/header-logo.png' 
                 alt='Logo'
                 height={100}
                 width={100}
                 priority={true}
-                className='h-12 w-auto sm:scale-110 md:scale-150'
+                className='h-24 w-auto sm:scale-110 md:scale-200'
                 />
             </div>
 
@@ -149,7 +149,7 @@ export default function Header() {
             
 
             <div ref={menuRef} className={`${navMenuOpen ? 'max-lg:w-64 menu-appear' : 'menu-disappear'} box-border absolute top-28 left-0 h-fit lg:h-auto  lg:static lg:flex lg:p-8 z-50`}>
-                <div className={`flex flex-col lg:flex-row lg:items-center lg:px-4 h-fit max-lg:w-64 bg-lilac lg:bg-white`}>
+                <div className={`flex flex-col lg:flex-row lg:items-center lg:px-4 h-fit max-lg:w-64 max-lg:text-white bg-periwinkle lg:bg-white`}>
                     <ul className='list-none flex flex-col lg:items-center lg:flex-row lg:text-center lg:space-x-6'>
                         
                         <li className='max-lg:py-2 max-lg:px-6 max-lg:border-b-2 border-black'>

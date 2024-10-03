@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /thank-you/
+Disallow: /api/
+Disallow: /src/app/
+
+Allow: /
+Allow: /packages/
+Allow: /contact-us/
+Allow: /about-us/
+Allow: /enquire-info/
