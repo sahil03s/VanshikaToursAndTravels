@@ -33,7 +33,7 @@ export default function Home() {
           <div>
             <h2 className='text-lg font-semibold mb-2'>Our Services</h2>
             <p>We offer a comprehensive range of travel services tailored to meet the unique needs of our clients:</p>
-            <ul className='list-inside mx-1 tablet:mx-5 sm:mx-8 mt-2'>
+            <ul className='list-inside list-disc mx-1 tablet:mx-5 sm:mx-8 mt-2'>
               <li><span className='font-semibold'>Customized Travel Plans:</span> Tailor-made itineraries that cater to your specific preferences and requirements.</li>
               <li><span className='font-semibold'>Vacation Packages:</span> Curated packages for families, honeymooners, and corporate groups that offer exceptional value and unforgettable experiences.</li>
               <li><span className='font-semibold'>Corporate Travel Solutions:</span> Specialized services designed to meet the needs of businesses and organizations.</li>

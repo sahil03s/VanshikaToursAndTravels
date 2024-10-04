@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import Link from "next/link";
-import {redirect} from 'next/navigation'; 
+import Link from "next/link"; 
 import Image from 'next/image';
 import Head from 'next/head';
 import Overview from './overview';
@@ -22,8 +21,8 @@ export async function generateMetadata({ params }) {
     const tour = tours[params.tour];
   
     return {
-      title: tour ? `${tour.heading} | Vanshika Tour & Travels` : "Tour Not Found | Vanshika Tour & Travels",
-      description: tour ? `${tour.heading} - ${tour.duration}. Explore India with customized tours and itineraries with Vanshika Tours and Travels.` : "Tour not found",
+      title: tour ? `${tour.heading} | Vanshika Tour and Travels` : "Tour Not Found | Vanshika Tour and Travels",
+      description: tour ? `Explore ${tour.heading} with Vanshika Tour and Travels and enjoy a customized travel experience to famous landmarks. Our tailor-made tour packages offer seamless travel with vehicle rentals and guided tours, ensuring a memorable journey to ${tour.heading} and nearby attractions. Start your unforgettable journey today and explore more with us!` : "Tour not found",
     };
 }
 
@@ -51,11 +50,7 @@ export default async function Page({ params }) {
         return <div>Tour not found</div>;
     }
 
-    const handleEnquiry = () => {
-        redirect(`/enquire-now?package=${tour.heading}&duration=${tour.duration}`);
-    }
-
-    const canonicalUrl = `https://vanshika-tours-and-travels.vercel.app/packages/${params.tour}`;
+    const canonicalUrl = `https://www.vanshikatour.in/packages/`;
 
     //Parsing and Displaying details about the tour
     return (
@@ -64,8 +59,7 @@ export default async function Page({ params }) {
         {/* Head component for SEO, including canonical tag */}
         <Head>
             <link rel="canonical" href={canonicalUrl} />
-            <meta name="description" content={`${tour.heading} - Explore the best of ${tour.heading} with customized tours and itineraries with Vanshika Tour and Travels, Varanasi.`} />
-        </Head>
+        </Head> 
 
 
         <div className='grid sm:grid-cols-2 lg:grid-cols-5 bg-white py-2 box-border'>

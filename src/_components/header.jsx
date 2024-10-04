@@ -132,31 +132,31 @@ export default function Header() {
     return (
         <div className="flex items-center h-16 mb-2">
 
-            <div className='flex-auto flex justify-center lg:justify-normal items-center h-14 mt-2 lg:ml-6'>
+            <div className='flex-auto flex justify-normal items-center h-14  sm:ml-2 lg:ml-6'>
                 <Image 
                 src='/images/logo/header-logo.png' 
                 alt='Logo'
                 height={100}
                 width={100}
                 priority={true}
-                className='h-24 w-auto sm:scale-110 md:scale-200'
+                className='h-20 w-auto '
                 />
             </div>
 
                 
-            <CloseIcon className={`absolute left-4 mr-6 ${navMenuOpen ? 'navicon-visible' : 'navicon-hidden'} lg:hidden`} />
-            <MenuIcon className={`absolute left-4 mr-6 ${navMenuOpen ? 'navicon-hidden' : 'navicon-visible'} lg:hidden`} onClick={handleMenu} />
+            <CloseIcon className={`absolute right-4 mr-6 ${navMenuOpen ? 'navicon-visible' : 'navicon-hidden'} lg:hidden`} />
+            <MenuIcon fontSize='large' className={`absolute right-4 mr-6   ${navMenuOpen ? 'navicon-hidden' : 'navicon-visible'} lg:hidden`} onClick={handleMenu} />
             
 
-            <div ref={menuRef} className={`${navMenuOpen ? 'max-lg:w-64 menu-appear' : 'menu-disappear'} box-border absolute top-28 left-0 h-fit lg:h-auto  lg:static lg:flex lg:p-8 z-50`}>
-                <div className={`flex flex-col lg:flex-row lg:items-center lg:px-4 h-fit max-lg:w-64 max-lg:text-white bg-periwinkle lg:bg-white`}>
+            <div ref={menuRef} className={`${navMenuOpen ? 'max-sm:w-full max-lg:w-64 menu-appear' : 'menu-disappear'} box-border absolute top-16 sm:top-28 right-0 h-fit lg:h-auto  lg:static lg:flex lg:p-8 z-50`}>
+                <div className={`flex flex-col lg:flex-row lg:items-center lg:px-4 h-fit max-sm:w-full max-lg:w-64 max-lg:text-white bg-periwinkle lg:bg-white`}>
                     <ul className='list-none flex flex-col lg:items-center lg:flex-row lg:text-center lg:space-x-6'>
                         
-                        <li className='max-lg:py-2 max-lg:px-6 max-lg:border-b-2 border-black'>
+                        <li className='max-lg:py-2 max-lg:px-6 max-lg:border-b border-gray-400'>
                             <Navlink href='/' title='Home' handleClick={handleClick}/>
                         </li>
 
-                        <li className='relative group cursor-pointer max-lg:border-b-2 border-black' onMouseEnter={isLargeScreen ? (event)=>handleOpen(event, 1) : null} onMouseLeave={isLargeScreen ? (event)=>handleClose(event) : null} onClick={(event) => handleOpen(event,1)}>
+                        <li className='relative group cursor-pointer max-lg:border-b border-gray-400' onMouseEnter={isLargeScreen ? (event)=>handleOpen(event, 1) : null} onMouseLeave={isLargeScreen ? (event)=>handleClose(event) : null} onClick={(event) => handleOpen(event,1)}>
                             
                             <div className='max-lg:pl-8  max-lg:py-2'>
                                 <h2 className='inline-block'>Varanasi Tour</h2>
@@ -164,20 +164,20 @@ export default function Header() {
                             </div>
 
                             <div className={`lg:absolute`}>
-                               <ul ref={(curr) => contentRef.current[1] = curr} className={`${open===1 ? 'dropdown-appear' : 'dropdown-disappear'}  flex-col w-64 lg:w-52 max-lg:pl-6 z-50 cursor-pointer list-none text-start text-white bg-periwinkle`}>
-                                <Link href={parsePath('Kashi/Varanasi Tour')} onClick={(event) => handleClick(event)}><li className='px-2 py-2 hover:bg-black text-sm'>Kashi Tour</li></Link>
-                                <Link href={parsePath('Varanasi, Bodhgaya, Rajgir, Nalanda, and Patna')} onClick={(event) => handleClick(event)}><li className='px-2 py-2 hover:bg-black text-sm'>Varanasi, Bodhgaya, Rajgir, Nalanda, and Patna</li></Link>
-                                <Link href={parsePath('Lucknow, Ayodhya, Prayagraj, Chitrakoot, and Varanasi')} onClick={(event) => handleClick(event)}><li className='px-2 py-2 hover:bg-black text-sm'>Lucknow, Ayodhya, Prayagraj, Chitrakoot, and Varanasi</li></Link>
-                                <Link href={parsePath('Kashi/Varanasi')} onClick={(event) => handleClick(event)}><li className='px-2 py-2 hover:bg-black text-sm'>Kashi</li></Link>
-                                <Link href={parsePath('Varanasi Religious Tour Plan')} onClick={(event) => handleClick(event)}><li className='px-2 py-2 hover:bg-black text-sm'>Varanasi Religious Tour Plan</li></Link>
-                                <Link href={parsePath('Varanasi, Prayagraj, Ayodhya Tour')} onClick={(event) => handleClick(event)}><li className='px-2 py-2 hover:bg-black text-sm'>Varanasi, Prayagraj, Ayodhya Tour</li></Link>
-                                <Link href={parsePath('Varanasi, Prayagraj, Chitrakoot, and Ayodhya Tour Package')} onClick={(event) => handleClick(event)}><li className='px-2 py-2 hover:bg-black text-sm'>Varanasi, Prayagraj, Chitrakoot, and Ayodhya Tour Package</li></Link>
+                               <ul ref={(curr) => contentRef.current[1] = curr} className={`${open===1 ? 'dropdown-appear' : 'dropdown-disappear'}  flex-col w-full sm:w-64 lg:w-52 max-lg:pl-6 z-50 cursor-pointer list-none text-start text-white bg-periwinkle`}>
+                                <Link href={parsePath('Kashi/Varanasi Tour')} onClick={(event) => handleClick(event)}><li className='px-2 py-2 hover:bg-black text-sm max-lg:border-b border-gray-400'>Kashi Tour</li></Link>
+                                <Link href={parsePath('Varanasi, Bodhgaya, Rajgir, Nalanda, and Patna')} onClick={(event) => handleClick(event)}><li className='px-2 py-2 hover:bg-black text-sm max-lg:border-b border-gray-400'>Varanasi, Bodhgaya, Rajgir, Nalanda, and Patna</li></Link>
+                                <Link href={parsePath('Lucknow, Ayodhya, Prayagraj, Chitrakoot, and Varanasi')} onClick={(event) => handleClick(event)}><li className='px-2 py-2 hover:bg-black text-sm max-lg:border-b border-gray-400'>Lucknow, Ayodhya, Prayagraj, Chitrakoot, and Varanasi</li></Link>
+                                <Link href={parsePath('Kashi/Varanasi')} onClick={(event) => handleClick(event)}><li className='px-2 py-2 hover:bg-black text-sm max-lg:border-b border-gray-400'>Kashi</li></Link>
+                                <Link href={parsePath('Varanasi Religious Tour Plan')} onClick={(event) => handleClick(event)}><li className='px-2 py-2 hover:bg-black text-sm max-lg:border-b border-gray-400'>Varanasi Religious Tour Plan</li></Link>
+                                <Link href={parsePath('Varanasi, Prayagraj, Ayodhya Tour')} onClick={(event) => handleClick(event)}><li className='px-2 py-2 hover:bg-black text-sm max-lg:border-b border-gray-400'>Varanasi, Prayagraj, Ayodhya Tour</li></Link>
+                                <Link href={parsePath('Varanasi, Prayagraj, Chitrakoot, and Ayodhya Tour Package')} onClick={(event) => handleClick(event)}><li className='px-2 py-2 hover:bg-black text-sm max-lg:border-b border-gray-400'>Varanasi, Prayagraj, Chitrakoot, and Ayodhya Tour Package</li></Link>
                                 </ul>
                             </div>
 
                         </li>
 
-                        <li className='relative group cursor-pointer max-lg:border-b-2 border-black' onMouseEnter={isLargeScreen ? (event)=>handleOpen(event,2) : null} onMouseLeave={isLargeScreen ? (event)=>handleClose(event) : null} onClick={(event) => handleOpen(event,2)}>
+                        <li className='relative group cursor-pointer max-lg:border-b border-gray-400' onMouseEnter={isLargeScreen ? (event)=>handleOpen(event,2) : null} onMouseLeave={isLargeScreen ? (event)=>handleClose(event) : null} onClick={(event) => handleOpen(event,2)}>
                             
                             <div className='max-lg:pl-8 max-lg:py-2'>
                             <h2 className='inline-block'>Domestic Tour</h2>
@@ -186,7 +186,7 @@ export default function Header() {
 
                         </li>
 
-                        <li className='relative group cursor-pointer max-lg:border-b-2 border-black' onMouseEnter={isLargeScreen ? (event)=>handleOpen(event,3) : null} onMouseLeave={isLargeScreen ? (event)=>handleClose(event) : null} onClick={(event) => handleOpen(event,3)}>
+                        <li className='relative group cursor-pointer max-lg:border-b border-gray-400' onMouseEnter={isLargeScreen ? (event)=>handleOpen(event,3) : null} onMouseLeave={isLargeScreen ? (event)=>handleClose(event) : null} onClick={(event) => handleOpen(event,3)}>
                             
                             <div className='max-lg:pl-8 max-lg:py-2'>
                                 <h2 className='inline-block'>Nepal Tour</h2>
@@ -195,7 +195,7 @@ export default function Header() {
 
                         </li>
 
-                        <li className='relative group cursor-pointer max-lg:border-b-2 border-black' onMouseEnter={isLargeScreen ? (event)=>handleOpen(event,4) : null} onMouseLeave={isLargeScreen ? (event)=>handleClose(event) : null} onClick={(event) => handleOpen(event,4)}>
+                        <li className='relative group cursor-pointer max-lg:border-b border-gray-400' onMouseEnter={isLargeScreen ? (event)=>handleOpen(event,4) : null} onMouseLeave={isLargeScreen ? (event)=>handleClose(event) : null} onClick={(event) => handleOpen(event,4)}>
                             
                             <div className='max-lg:pl-8 max-lg:py-2'>
                                 <h2 className='inline-block'>Kumbh</h2>
@@ -210,7 +210,7 @@ export default function Header() {
 
                         </li>
 
-                        <li className='relative group cursor-pointer max-lg:border-b-2 border-black' onMouseEnter={isLargeScreen ? (event)=>handleOpen(event,5) : null} onMouseLeave={isLargeScreen ? (event)=>handleClose(event) : null} onClick={(event) => handleOpen(event,5)}>
+                        <li className='relative group cursor-pointer max-lg:border-b border-gray-400' onMouseEnter={isLargeScreen ? (event)=>handleOpen(event,5) : null} onMouseLeave={isLargeScreen ? (event)=>handleClose(event) : null} onClick={(event) => handleOpen(event,5)}>
                             
                             <div className='max-lg:pl-8 max-lg:py-2'>
                                 <h2 className='inline-block'>Pind Daan</h2>
@@ -219,7 +219,7 @@ export default function Header() {
                             
                         </li>
 
-                        <li className='max-lg:py-2 max-lg:px-6 max-lg:border-b-2 border-black'>
+                        <li className='max-lg:py-2 max-lg:px-6'>
                             <Navlink href='/contact-us' title='Contact' handleClick={handleClick}/>
                         </li>
 

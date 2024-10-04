@@ -37,12 +37,16 @@ export default function Footer() {
 
                         <div className='flex mb-1'>
                             <PhoneAndroidIcon/>
-                            <div className='ml-4 text-sm'> +91 9794604278 </div>
+                            <Link href={`tel:+91 9794604278`} target='_blank'>
+                                <span className='ml-4 text-sm'>+91 9794604278</span>
+                            </Link>
                         </div>
 
                         <div className='flex'>
                             <MailIcon/>
-                            <div className='ml-4 text-sm'> vanshika.travelinfo@gmail.com </div>
+                            <Link href='mailto:vanshika.travelinfo@gmail.com' target='_blank'>
+                                <div className='ml-4 text-sm'> vanshika.travelinfo@gmail.com </div>
+                            </Link>
                         </div>
                             
                     </div>
@@ -53,8 +57,8 @@ export default function Footer() {
                 <div className='mb-6 tablet:mb-4 sm:mb-0 sm:col-span-3 md:col-span-2'>
                     <h2 className='font-medium mb-4 relative underline-half'>QUICK LINKS</h2>
                     <div className='flex flex-col'>
-                    <Link className='hover:text-yellow-gold' href='/about'>About</Link>
-                    <Link className='hover:text-yellow-gold' href='/contact-us'>Get in Touch</Link>
+                        <div><Link className='hover:text-yellow-gold' href='/about'>About</Link></div>
+                        <div><Link className='hover:text-yellow-gold' href='/contact-us'>Get in Touch</Link></div>
                     </div>
                 </div>
 
@@ -62,8 +66,8 @@ export default function Footer() {
                 {/* Follow Us Section */}
                 <div className='mb-4 sm:mb-0 sm:col-span-2 md:col-span-1'>
                     <h2 className='font-medium mb-4 relative underline-half'>FOLLOW US:</h2>
-                    <div className='flex flex-row'>
-                        <FacebookIcon className='mr-1'/>
+                    <div className='flex flex-row items-center'>
+                        <Link className='mr-1' href='https://www.facebook.com/profile.php?id=61566433152535' target='_blank'><FacebookIcon/></Link>
                         <InstagramIcon className='mr-1'/>
                         <YouTubeIcon className=''/>
                     </div>
@@ -75,7 +79,7 @@ export default function Footer() {
 
             {/* Footer Bottom */}
             <div>
-                <h3 className='text-center text-xs sm:text-sm'>&copy;  { new Date().getFullYear()} All rights reserved | Vanshika Tour & Travels</h3>
+                <h3 className='text-center text-xs sm:text-sm'>&copy;  2016-{ new Date().getFullYear()} All rights reserved | Vanshika Tour & Travels</h3>
             </div>
 
         </footer>

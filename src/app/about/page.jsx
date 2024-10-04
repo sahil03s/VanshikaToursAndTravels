@@ -1,5 +1,10 @@
 import Link from "next/link";
 
+export const metadata = {
+    title: "About Us | Vanshika Tour and Travels – Your Trusted Travel Partner Across India",
+    description: "Learn more about Vanshika Tour and Travels, a trusted name in Indian tourism. Based in Varanasi, we specialize in religious and cultural tours, offering packages to destinations like Varanasi, Nalanda, Lumbini, Gaya, Delhi, and more. With a focus on seamless travel and vehicle rentals, we ensure memorable journeys tailored to your needs. Discover who we are and why we are the right choice for your next adventure.",
+};
+
 export default function Page()
 {
     return (

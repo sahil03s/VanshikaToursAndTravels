@@ -17,15 +17,15 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Vanshika Tour & Travels | Varanasi",
-  description: "Best tour and travels agency in Varanasi for exploring different cities of India by using different tour packages",
+  title: "Vanshika Tour and Travels | Best Tour Packages and Travel Services in Varanasi, India",
+  description: "Explore India's spiritual heart Varanasi and beyond with Vanshika Tour and Travels. We offer customized tour packages and services to all famous religious and historical sites in Varanasi, as well as top destinations like Nalanda, Lumbini, Gaya, Delhi, and more. Rent vehicles for your convenience and experience the best of India with our reliable travel services.",
 };
 
 const jsonLdData ={
   "@context": "http://schema.org",
   "@type": "TravelAgency",
-  "name": "Vanshika Tour & Travels",
-  "image": "https://vanshika-tours-and-travels.vercel.app/_next/image?url=%2Fimages%2Flogo%2Fvans.png&w=256&q=75",
+  "name": "Vanshika Tour and Travels",
+  "image": "https://www.vanshikatour.in/_next/image?url=%2Fimages%2Flogo%2Fheader-logo.png&w=256&q=75",
   "telephone": "+91 9794604278",
   "email": "vanshika.travelinfo@gmail.com",
   "address": {
@@ -36,8 +36,8 @@ const jsonLdData ={
     "addressCountry": "IN",
     "postalCode": "221002"
   },
-  "url": "https://vanshika-tours-and-travels.vercel.app/",
-  "@id": "https://vanshika-tours-and-travels.vercel.app/#organization"  // Optional: Unique identifier for the business
+  "url": "https://www.vanshikatour.in/",
+  "@id": "https://www.vanshikatour.in/#organization"  // Optional: Unique identifier for the business
 }
 
 export default function RootLayout({ children }) {
