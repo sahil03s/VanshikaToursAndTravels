@@ -4,7 +4,7 @@ import axios from "axios";
 export const POST = async (req) => {
     try {
         const details = await req.json();
-        const res = await axios.post('https://graph.facebook.com/v20.0/456878240832822/messages', {
+        const res = await axios.post('https://graph.facebook.com/v20.0/383613381511288/messages', {
             'messaging_product': 'whatsapp',
             'to': '91'+details.phone,
             'type': 'template',
