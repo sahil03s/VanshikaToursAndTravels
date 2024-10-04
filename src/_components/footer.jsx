@@ -1,5 +1,6 @@
 import '@/app/globals.css';
 import './styles.css';
+import Image from 'next/image';
 import MailIcon from '@mui/icons-material/Mail';
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -65,11 +66,30 @@ export default function Footer() {
 
                 {/* Follow Us Section */}
                 <div className='mb-4 sm:mb-0 sm:col-span-2 md:col-span-1'>
-                    <h2 className='font-medium mb-4 relative underline-half'>FOLLOW US:</h2>
-                    <div className='flex flex-row items-center'>
-                        <Link className='mr-1' href='https://www.facebook.com/profile.php?id=61566433152535' target='_blank'><FacebookIcon/></Link>
-                        <InstagramIcon className='mr-1'/>
-                        <YouTubeIcon className=''/>
+                    <div className='flex sm:flex-col'>
+
+                    <div className='sm:mb-8 mr-12'>
+                        <h2 className='font-medium mb-4 relative underline-half'>FOLLOW US:</h2>
+                        <div className='flex flex-row items-center'>
+                            <Link className='mr-1' href='https://www.facebook.com/profile.php?id=61566433152535' target='_blank'><FacebookIcon/></Link>
+                            <InstagramIcon className='mr-1'/>
+                            <YouTubeIcon/>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 className='font-medium mb-4 relative underline-half'>SCAN TO VISIT</h2>
+                        <Image 
+                        src='/images/qr-code.png' 
+                        alt='QR Code for our website'
+                        height={50}
+                        width={50}
+                        priority={true}
+                        className=''
+                        />
+
+                    </div>
+
                     </div>
                 </div>
 
