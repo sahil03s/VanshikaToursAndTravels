@@ -1,9 +1,12 @@
 User-agent: *
 Disallow: /thank-you/
 Disallow: /api/
+Disallow: /enquire-now/
+Disallow: /contact-us/
 
 Allow: /
 Allow: /packages/
-Allow: /contact-us/
 Allow: /about/
-Allow: /enquire-now/
+
+# Sitemap location
+Sitemap: https://www.vanshikatour.in/sitemap.xml
