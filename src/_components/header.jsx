@@ -144,7 +144,7 @@ export default function Header() {
             </div>
 
                 
-            <CloseIcon className={`absolute right-4 mr-6 ${navMenuOpen ? 'navicon-visible' : 'navicon-hidden'} lg:hidden`} />
+            <CloseIcon fontSize='large' className={`absolute right-4 mr-6 ${navMenuOpen ? 'navicon-visible' : 'navicon-hidden'} lg:hidden`} />
             <MenuIcon fontSize='large' className={`absolute right-4 mr-6   ${navMenuOpen ? 'navicon-hidden' : 'navicon-visible'} lg:hidden`} onClick={handleMenu} />
             
 
