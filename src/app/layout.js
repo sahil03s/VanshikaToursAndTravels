@@ -17,7 +17,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Vanshika Tour and Travels | Best Tour Packages and Travel Services in Varanasi, India",
+  title: "Vanshika Tour and Travels | Best Tour and Travels | Varanasi",
   description: "Explore India's spiritual heart Varanasi and beyond with Vanshika Tour and Travels. We offer customized tour packages and services to all famous religious and historical sites in Varanasi, as well as top destinations like Nalanda, Lumbini, Gaya, Delhi, and more. Rent vehicles for your convenience and experience the best of India with our reliable travel services.",
 };
 
@@ -44,6 +44,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/images/logo/favicon.svg"/>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }} />
       </head>
       <body

@@ -1,10 +1,9 @@
 User-agent: *
 Disallow: /thank-you/
 Disallow: /api/
-Disallow: /enquire-now/
-Disallow: /contact-us/
 
-Allow: /
+Allow: /enquire-now/
+Allow: /contact-us/
 Allow: /packages/
 Allow: /about/
 

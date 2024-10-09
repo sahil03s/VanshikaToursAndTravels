@@ -1,6 +1,8 @@
 {
     "kashi-varanasi-tour" : {
+        "link" : "kashi-varanasi-tour",
         "heading" : "Kashi/Varanasi Tour",
+        "description" : "Kashi Tour",
         "overview" : [
             {
                 "type" : "heading",
@@ -107,11 +109,14 @@
                 ]
             }
 
-        ]
+        ],
+        "featured" : true 
     },
     
     "varanasi-bodhgaya-rajgir-nalanda-and-patna" : {
+        "link" : "varanasi-bodhgaya-rajgir-nalanda-and-patna",
         "heading" : "Varanasi, Bodhgaya, Rajgir, Nalanda, and Patna",
+        "description" : "Varanasi-Bodhgaya",
         "overview" : [
             {
                 "type":"paragraph",
@@ -238,11 +243,14 @@
                 ]
             }
 
-        ]
+        ],
+        "featured" : true 
     },
 
     "lucknow-ayodhya-prayagraj-chitrakoot-and-varanasi" : {
+        "link" : "lucknow-ayodhya-prayagraj-chitrakoot-and-varanasi",
         "heading" : "Lucknow, Ayodhya, Prayagraj, Chitrakoot and Varanasi",
+        "description" : "Lucknow-Varanasi",
         "overview" : [],
         "duration" : "6N/7D",
         "route" : ["Lucknow", "Ayodhya", "Prayagraj", "Chitrakoot", "Varanasi"],
@@ -391,11 +399,14 @@
                 "text" : "Spiritual experiences:",
                 "description" : "Attend religious ceremonies, meditation sessions, or yoga classes to deepen your spiritual experience."
             }
-        ] 
+        ],
+        "featured" : true  
     },
 
     "kashi-varanasi" : {
+        "link" : "kashi-varanasi",
         "heading" : "Kashi/Varanasi",
+        "description" : "Varanasi Tour",
         "overview" : [],
         "duration" : "1N/2D",
         "route" : ["Varanasi"],
@@ -466,10 +477,14 @@
                 "text" : "Food:",
                 "description" : "Don't miss the opportunity to try local delicacies like chaat, kachori, and lassi."
             }
-        ]
+        ],
+        "featured" : true 
     },
+
     "varanasi-religious-tour-plan" : {
+        "link" : "varanasi-religious-tour-plan",
         "heading" : "Varanasi Religious Tour Plan",
+        "description" : "Varanasi Religious Tour",
         "overview" : [ 
             {
                 "type":"paragraph",
@@ -567,11 +582,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "featured" : true 
     },
 
     "varanasi-prayagraj-ayodhya-tour" : {
+        "link" : "varanasi-prayagraj-ayodhya-tour",
         "heading" : "Varanasi, Prayagraj, Ayodhya Tour",
+        "description" : "Varanasi-Ayodhya",
         "overview" : [
             {
                 "type":"paragraph",
@@ -687,10 +705,14 @@
                     }
                 ]
             }
-        ]
+        ],
+        "featured" : true 
     },
+
     "varanasi-prayagraj-chitrakoot-and-ayodhya-tour-package" : {
+        "link" : "varanasi-prayagraj-chitrakoot-and-ayodhya-tour-package",
         "heading" : "Varanasi, Prayagraj, Chitrakoot, and Ayodhya Tour Package",
+        "description" : "Varanasi-Ayodhya",
         "overview" : [
             {
                 "type":"paragraph",
@@ -812,8 +834,11 @@
             }
         ]
     },
+
     "prayagraj-kumbh-mela" : {
+        "link" : "prayagraj-kumbh-mela",
         "heading" : "Prayagraj Kumbh Mela",
+        "description" : "Prayagraj Kumbh Mela",
         "overview" : [],
         "duration" : "3N/4D",
         "route" : ["Prayagraj"],

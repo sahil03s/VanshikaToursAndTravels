@@ -8,13 +8,13 @@ import './styles.css';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
-export default function Carousel() {
+export default function Carousel({path, arrow, content}) {
     const [images, setImages] = useState([]); // array containing objects with members src and alt
     const [currIndex, setCurrIndex] = useState(0); // indicates the index of curent Image to be shown
 
-    // fetches image objects list from images.json on initial render
+    // fetches image objects list from json file on initial render
     useEffect(() => {
-        axios.get('/images/carousel/images.json')
+        axios.get(path)
         .then((res) => setImages(res.data))
         .catch((err) => console.error('Error in fetching images', err));
     }, []);
@@ -37,23 +37,37 @@ export default function Carousel() {
     }, [nextSlide, currIndex]);
 
   return (
-      <div className="relative mt-4 w-full h-64 sm:h-72 md:h-80 lg:h-96 justify-center">
+      <div className="relative h-full w-full">
         {images.map((image, index) => (
             <div 
             key={index}
-            className='absolute top-0 left-0 w-full'>
-                {index === currIndex && (<Image 
-                                            src={image.src} 
-                                            alt={image.alt}
-                                            width={500}
-                                            height={500}
-                                            className={`rounded-2xl w-full h-64 sm:h-72 md:h-80 lg:h-96 transition-opacity duration-500 ease-in-out ${index === currIndex ? 'active-image' : ''}`}/>)}
+            className='absolute h-full w-full'>
+                <Image 
+                    src={image.src} 
+                    alt={image.alt}
+                    width={500}
+                    height={500}
+                    priority
+                    className={`rounded-2xl w-full h-full transition-opacity duration-500 ease-in-out ${index === currIndex ? '' : 'hidden'}`}/>
             </div>
         ))}
+
+        {
+        arrow && 
         <div className='flex items-center absolute top-0 left-0 w-full h-full'>
         <ArrowBackIosNewIcon className='absolute left-4 lg:left-10 text-white' onClick={prevSlide}/>
         <ArrowForwardIosIcon className='absolute right-4 lg:right-10 text-white' onClick={nextSlide}/>
         </div> 
+        }
+
+        {
+            content && 
+            <div className='absolute bottom-2 left-4 font-bold text-lg text-white'>
+                <h2>{content.heading}</h2>
+                <span>{content.duration}</span>
+            </div>
+        }
+
       </div>
   )
   

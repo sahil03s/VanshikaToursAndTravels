@@ -37,3 +37,11 @@ ul {
 .float-calling-icon {
     background-color: #2222d8;
 }
+
+.card-image {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3), -2px 2px 2px 1px rgba(0, 0, 0, 0.3), 0px 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card-description {
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.2), -1px 1px 4px 1px rgba(0, 0, 0, 0.2);
+}

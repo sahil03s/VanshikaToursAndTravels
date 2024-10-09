@@ -11,7 +11,7 @@ import EastIcon from '@mui/icons-material/East';
 
 // Fetch the JSON file data
 async function getTourData() {
-    const filePath = path.join(process.cwd(), 'src/app/packages/[tour]/tours.json');
+    const filePath = path.join(process.cwd(), 'public/tours.json');
     const data = await fs.promises.readFile(filePath, 'utf-8');
     return JSON.parse(data);
 }
