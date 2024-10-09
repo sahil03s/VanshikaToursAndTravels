@@ -22,12 +22,12 @@ export default function Home() {
           <Link href='/contact-us' className='bg-periwinkle rounded-full text-white font-bold px-4 py-2'>Contact Us</Link>
         </div>
 
-        {/* <div className='w-full md:w-1/2 lg:w-3/5 h-64 sm:h-72 md:h-80 lg:h-96 my-4'>
+        <div className='w-full md:w-1/2 lg:w-3/5 h-64 sm:h-72 md:h-80 lg:h-96 my-4'>
             <Carousel 
             path='/images/carousel/images.json'
             arrow={true}
             /> 
-        </div> */}
+        </div>
 
       </div>
       
@@ -52,10 +52,10 @@ export default function Home() {
           </div>
           <br/>
 
-          <div className='mt-4 mb-8'>
+          {/* <div className='mt-4 mb-8'>
             <h3 className='text-3xl font-semibold mb-6 text-red text-center'>Popular Tour Packages</h3>
             <CarouselSlider/>
-          </div>
+          </div> */}
 
           <div>
             <h3 className='text-lg font-semibold mb-2'>Our Fleet</h3>
