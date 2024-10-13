@@ -19,7 +19,8 @@ module.exports = {
 	},
   	extend: {
   		listStyleType: {
-  			square: 'square'
+  			square: 'square',
+			circle: 'circle'
   		},
   		colors: {
   			background: 'hsl(var(--background))',

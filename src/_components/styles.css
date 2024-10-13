@@ -45,3 +45,20 @@ ul {
 .card-description {
     box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.2), -1px 1px 4px 1px rgba(0, 0, 0, 0.2);
 }
+
+.services-card {
+    box-shadow: 1px 1px 4px 1px #735DA5, -1px 1px 4px 1px #735DA5;
+}
+
+.slider-container {
+    width: 100%;
+    position: relative;
+}
+
+.slider-wrapper {
+    scrollbar-width: none;
+}
+
+.slider-wrapper::-webkit-scrollbar {
+    display: none;
+}

@@ -132,19 +132,19 @@ export default function Header() {
     return (
         <div className="flex items-center h-16 mb-2">
 
-            <div className='flex-auto flex justify-normal items-center h-14  sm:ml-2 lg:ml-6'>
+            <div className='flex-auto flex justify-normal items-center h-14  sm:ml-2 lg:ml-3'>
                 <Image 
                 src='/images/logo/header-logo.png' 
-                alt='Logo'
-                height={100}
-                width={100}
+                alt='Vanshika Tour and Travels logo, representing a travel agency with a modern design, symbolizing adventure and exploration.'
+                height={1000}
+                width={1000}
                 priority={true}
-                className='h-20 w-auto '
+                className='h-auto w-48'
                 />
             </div>
 
                 
-            <CloseIcon fontSize='large' className={`absolute right-4 mr-6 ${navMenuOpen ? 'navicon-visible' : 'navicon-hidden'} lg:hidden`} />
+            <CloseIcon fontSize='large' className={`absolute right-4 mr-6 ${navMenuOpen ? 'navicon-visible' : 'navicon-hidden'} lg:hidden`}/>
             <MenuIcon fontSize='large' className={`absolute right-4 mr-6   ${navMenuOpen ? 'navicon-hidden' : 'navicon-visible'} lg:hidden`} onClick={handleMenu} />
             
 
@@ -166,7 +166,7 @@ export default function Header() {
                             <div className={`lg:absolute`}>
                                <ul ref={(curr) => contentRef.current[1] = curr} className={`${open===1 ? 'dropdown-appear' : 'dropdown-disappear'}  flex-col w-full sm:w-64 lg:w-52 max-lg:pl-10 z-50 cursor-pointer list-none text-start text-white bg-periwinkle`}>
                                 <Link href={parsePath('Kashi/Varanasi Tour')} onClick={(event) => handleClick(event)}><li className='px-2 py-2 hover:bg-black text-sm max-lg:border-b border-gray-400'>Kashi Tour</li></Link>
-                                <Link href={parsePath('Varanasi, Bodhgaya, Rajgir, Nalanda, and Patna')} onClick={(event) => handleClick(event)}><li className='px-2 py-2 hover:bg-black text-sm max-lg:border-b border-gray-400'>Varanasi, Bodhgaya, Rajgir, Nalanda, and Patna</li></Link>
+                                <Link href={parsePath('Varanasi, Bodhgaya, Rajgir and Nalanda')} onClick={(event) => handleClick(event)}><li className='px-2 py-2 hover:bg-black text-sm max-lg:border-b border-gray-400'>Varanasi, Bodhgaya, Rajgir and Nalanda</li></Link>
                                 <Link href={parsePath('Lucknow, Ayodhya, Prayagraj, Chitrakoot, and Varanasi')} onClick={(event) => handleClick(event)}><li className='px-2 py-2 hover:bg-black text-sm max-lg:border-b border-gray-400'>Lucknow, Ayodhya, Prayagraj, Chitrakoot, and Varanasi</li></Link>
                                 <Link href={parsePath('Kashi/Varanasi')} onClick={(event) => handleClick(event)}><li className='px-2 py-2 hover:bg-black text-sm max-lg:border-b border-gray-400'>Kashi</li></Link>
                                 <Link href={parsePath('Varanasi Religious Tour Plan')} onClick={(event) => handleClick(event)}><li className='px-2 py-2 hover:bg-black text-sm max-lg:border-b border-gray-400'>Varanasi Religious Tour Plan</li></Link>
@@ -215,6 +215,12 @@ export default function Header() {
                             <div className='max-lg:pl-8 max-lg:py-2'>
                                 <h2 className='inline-block'>Pind Daan</h2>
                                 <KeyboardArrowDownIcon className={`max-lg:absolute max-lg:right-3 ${open===5 ? 'open' : 'close'}`}/>
+                            </div>
+
+                            <div className={`lg:absolute`}>
+                               <ul ref={(curr) => contentRef.current[5] = curr} className={`${open===5 ? 'dropdown-appear' : 'dropdown-disappear'}  flex-col w-full sm:w-64 lg:w-52 max-lg:pl-10 z-50 cursor-pointer list-none text-start text-white bg-periwinkle`}>
+                                <Link href={parsePath('Kashi Pind Daan')} onClick={(event) => handleClick(event)}><li className='px-2 py-2 hover:bg-black text-sm max-lg:border-b border-gray-400'>Kashi Pind Daan</li></Link>
+                                </ul>
                             </div>
                             
                         </li>

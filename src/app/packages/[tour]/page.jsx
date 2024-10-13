@@ -1,13 +1,13 @@
 import fs from 'fs';
 import path from 'path';
-import Link from "next/link"; 
-import Image from 'next/image';
+import Link from "next/link";
 import Head from 'next/head';
 import Overview from './overview';
 import Policy from './policy';
 import Itinerary from './itinerary';
 import Preference from './preference';
 import EastIcon from '@mui/icons-material/East';
+import Carousel from '@/_components/carousel';
 
 // Fetch the JSON file data
 async function getTourData() {
@@ -50,11 +50,11 @@ export default async function Page({ params }) {
         return <div>Tour not found</div>;
     }
 
-    const canonicalUrl = `https://www.vanshikatour.in/packages/`;
+    const canonicalUrl = `https://www.vanshikatour.in/packages/${tour.link}`;
 
     //Parsing and Displaying details about the tour
     return (
-        <div className='px-4'>
+        <div className='px-12'>
 
         {/* Head component for SEO, including canonical tag */}
         <Head>
@@ -62,18 +62,14 @@ export default async function Page({ params }) {
         </Head> 
 
 
-        <div className='grid sm:grid-cols-2 lg:grid-cols-5 bg-white py-2 box-border'>
-
-            <div className='row-start-2 lg:col-span-2 sm:row-span-3 lg:row-span-4 bg-white mt-4 lg:mb-4 mr-2'>
-                <Image
-                src={tour.image.src}
-                alt={tour.image.alt}
-                width={1000}
-                height={1000}   
-                />
+        <div className='grid sm:grid-cols-2 lg:grid-cols-12 bg-white py-2 box-border'>
+            <div className='row-start-2 lg:col-span-5 sm:row-span-3 lg:row-span-4 bg-white mt-4 lg:mb-4 mr-2'>
+                <div className='w-auto h-64 tablet:h-72 sm:h-80 lg:h-96 '>
+                <Carousel imageList={tour.image} arrow={true}/>
+                </div>
             </div>
 
-            <div className='lg:col-span-3 mt-4 sm:mx-2 max-h-fit'>
+            <div className='lg:col-span-7 mt-4 sm:mx-2 max-h-fit'>
                 <div className='flex items-center mb-2 sm:mb-0'>
                     <h2 className='font-bold text-3xl sm:text-2xl md:text-3xl align-content-middle'>{tour.heading}<span className='text-red text-sm ml-3 align-middle'>{tour.duration}</span></h2>    
                 </div>
@@ -88,11 +84,11 @@ export default async function Page({ params }) {
                 </div>
             </div>
 
-            <div className='lg:col-span-3 sm:mx-2 sm:max-md:mt-2 mt-4 max-h-fit'>
+            <div className='lg:col-span-7 sm:mx-2 sm:max-md:mt-2 mt-4 max-h-fit'>
                 <p className='text-sm'><span className='text-sm font-bold'>Note:</span> We can customize the package according to your preferences and interests.</p>
             </div>
                     
-            <div className='lg:col-span-3 sm:mx-2 mt-2 lg:mt-1 max-h-fit'>
+            <div className='lg:col-span-7 sm:mx-2 mt-2 lg:mt-1 max-h-fit'>
                 <div className='flex w-fit border-box border-periwinkle rounded-sm border-2 items-center px-2 py-1 md:py-1.5'>
                     <h6 className='sm:max-md:mr-2 mr-4 text-red sm:max-md:text-sm text-base font-semibold'>Price on Request</h6>
                     <Link 
@@ -101,7 +97,7 @@ export default async function Page({ params }) {
                 </div>
             </div>
 
-            <div className='sm:col-span-2 lg:col-span-3 lg:mx-2'>
+            <div className='sm:col-span-2 lg:col-span-7 lg:mx-2'>
                 {tour.overview.length!==0 && <Overview tour={tour}/>}
             </div>
         </div>
@@ -127,7 +123,6 @@ export default async function Page({ params }) {
                         </ul>
                     </div>
                 }
-                <p className='text-sm md:text-base'><span className='text-base md:text-lg font-bold'>Note:</span> We can customize the package according to your preferences and interests.</p>
             </div>
 
             {/* Right Side container containing Form Section*/}

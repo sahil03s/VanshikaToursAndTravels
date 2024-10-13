@@ -66,6 +66,19 @@ export default function Itinerary({tour}) {
                                         <li key={idx}>
                                             <h6 className='inline font-semibold text-sm'>{desc.text} </h6> 
                                             <span className='text-sm'>{desc.description}</span>
+                                            {desc.nestedList && 
+                                                <ul className='list-circle ml-8'>
+                                                    {desc.nestedList.map((nestedItem) => {
+                                                        return (
+                                                            <li>
+                                                                <h6 className='inline font-semibold text-sm'>{nestedItem.text}</h6>
+                                                                <span className='text-sm'>{nestedItem.description}</span>
+                                                            </li>
+                                                        )
+                                                    })}
+
+                                                </ul>
+                                            }
                                         </li>
                                     );
                                 })}

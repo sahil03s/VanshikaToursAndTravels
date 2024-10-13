@@ -15,16 +15,18 @@ export default function Home() {
       </Head>
 
       <div className='flex flex-col md:flex-row bg-custom-grey px-4 tablet:px-6 sm:px-8 md:px-8 lg:px-12 mb-4 md:mb-8'>
-        <div className='w-full md:w-1/2 lg:w-2/5 pr-4 mr-4 mt-4 mb-4'>
+        <div className='w-full md:w-1/2 lg:w-2/5 xl:w-5/12 2xl:w-1/2 pr-4 mr-4 mt-4 mb-4'>
           <h1 className='mb-4 font-bold text-3xl'>Vanshika Tour &amp; Travels</h1>
-          <p className='mb-6 md:mb-12'>Discover the beauty of India with Vanshika Tour and Travels. We specialize in crafting unforgettable domestic travel experiences tailored to your preferences. From serene getaways to thrilling adventures, we have it all covered. Our comprehensive services include flight bookings, hotel accommodations, guided tours, and transportation arrangements. Let our experienced team ensure a hassle-free and enriching journey. <br/><br/>
-          Choose Vanshika Tour and Travels for your next Indian adventure.</p>
+          <p className='mb-6 md:mb-8'>Vanshika Tour & Travels is committed to attracting unforgettable experiences. We are a leading Tour and Travels Agency in Varanasi, and we really find ourselves enjoying this more than anything else. No matter whether you are planning a business getaway, family vacation or an individual travel itinerary, our team will make your travel dreams come true.</p>
+          <h5 className='text-lg italic'>Vanshika Tour &amp; Travels – Your Trusted Travel Partner.</h5><br/>
+          
+        
           <Link href='/contact-us' className='bg-periwinkle rounded-full text-white font-bold px-4 py-2'>Contact Us</Link>
         </div>
 
-        <div className='w-full md:w-1/2 lg:w-3/5 h-64 sm:h-72 md:h-80 lg:h-96 my-4'>
+        <div className='w-full md:w-1/2 lg:w-3/5 xl:w-7/12 2xl:w-1/2 h-60 tablet:h-72 sm:h-80 md:h-80 lg:h-96 my-4 rounded-2xl overflow-hidden'>
             <Carousel 
-            path='/images/carousel/images.json'
+            path='/carousel-homepage.json'
             arrow={true}
             /> 
         </div>
@@ -35,27 +37,71 @@ export default function Home() {
       <div className='flex flex-col ml-2 pl-2 tablet:pl-4 sm:pl-8 lg:pl-12 pr-6 sm:pr-10 lg:pr-14 border-box '>
           <div>
             <h3 className='text-lg font-semibold mb-2'>Why Choose Vanshika Tour &amp; Travels?</h3>
-            <p>With over a decade of experience in the travel and tourism industry, Vanshika Tour &amp; Travels has established itself as a trusted name in the sector. Our commitment to excellence is reflected in every aspect of our operations. We have a dedicated team of more than 50 professionals, including seasoned travel consultants, tour operators, customer service specialists, and logistics experts, all working together to create seamless and memorable travel experiences.</p>
+            <p>Vanshika Tour & Travels has made a mark in this field and over its half of decade long service, it has become renowned as one of the outstanding entities that serves incredible experience with tour packages. Every aspect of our every operation speaks to the excellence we are committed to. Our full-time team is over 50 strong and entirely focused on a singular mission: to empower our clients with perfectly curated, seamless travel.</p>
           </div>
           <br/>
 
           <div>
             <h2 className='text-lg font-semibold mb-2'>Our Services</h2>
             <p>We offer a comprehensive range of travel services tailored to meet the unique needs of our clients:</p>
-            <ul className='list-inside list-disc mx-1 tablet:mx-5 sm:mx-8 mt-2'>
-              <li><span className='font-semibold'>Customized Travel Plans:</span> Tailor-made itineraries that cater to your specific preferences and requirements.</li>
-              <li><span className='font-semibold'>Vacation Packages:</span> Curated packages for families, honeymooners, and corporate groups that offer exceptional value and unforgettable experiences.</li>
-              <li><span className='font-semibold'>Corporate Travel Solutions:</span> Specialized services designed to meet the needs of businesses and organizations.</li>
-              <li><span className='font-semibold'>Luxury Travel Options:</span> High-end travel experiences that combine comfort, elegance, and unique destinations.</li>
-              <li><span className='font-semibold'>Group Travel Experiences:</span> Thoughtfully planned group tours that ensure a fun and stress-free journey for everyone.</li>
-            </ul>
+            
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-4 mt-4 mx-4'>
+
+              <div className='bg-custom-grey services-card p-4'>
+                <span className='font-bold text-red'>Customized Tour Packages:</span> 
+                <p>Tailored itineraries to meet individual preferences and needs.</p>
+              </div>
+
+
+              <div className='bg-custom-grey services-card p-4'>
+                <span className='font-semibold text-red'>Religious Activities/Tours:</span> 
+                <p>Spiritual activities and tour :
+                </p>
+                <ul className='list-inside list-disc'>
+                  <li className='list-inside'>Temple darshan</li>
+                  <li>Pind daan ceremonies in Varanasi, Prayagraj and Bodhgaya</li>
+                  <li>Rudraabhishek at Kashi Vishwanath</li>
+                </ul>
+              </div>
+
+              <div className='bg-custom-grey services-card p-4'>
+                <span className='font-semibold text-red'>Sightseeing Tours:</span> 
+                <p>Exploration of significant religious and cultural sites (Vishwanath Temple, BHU, Sarnath,Ayodhya, Nalanda, Vrindavan, Taj Mahal, etc.).</p>
+              </div>
+
+              <div className='bg-custom-grey services-card p-4'>
+                <span className='font-semibold text-red'>Transport Services:</span> 
+                <p>Convenient transportation options including:</p>
+                <ul className='list-inside list-disc'>
+                  <li>Pick and drop services</li>
+                  <li>Transportation for specific events</li>
+                  <li>Corporate Events</li>
+                </ul>
+              </div>
+
+              <div className='bg-custom-grey services-card p-4'>
+              <span className='font-semibold text-red'>Hotel Bookings:</span> 
+              <p>Assistance with booking accommodations to suit all budgets and preferences.</p>
+              </div>
+
+              <div className='bg-custom-grey services-card p-4'>
+              <span className='font-semibold text-red'>Tour Guides:</span> 
+              <p>Knowledgeable guides available to enhance your travel experience with insights and local expertise.</p>
+              </div>
+
+              <div className='bg-custom-grey services-card p-4'>
+              <span className='font-semibold text-red'>Areas of Service:</span> 
+              <p>We are covering Uttar Pradesh, Bihar, Delhi, Madhya Pradesh, and Nepal.</p>
+              </div>
+
+            </div>
           </div>
           <br/>
 
-          {/* <div className='mt-4 mb-8'>
-            <h3 className='text-3xl font-semibold mb-6 text-red text-center'>Popular Tour Packages</h3>
+          <div className='mt-4 mb-8 w-full'>
+            <h3 className='text-3xl font-semibold mb-6 text-center'>Popular Tour Packages</h3>
             <CarouselSlider/>
-          </div> */}
+          </div>
 
           <div>
             <h3 className='text-lg font-semibold mb-2'>Our Fleet</h3>
@@ -82,12 +128,7 @@ export default function Home() {
             <span> today and let Vanshika Tour &amp; Travels turn your travel dreams into reality.</span>
              </p>
           </div>
-          <br/>
-
-          <div>
-            <h5 className='text-lg font-semibold'>Vanshika Tour &amp; Travels – Your Trusted Travel Partner.</h5><br/>
-          </div>
-          <br/>
+          <br/><br/>
 
         </div>
 
