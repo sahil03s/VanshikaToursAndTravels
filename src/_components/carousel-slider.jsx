@@ -22,6 +22,14 @@ export default function CarouselSlider() {
         });
     }, [])
 
+    const scrollNext = () => {
+        setCurrIndex((prev) => {
+            if(prev === tour.length-4)
+                return 4;
+            else
+                return prev+1;
+        })
+    };
 
     useEffect(() => {    
         if(!isManualScrolling)
@@ -41,16 +49,8 @@ export default function CarouselSlider() {
         return () => clearInterval(interval);
         
 
-    }, [tour, currIndex, isManualScrolling]);
+    }, [tour, currIndex, isManualScrolling, scrollNext]);
     
-    const scrollNext = () => {
-        setCurrIndex((prev) => {
-            if(prev === tour.length-4)
-                return 4;
-            else
-                return prev+1;
-        })
-    };
 
 
     const handleTouchStart = () => {

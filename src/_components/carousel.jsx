@@ -23,7 +23,7 @@ export default function Carousel({path, arrow, content, imageList}) {
         else
             setImages(imageList);
         
-    }, []);
+    }, [imageList, path]);
 
 
     // Memoize nextSlide function to avoid recreating it on every render
