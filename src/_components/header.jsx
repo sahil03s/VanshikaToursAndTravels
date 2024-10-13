@@ -132,14 +132,14 @@ export default function Header() {
     return (
         <div className="flex items-center h-16 mb-2">
 
-            <div className='flex-auto flex justify-normal items-center h-14  sm:ml-2 lg:ml-3'>
+            <div className='flex-auto flex justify-normal items-center h-14 ml-2 tablet:ml-3 sm:ml-4 lg:ml-8'>
                 <Image 
                 src='/images/logo/header-logo.png' 
                 alt='Vanshika Tour and Travels logo, representing a travel agency with a modern design, symbolizing adventure and exploration.'
                 height={1000}
                 width={1000}
                 priority={true}
-                className='h-auto w-48'
+                className='h-auto w-32'
                 />
             </div>
 

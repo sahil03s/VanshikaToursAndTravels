@@ -54,7 +54,7 @@ export default async function Page({ params }) {
 
     //Parsing and Displaying details about the tour
     return (
-        <div className='px-12'>
+        <div className='mx-4 tablet:mx-6 sm:mx-8 lg:mx-12'>
 
         {/* Head component for SEO, including canonical tag */}
         <Head>
