@@ -220,6 +220,8 @@ export default function Header() {
                             <div className={`lg:absolute`}>
                                <ul ref={(curr) => contentRef.current[5] = curr} className={`${open===5 ? 'dropdown-appear' : 'dropdown-disappear'}  flex-col w-full sm:w-64 lg:w-52 max-lg:pl-10 z-50 cursor-pointer list-none text-start text-white bg-periwinkle`}>
                                 <Link href={parsePath('Kashi Pind Daan')} onClick={(event) => handleClick(event)}><li className='px-2 py-2 hover:bg-black text-sm max-lg:border-b border-gray-400'>Kashi Pind Daan</li></Link>
+                                <Link href={parsePath('Prayagraj Pind Daan')} onClick={(event) => handleClick(event)}><li className='px-2 py-2 hover:bg-black text-sm max-lg:border-b border-gray-400'>Prayagraj Pind Daan</li></Link>
+                                <Link href={parsePath('Pind Daan at Varanasi and Prayagraj')} onClick={(event) => handleClick(event)}><li className='px-2 py-2 hover:bg-black text-sm max-lg:border-b border-gray-400'>Pind Daan at Varanasi and Prayagraj</li></Link>
                                 </ul>
                             </div>
                             

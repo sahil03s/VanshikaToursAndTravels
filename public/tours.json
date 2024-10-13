@@ -975,7 +975,9 @@
         "duration" : "3N/4D",
         "route" : ["Prayagraj"],
         "image" : [
+            { "src" : "/images/places/prayagraj/kumbh_mela_prayagraj_4.png", "alt" : ""},
             { "src" : "/images/places/prayagraj/triveni_sangam_3.jpg", "alt" : ""},
+            { "src" : "/images/places/prayagraj/kumbh_mela_prayagraj_3.png", "alt" : ""},
             { "src" : "/images/places/prayagraj/triveni_sangam_1.jpg", "alt" : ""},
             { "src" : "/images/places/prayagraj/kumbh_tents.jpg", "alt" : ""},
             { "src" : "/images/places/prayagraj/akbar_fort_3.jpg", "alt" : ""},
@@ -1067,13 +1069,13 @@
         "featured" : {
             "visible" : true,
             "description" : "Prayagraj Kumbh",
-            "image" : { "src" : "/images/places/prayagraj/kumbh_tents.jpg", "alt" : "Aerial view of Kumbh tents spread across a vast area in Prayagraj (Allahabad), with numerous temporary shelters set up for pilgrims and devotees during the Kumbh Mela festival."}
+            "image" : { "src" : "/images/places/prayagraj/kumbh_mela_prayagraj_4.png", "alt" : ""}
         }
     },
 
     "kashi-pind-daan" : {
         "link" : "kashi-pind-daan",
-        "heading" : "Kashi Pind Dan",
+        "heading" : "Kashi Pind Daan",
         "overview" : [
             {
                 "type":"paragraph",
@@ -1091,16 +1093,8 @@
         "duration" : "1N/2D",
         "route" : ["Kashi"],
         "image" : [
-            { "src" : "/images/places/prayagraj/triveni_sangam_3.jpg", "alt" : ""},
-            { "src" : "/images/places/prayagraj/triveni_sangam_1.jpg", "alt" : ""},
-            { "src" : "/images/places/prayagraj/kumbh_tents.jpg", "alt" : ""},
-            { "src" : "/images/places/prayagraj/akbar_fort_3.jpg", "alt" : ""},
-            { "src" : "/images/places/prayagraj/akbar_fort_1.jpg", "alt" : ""},
-            { "src" : "/images/places/prayagraj/khusro_bagh.jpg", "alt" : ""},
-            { "src" : "/images/places/prayagraj/allahabad_museum_2.jpg", "alt" : ""},
-            { "src" : "/images/places/prayagraj/anand_bhawan.jpg", "alt" : ""},
-            { "src" : "/images/places/prayagraj/swaraj_bhawan.jpg", "alt" : ""},
-            { "src" : "/images/places/prayagraj/chandrasekhar_azad_park.jpg", "alt" : ""}
+            { "src" : "/images/places/pind_daan/pind_daan_kashi_2.png", "alt" : ""},
+            { "src" : "/images/places/pind_daan/pind_daan_prayagraj.png", "alt" : ""}
         ],
         "itinerary" : [
             {
@@ -1156,6 +1150,164 @@
         "featured" : {
             "visible" : false,
             "description" : "Kashi-Pind-daan",
+            "image" : { "src" : "/images/places/prayagraj/kumbh_tents.jpg", "alt" : "Aerial view of Kumbh tents spread across a vast area in Prayagraj (Allahabad), with numerous temporary shelters set up for pilgrims and devotees during the Kumbh Mela festival."}
+        }
+    },
+
+    "prayagraj-pind-daan" : {
+        "link" : "prayagraj-pind-daan",
+        "heading" : "Prayagraj Pind Daan",
+        "overview" : [
+            {
+                "type":"paragraph",
+                "content":[
+                    {"text" : "Prayagraj (earlier known as Allahabad) Pind Daan ritual is a sacred Hindu ceremony performed at the Triveni Sangam, the confluence of the holy rivers Ganga, Yamuna, and the mystical Saraswati. This location is considered highly auspicious for conducting the Pind Daan, which is performed to offer peace and salvation to the souls of ancestors, helping them attain liberation (moksha)."}
+                ]
+            },
+            {
+                "type":"paragraph",
+                "content":[
+                    {"text" : "The ceremony is conducted by experienced priests at the Sangam, following ancient Vedic traditions. This ritual holds immense spiritual significance for Hindus, allowing families to honor their ancestors in one of India’s holiest cities."}
+                ]
+            }
+        ],
+        "duration" : "1N/2D",
+        "route" : ["Prayagraj"],
+        "image" : [
+            { "src" : "/images/places/pind_daan/pind_daan_kashi_2.png", "alt" : ""},
+            { "src" : "/images/places/pind_daan/pind_daan_prayagraj.png", "alt" : ""}
+        ],
+        "itinerary" : [
+            {
+                "day" : "Day1",
+                "heading" : "Arrival in Prayagraj and Pind Daan Ritual",
+                "desc" : [
+                    {
+                        "text" : "Arrival:",
+                        "description" : "Upon arrival at Prayagraj Airport/Railway Station, you will be warmly welcomed by our representatives. You will then be transferred to your pre-booked hotel for check-in and refreshment."
+                    },
+                    {
+                        "text" : "Pind Daan Ritual:",
+                        "description" : "After freshening up, proceed to the sacred site at the Triveni Sangam—the confluence of the holy rivers Ganga, Yamuna, and the mystical Saraswati. This is considered one of the most powerful and sacred places for performing the Pind Daan. Our experienced priests will guide you through the ritual, which is done to offer peace and moksha (liberation) to the souls of ancestors."
+                    },
+                    {
+                        "text" : "Lunch:",
+                        "description" : "After the ritual, return to the hotel for some rest and enjoy a traditional vegetarian lunch."
+                    },
+                    {
+                        "text" : "Evening Leisure:",
+                        "description" : "You can opt for a visit to nearby temples, or take a peaceful stroll along the ghats, soaking in the spiritual ambiance of Prayagraj."
+                    },
+                    {
+                        "text" : "Dinner & Overnight Stay:",
+                        "description" : "After a day filled with sacred experiences, return to the hotel for dinner and a comfortable overnight stay."
+                    }
+                ]
+            },
+            {
+                "day" : "Day2",
+                "heading" : "Temple Tour and Departure",
+                "desc" : [
+                    {
+                        "text" : "Morning:",
+                        "description" : "After breakfast, embark on a short Temple Tour, visiting the famous:",
+                        "nestedList" : [
+                            {"text" : "Hanuman Temple ", "description" : "(Prayagraj’s iconic reclining Hanuman idol)."},
+                            {"text" : "Anand Bhawan ", "description" : "(optional for those interested in history; it is the ancestral home of the Nehru family)."}
+                        ]
+                    },
+                    {
+                        "text" : "Drop-off:",
+                        "description" : "After the tour, we will drop you back at Prayagraj Airport/Railway Station for your onward journey, leaving with a deep sense of spiritual fulfillment."
+                    }
+                ]
+            }
+        ],
+        "featured" : {
+            "visible" : false,
+            "description" : "Prayagraj-Pind-daan",
+            "image" : { "src" : "/images/places/prayagraj/kumbh_tents.jpg", "alt" : "Aerial view of Kumbh tents spread across a vast area in Prayagraj (Allahabad), with numerous temporary shelters set up for pilgrims and devotees during the Kumbh Mela festival."}
+        }
+    },
+
+    "pind-daan-at-varanasi-and-prayagraj" : {
+        "link" : "pind-daan-at-varanasi-and-prayagraj",
+        "heading" : "Pind Daan at Varanasi and Prayagraj",
+        "overview" : [
+            {
+                "type":"paragraph",
+                "content":[
+                    {"text" : "The Pind Daan ritual in Varanasi and Prayagraj is a sacred ceremony performed to offer peace and liberation to the souls of departed ancestors."}
+                ]
+            },
+            {
+                "type":"paragraph",
+                "content":[
+                    {"text" : "In Varanasi, the ritual is conducted at the holy Manikarnika Ghat or Dashashwamedh Ghat, two of the most revered ghats along the Ganges River. Experienced priests guide families through the ceremony, believed to help ancestors attain moksha (salvation). The day concludes with the captivating Ganga Aarti at Dashashwamedh Ghat."}
+                ]
+            },
+            {
+                "type":"paragraph",
+                "content":[
+                    {"text" : "In Prayagraj, the Pind Daan is performed at the Triveni Sangam, the confluence of the Ganga, Yamuna, and the sacred Saraswati river. This site is considered highly auspicious for such rituals, believed to purify the soul and grant peace to ancestors."}
+                ]
+            }
+        ],
+        "duration" : "1N/2D",
+        "route" : ["Varanasi","Prayagraj"],
+        "image" : [
+            { "src" : "/images/places/pind_daan/pind_daan_kashi_2.png", "alt" : ""},
+            { "src" : "/images/places/pind_daan/pind_daan_prayagraj.png", "alt" : ""}
+        ],
+        "itinerary" : [
+            {
+                "day" : "Day1",
+                "heading" : "Arrival in Varanasi and Pind Daan Ritual",
+                "desc" : [
+                    {
+                        "text" : "Arrival:",
+                        "description" : "Arrive at Varanasi Airport/Railway Station, our representatives will warmly greet you. After a short transfer to your pre-booked hotel, check-in and relax for a while."
+                    },
+                    {
+                        "text" : "Pind Daan Ritual in Varanasi:",
+                        "description" : "After refreshment, proceed to the sacred Manikarnika Ghat or Dashashwamedh Ghat for the Pind Daan ritual, where our experienced priests will guide you through the ceremony. This ancient ritual offers peace and salvation to the souls of your ancestors."
+                    },
+                    {
+                        "text" : "Lunch:",
+                        "description" : "After the ritual, return to the hotel for a traditional lunch."
+                    },
+                    {
+                        "text" : "Evening Ganga Aarti:",
+                        "description" : "In the evening, witness the awe-inspiring Ganga Aarti at Dashashwamedh Ghat, a beautiful and devotional ceremony performed on the banks of the holy Ganges River."
+                    },
+                    {
+                        "text" : "Dinner & Overnight Stay:",
+                        "description" : "After the Aarti, return to your hotel for dinner and an overnight stay in Varanasi."
+                    }
+                ]
+            },
+            {
+                "day" : "Day2",
+                "heading" : "Pind Daan at Triveni Sangam, Prayagraj and Departure",
+                "desc" : [
+                    {
+                        "text" : "Transfer to Prayagraj:",
+                        "description" : "After an early breakfast, check out and head to Prayagraj (approx. 2.5–3 hours drive). Upon arrival, proceed to the sacred Triveni Sangam, the confluence of the rivers Ganga, Yamuna, and the mystical Saraswati."
+                    },
+                    {
+                        "text" : "Pind Daan Ritual at Prayagraj:",
+                        "description" : "At the Triveni Sangam, perform the Pind Daan ritual under the guidance of experienced priests. This location is believed to be one of the most sacred spots for offering prayers for the peace and liberation (moksha) of departed souls."
+                    },
+                    {
+                        "text" : "Lunch & Departure:",
+                        "description" : "After the ritual, you can have lunch at a local restaurant or packed lunch, followed by a drop-off at Prayagraj Airport/Railway Station for your onward journey, bringing your spiritually enriching journey to a close."
+                    }
+                ]
+            }
+        ],
+        "featured" : {
+            "visible" : false,
+            "description" : "Prayagraj-Varanasi-Pind-daan",
             "image" : { "src" : "/images/places/prayagraj/kumbh_tents.jpg", "alt" : "Aerial view of Kumbh tents spread across a vast area in Prayagraj (Allahabad), with numerous temporary shelters set up for pilgrims and devotees during the Kumbh Mela festival."}
         }
     }
