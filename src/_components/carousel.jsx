@@ -8,15 +8,21 @@ import './styles.css';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
-export default function Carousel({path, arrow, content}) {
+export default function Carousel({path, arrow, content, imageList}) {
     const [images, setImages] = useState([]); // array containing objects with members src and alt
     const [currIndex, setCurrIndex] = useState(0); // indicates the index of curent Image to be shown
 
     // fetches image objects list from json file on initial render
     useEffect(() => {
-        axios.get(path)
-        .then((res) => setImages(res.data))
-        .catch((err) => console.error('Error in fetching images', err));
+        if(path)
+        {
+            axios.get(path)
+            .then((res) => setImages(res.data))
+            .catch((err) => console.error('Error in fetching images', err));
+        }
+        else
+            setImages(imageList);
+        
     }, []);
 
 
@@ -45,10 +51,10 @@ export default function Carousel({path, arrow, content}) {
                 <Image 
                     src={image.src} 
                     alt={image.alt}
-                    width={500}
                     height={500}
+                    width={500}
                     priority
-                    className={`rounded-2xl w-full h-full transition-opacity duration-500 ease-in-out ${index === currIndex ? '' : 'hidden'}`}/>
+                    className={`w-full h-full transition-opacity duration-500 ease-in-out ${index === currIndex ? '' : 'hidden'}`}/>
             </div>
         ))}
 
