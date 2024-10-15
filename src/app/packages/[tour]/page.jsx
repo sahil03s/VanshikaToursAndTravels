@@ -64,7 +64,7 @@ export default async function Page({ params }) {
 
         <div className='grid sm:grid-cols-2 lg:grid-cols-12 bg-white py-2 box-border'>
             <div className='row-start-2 lg:col-span-5 sm:row-span-3 lg:row-span-4 bg-white mt-4 lg:mb-4 mr-2'>
-                <div className='w-auto h-64 tablet:h-72 sm:h-80 lg:h-96 '>
+                <div className='w-auto h-64 tablet:h-72 sm:h-80 lg:h-96 border-white border-4 card-image '>
                 <Carousel imageList={tour.image} arrow={true}/>
                 </div>
             </div>

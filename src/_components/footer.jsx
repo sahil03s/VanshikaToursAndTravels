@@ -14,11 +14,11 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 export default function Footer() {
     return (
         <footer className='bg-periwinkle text-white h-fit pt-3 pb-1'>
-            <div className='float-whatsapp-icon fixed right-5 sm:right-6 bottom-4 md:bottom-12 flex justify-center border-box p-2 scale-125 md:scale-150 rounded-full cursor-pointer z-1000'>
+            <div className='float-whatsapp-icon fixed right-5 sm:right-6 bottom-4 md:bottom-12 flex justify-center border-box p-2 scale-125 md:scale-150 rounded-full cursor-pointer z-50'>
             <Link href={`https://wa.me/919794604278?text=Hi%20there%2C%20I%20am%20looking%20for%20tour%20packages%2Fcab%20services.%0Ahttps%3A%2F%2Fwww.vanshikatour.in%2F`} target='_blank'><WhatsAppIcon/></Link>
             </div>
 
-            <div className='float-calling-icon fixed right-20 sm:right-24 bottom-4 md:bottom-12 flex justify-center p-2 scale-125 md:scale-150 rounded-full cursor-pointer z-1000'>
+            <div className='float-calling-icon fixed right-20 sm:right-24 bottom-4 md:bottom-12 flex justify-center p-2 scale-125 md:scale-150 rounded-full cursor-pointer z-50'>
             <Link href={`tel:+91 9794604278`} target='_blank'><CallIcon fontSize='medium'/></Link>
             </div>
 
@@ -77,7 +77,7 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <div>
+                    {/* <div>
                         <h2 className='font-medium mb-4 relative underline-half'>SCAN TO VISIT</h2>
                         <Image 
                         src='/images/qr-code.png' 
@@ -87,8 +87,7 @@ export default function Footer() {
                         priority={true}
                         className=''
                         />
-
-                    </div>
+                    </div> */}
 
                     </div>
                 </div>
