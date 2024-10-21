@@ -19,7 +19,7 @@ export default function DatePicker({details, setDetails, calendarIconRight, heig
   const handleInput = (val) => {
     setDetails({
         ...details,
-        date:val 
+        traveldate: val 
     })
     setOpen(false);
   }
@@ -31,18 +31,18 @@ export default function DatePicker({details, setDetails, calendarIconRight, heig
           variant={"outline"}
           className={cn(
             "w-full relative justify-start text-left font-normal focus:border-black hover:border-black",
-            !details.date && "text-muted-foreground",
+            !details.traveldate && "text-muted-foreground",
             preferenceFlag ? 'h-8' : 'h-12 border-black',
           )}
         >
-          {details.date ? format(details.date, "PPP") : <span>Start date of Journey</span>}
+          {details.traveldate ? format(details.traveldate, "PPP") : <span>Start date of Journey</span>}
           <CalendarIcon className={`mr-2 h-4 w-4 absolute right-2 `} />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-auto p-0">
         <Calendar
           mode="single"
-          selected={details.date}
+          selected={details.traveldate}
           onSelect={handleInput}
           initialFocus
           captionLayout='dropdown'

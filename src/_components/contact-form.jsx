@@ -5,6 +5,23 @@ import { useRouter, useSearchParams } from "next/navigation";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Link from "next/link";
 import DatePicker from "./datepicker";
+import { PhoneNumberUtil, PhoneNumberFormat } from "google-libphonenumber";
+
+const phoneUtil = PhoneNumberUtil.getInstance();
+
+function validatePhoneNumber(number) {
+    // Add '+' if it's missing and the number starts with the country code
+    if (/^\d{10,15}$/.test(number)) {
+        number = '+' + number;
+    }
+
+    try {
+        const parsedNumber = phoneUtil.parseAndKeepRawInput(number);
+        return phoneUtil.isValidNumber(parsedNumber);
+    } catch (error) {
+        return false; // Invalid number
+    }
+}
 
 
 // parses and retrieves the url of tour package based on its heading. Here, It helps to redirect back to the tour package page when back button is clicked 
@@ -32,14 +49,16 @@ export default function Contact() {
     // useRouter hook helps to redirect to thank-you page after form is submitted successfully
     const router = useRouter();
 
-    const initialValue = {fname:'', lname:'', phone:'', mail:'', date:'', duration:'', passengers:'', comment:''};
+    const initialValue = {fname:'', lname:'', phone:'', email:'', traveldate:'', duration:'', passengers:'', comment:''};
 
     
     //regular expressions to check the validity of first name, last name and phone no.
     const pattern = {
         fname: /^[A-Za-z]+[ ]*[A-Za-z]*$/,
         lname: /^[A-Za-z]*[ ]*[A-Za-z]*$/,
-        phone: /^[0-0]{0,1}[1-9]{1,1}[0-9]{9,9}$/
+        email: /^[A-Za-z0-9]+([._-]?[A-Za-z0-9]+)*@[A-Za-z]+\.[A-Za-z]{2,}(\.[A-Za-z]{2,})?$/,
+        duration: /^[1-9]{1,1}[0-9]{0,1}$/,
+        passengers: /^[1-9]{1,1}[0-9]{0,3}$/
     };
 
     
@@ -65,11 +84,20 @@ export default function Contact() {
         
         if(!pattern.lname.test(obj.lname))
             errors.lname = 'Invalid input! Last Name must contain only alphabets and spaces';
-
+        
         if(!obj.phone)
             errors.phone = 'This is required';
-        else if(!pattern.phone.test(obj.phone))
+        else if(!validatePhoneNumber(obj.phone) && !validatePhoneNumber('91'+obj.phone))
             errors.phone = 'Please Enter a valid phone number';
+        
+        if(obj.email && !pattern.email.test(obj.email))
+            errors.email = 'Enter valid email id!';
+
+        if(obj.duration && !pattern.duration.test(obj.duration))
+            errors.duration = 'Duration range should be 1 to 99 days!';
+
+        if(obj.passengers && !pattern.passengers.test(obj.passengers))
+            errors.passengers = 'Passengers range between 1 and 9999!';
             
         setFormErrors(errors);
         return errors;
@@ -82,14 +110,38 @@ export default function Contact() {
         const err = formValidation(details);
         if(Object.keys(err).length === 0)
         {
-            fetch('/api/sendWhatsapp', {
-                method: 'POST',
-                headers: {
-                    'Content-type' : 'application/json',
-                },
-                body : JSON.stringify(details)
-            });
-            router.push('/thank-you');
+            // fetch('/api/sendWhatsapp', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-type' : 'application/json',
+            //     },
+            //     body : JSON.stringify(details)
+            // });
+            try {
+                const dbResponse = await fetch('/api/userdata', {
+                    method: 'POST',
+                    headers: { 'Content-Type' : 'application/json', },
+                    body: JSON.stringify(details),
+                }); 
+                
+                if(dbResponse.ok) {
+                    const mailResponse = await fetch('/api/sendMail', {
+                        method: 'POST',
+                        headers: { 'Content-Type' : 'application/json', },
+                        body: JSON.stringify(details),
+                    });
+
+                    if(mailResponse.ok) {
+                        router.push('/thank-you');
+                    } else {
+                        console.error('Error sending the form data to email!');
+                    }
+                } else {
+                    console.error('Error submitting the form');
+                }
+            } catch(error) {
+                console.log('Form Submission error : ', error);
+            }
         }
     }
 
@@ -196,9 +248,9 @@ export default function Contact() {
 
                             {/* Email input field */}
                             <div className='relative w-11/12 sm:w-3/5 md:w-2/5 h-12 my-2'>
-                            <span className={`absolute -top-2 left-3 z-40 text-xs bg-white px-0.5 ${checkLabelColor('mail')}`}>Email</span>
-                            <input type="text" name='mail' value={details.mail} autoComplete="off"
-                                className={`h-full w-full p-3 outline-none border rounded ${checkBorderColor('mail')}`}
+                            <span className={`absolute -top-2 left-3 z-40 text-xs bg-white px-0.5 ${checkLabelColor('email')}`}>Email</span>
+                            <input type="text" name='email' value={details.email} autoComplete="off"
+                                className={`h-full w-full p-3 outline-none border rounded ${checkBorderColor('email')}`}
                                 onChange={handleChange}
                             />
                             </div>
