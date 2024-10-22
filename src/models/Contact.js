@@ -1,13 +1,9 @@
 import mongoose from 'mongoose';
 
 const ContactSchema = new mongoose.Schema({
-    fname: {
+    name: {
         type: String,
         required : [true, 'Please enter your name'],
-    },
-    lname: {
-        type: String,
-        default: '',
     },
     phone: {
         type: String,
@@ -29,7 +25,7 @@ const ContactSchema = new mongoose.Schema({
         default: null,
     },
     comment: {
-        type: String, 
+        type: String,
         default: '',
     },
     createdAt: {

@@ -24,7 +24,7 @@ function validatePhoneNumber(number) {
 }
 
 
-// parses and retrieves the url of tour package based on its heading. Here, It helps to redirect back to the tour package page when back button is clicked 
+// parses and retrieves the url of tour package based on its heading. Here, It helps to redirect back to the tour package page when back button is clicked
 function parsePath(s)
 {
     let res = '/packages/' + s.toLowerCase().replaceAll(' ', '-').replaceAll('/', '-');
@@ -51,7 +51,7 @@ export default function Contact() {
 
     const initialValue = {fname:'', lname:'', phone:'', email:'', traveldate:'', duration:'', passengers:'', comment:''};
 
-    
+
     //regular expressions to check the validity of first name, last name and phone no.
     const pattern = {
         fname: /^[A-Za-z]+[ ]*[A-Za-z]*$/,
@@ -61,7 +61,7 @@ export default function Contact() {
         passengers: /^[1-9]{1,1}[0-9]{0,3}$/
     };
 
-    
+
     // details helps to track the data filled in form, initially it is empty
     const [details, setDetails] = useState(initialValue);
 
@@ -81,15 +81,15 @@ export default function Contact() {
             errors.fname = 'This is required';
         else if(!pattern.fname.test(obj.fname))
             errors.fname = 'Invalid input! Name must contain only alphabets and spaces';
-        
+
         if(!pattern.lname.test(obj.lname))
             errors.lname = 'Invalid input! Last Name must contain only alphabets and spaces';
-        
+
         if(!obj.phone)
             errors.phone = 'This is required';
         else if(!validatePhoneNumber(obj.phone) && !validatePhoneNumber('91'+obj.phone))
             errors.phone = 'Please Enter a valid phone number';
-        
+
         if(obj.email && !pattern.email.test(obj.email))
             errors.email = 'Enter valid email id!';
 
@@ -98,7 +98,7 @@ export default function Contact() {
 
         if(obj.passengers && !pattern.passengers.test(obj.passengers))
             errors.passengers = 'Passengers range between 1 and 9999!';
-            
+
         setFormErrors(errors);
         return errors;
     }
@@ -118,12 +118,13 @@ export default function Contact() {
             //     body : JSON.stringify(details)
             // });
             try {
+                details.name = details.fname + ' ' + details.lname;
                 const dbResponse = await fetch('/api/userdata', {
                     method: 'POST',
                     headers: { 'Content-Type' : 'application/json', },
                     body: JSON.stringify(details),
-                }); 
-                
+                });
+
                 if(dbResponse.ok) {
                     const mailResponse = await fetch('/api/sendMail', {
                         method: 'POST',
@@ -148,19 +149,19 @@ export default function Contact() {
     // handles any change in user's input in form
     const handleChange = (event) =>{
         const updated = { ...details, [event.target.name] : event.target.value};
-        
+
         if(isSubmitted)
             formValidation(updated);
 
-        setDetails(updated); 
-    } 
+        setDetails(updated);
+    }
 
 
     // this function marks the border as red for those input fields which have errors on form submission
     const checkBorderColor = (name) => {
         return isSubmitted && Object.keys(formErrors).includes(name)  ? 'border-red' : 'border-black';
     }
-    
+
 
     // this function marks the label color as red for those input fields which have errors on form submission
     const checkLabelColor = (name) => {
@@ -169,11 +170,11 @@ export default function Contact() {
 
 
     return (
-        // Outer container for the page 
+        // Outer container for the page
         <div className='container flex items-center justify-center min-w-full min-h-fit py-8 sm:py-16'>
-        
+
             {/* Inner container for the page with the white background colour  */}
-            <div className={`w-4/5 tablet:w-3/4 md:w-2/3 lg:w-3/5 h-fit bg-white py-4 px-8`}>
+            <div className={`w-4/5 tablet:w-3/4 md:w-2/3 lg:w-3/5 h-fit bg-white py-4 px-2 tablet:px-4 sm:px-8`}>
 
 
                 {/* Heading of contact section, based on whether user is redirected from contact link or enquire now link */}
@@ -185,11 +186,11 @@ export default function Contact() {
                     {tour.heading &&
                     <div className='flex absolute right-0 items-center'>
                         <Link href={parsePath(tour.heading)}>
-                            <ArrowBackIcon 
+                            <ArrowBackIcon
                             className='border-box px-1.5 text-3xl bg-periwinkle rounded-full text-white'
                             />
                         </Link>
-                        <div className='font-semibold text-lg ml-1.5'>Back</div>
+                        <div className='font-semibold text-lg ml-1.5 max-sm:hidden'>Back</div>
                     </div> }
 
                 </div>
@@ -200,7 +201,7 @@ export default function Contact() {
                     }
 
                 </div>
-                
+
                 {/* form section */}
                 <div className='mt-6'>
                     <form onSubmit={handleForm}>
@@ -213,7 +214,7 @@ export default function Contact() {
 
                             {/* First Name input field */}
                             <div className='relative w-11/12 sm:w-3/5 md:w-2/5 h-12 my-2 sm:mr-6 md:mr-24'>
-                            <span 
+                            <span
                             className={`absolute -top-2 left-3 z-40 text-xs bg-white px-0.5 ${checkLabelColor('fname')}`}>
                             First Name*
                             </span>
@@ -231,7 +232,7 @@ export default function Contact() {
                                 onChange={handleChange}
                             />
                             </div>
-                            
+
                         </div>
 
                         {/* This div contains pairs of input fields which are displayed side by side (flex-row) for large screens one down the other (flex-other for very small screens)  */}

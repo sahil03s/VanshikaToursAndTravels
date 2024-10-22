@@ -4,6 +4,23 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import DatePicker from "@/_components/datepicker";
 import './tour.css'
+import { PhoneNumberUtil, PhoneNumberFormat } from "google-libphonenumber";
+
+const phoneUtil = PhoneNumberUtil.getInstance();
+
+function validatePhoneNumber(number) {
+    // Add '+' if it's missing and the number starts with the country code
+    if (/^\d{10,15}$/.test(number)) {
+        number = '+' + number;
+    }
+
+    try {
+        const parsedNumber = phoneUtil.parseAndKeepRawInput(number);
+        return phoneUtil.isValidNumber(parsedNumber);
+    } catch (error) {
+        return false; // Invalid number
+    }
+}
 
 
 export default function Preference() {
@@ -11,51 +28,48 @@ export default function Preference() {
     // useRouter hook helps to redirect to thank-you page after form is submitted successfully
     const router = useRouter();
 
-    const initialValue = {name:'', phone:'', mail:'', date:'', duration:'', passengers:'', comment:''};
-    
+    const initialValue = {name:'', phone:'', email:'', traveldate:'', duration:'', passengers:'', comment:''};
+
     //regular expressions to check the validity of first name, last name and phone no.
     const pattern = {
         name: /^[A-Za-z]+[ ]*[A-Za-z]*$/,
-        inputPhone: /^[1-9]{1,1}[0-9]{0,9}[ ]*$/,
-        completePhone: /^[1-9]{1,1}[0-9]{9,9}[ ]*$/,
-        duration:/^[1-9]{1,1}[0-9]{0,2}$/,
-        passengers:/^[1-9]{1,1}[0-9]{0,3}$/,
+        email: /^[A-Za-z0-9]+([._-]?[A-Za-z0-9]+)*@[A-Za-z]+\.[A-Za-z]{2,}(\.[A-Za-z]{2,})?$/,
+        duration: /^[1-9]{1,1}[0-9]{0,1}$/,
+        passengers: /^[1-9]{1,1}[0-9]{0,3}$/
     };
 
     // details helps to track the data filled in form, initially it is empty
     const [details, setDetails] = useState(initialValue);
+
+    // isSubmitted indicates whether submit button has been clicked at least once or not
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
     // formErrors keeps track of errors in input of form data, for example, putting characters in number field, formErrors.phone will contain detail of this error
     const [formErrors, setFormErrors] = useState({});
 
 
     // formValidation validates the necessary fields to be valid using regular expressions in pattern object declared above and setFormErrors accordingly, if any.
-    const formValidation = (obj, submitFlag=false) => {
+    const formValidation = (obj) => {
         const errors = {};
-        if(submitFlag && !obj.name)
+        if(!obj.name)
             errors.name = 'This is required';
-        else if(obj.name && !pattern.name.test(obj.name))
+        else if(!pattern.name.test(obj.name))
             errors.name = 'Invalid input! Name must contain only alphabets and spaces';
 
-        if(submitFlag && !obj.phone)
+        if(!obj.phone)
             errors.phone = 'This is required';
-        else if(obj.phone)
-        {
-            if(submitFlag)
-            {
-                if(!pattern.completePhone.test(obj.phone))
-                    errors.phone = 'Please Enter a valid phone number';
-            }
-            else if(!pattern.inputPhone.test(obj.phone))
-                errors.phone = 'Please Enter a valid phone number';
-        }
-        
-        if(obj.duration && !pattern.duration.test(obj.duration))
-            errors.duration = 'Invalid Input';
+        else if(!validatePhoneNumber(obj.phone) && !validatePhoneNumber('91'+obj.phone))
+            errors.phone = 'Please Enter a valid phone number';
 
-        if(obj.passengers && !pattern.duration.test(obj.passengers))
-            errors.passengers = 'Invalid Input';
-            
+        if(obj.email && !pattern.email.test(obj.email))
+            errors.email = 'Enter valid email id!';
+
+        if(obj.duration && !pattern.duration.test(obj.duration))
+            errors.duration = 'Duration range should be 1 to 99 days!';
+
+        if(obj.passengers && !pattern.passengers.test(obj.passengers))
+            errors.passengers = 'Passengers range between 1 and 9999!';
+
         setFormErrors(errors);
         return errors;
     }
@@ -63,28 +77,54 @@ export default function Preference() {
     // on submitting a form, this function validates the user's input, if no errors are there, api call is made to notify the user on whatsapp with brochure and then user is redirected to thank-you page
     const handleForm = async (event) => {
         event.preventDefault();
-        const err = formValidation(details, true);
+        setIsSubmitted(true);
+        const err = formValidation(details);
+        console.log(Object.keys(err))
         if(Object.keys(err).length === 0)
         {
-            fetch('/api/sendWhatsapp', {
-                method: 'POST',
-                headers: {
-                    'Content-type' : 'application/json',
-                },
-                body : JSON.stringify(details)
-            });
-            router.push('/thank-you');
+            // fetch('/api/sendWhatsapp', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-type' : 'application/json',
+            //     },
+            //     body : JSON.stringify(details)
+            // });
+            try {
+                const dbResponse = await fetch('/api/userdata', {
+                    method: 'POST',
+                    headers: { 'Content-Type' : 'application/json', },
+                    body: JSON.stringify(details),
+                });
+
+                if(dbResponse.ok) {
+                    const mailResponse = await fetch('/api/sendMail', {
+                        method: 'POST',
+                        headers: { 'Content-Type' : 'application/json', },
+                        body: JSON.stringify(details),
+                    });
+
+                    if(mailResponse.ok) {
+                        router.push('/thank-you');
+                    } else {
+                        console.error('Error sending the form data to email!');
+                    }
+                } else {
+                    console.error('Error submitting the form');
+                }
+            } catch(error) {
+                console.log('Form Submission error : ', error);
+            }
         }
     }
 
     // handles any change in user's input in form
     const handleChange = (event) =>{
         const updated = { ...details, [event.target.name] : event.target.value};
-        
+
         formValidation(updated);
 
-        setDetails(updated); 
-    } 
+        setDetails(updated);
+    }
 
 
     // this function marks the border as red for those input fields which have errors on form submission
@@ -95,12 +135,6 @@ export default function Preference() {
     // this function marks the border as red for those input fields which have errors on form submission
     const checkOutlineColorFocus = (name) => {
         return Object.keys(formErrors).includes(name)  ? 'outline-red' : 'outline-black';
-    }
-    
-
-    // this function marks the label color as red for those input fields which have errors on form submission
-    const checkLabelColor = (name) => {
-        return Object.keys(formErrors).includes(name)  ? 'text-red' : 'text-black';
     }
 
 
@@ -120,7 +154,7 @@ export default function Preference() {
                         className={`px-4 py-1 text-sm outline outline-1 ${checkOutlineColor('phone')} focus:${checkOutlineColorFocus('phone')} rounded-sm`}
                     />
 
-                    <input type="input" name="mail" value={details.mail} autoComplete="off" placeholder="Email"
+                    <input type="input" name="email" value={details.email} autoComplete="off" placeholder="Email"
                         onChange={handleChange}
                         className='px-4 py-1 text-sm outline outline-1 outline-gray-300 focus:outline-black rounded-sm'
                     />
@@ -148,7 +182,7 @@ export default function Preference() {
                     <div className='mx-4 mt-1 flex justify-center'>
                         <button className='bg-periwinkle text-white font-bold text-base rounded-full px-3 py-1' type="submit">Submit now</button>
                     </div>
-                    
+
                 </form>
             </div>
 
