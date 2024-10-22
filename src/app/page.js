@@ -124,7 +124,7 @@ export default function Home() {
           <div>
             <p>
             <span>Ready to embark on your next adventure? </span>
-            <span className='text-blue-600 font-bold'><Link href='/contact-us'>Contact us</Link></span>
+            <span className='text-blue-600 font-bold'><Link className='text-periwinkle' href='/contact-us'>Contact us</Link></span>
             <span> today and let Vanshika Tour &amp; Travels turn your travel dreams into reality.</span>
              </p>
           </div>

@@ -13,13 +13,13 @@ export default function ThankYou() {
 
             {/* Thank you text sliding from left to right */}
             <div className="bg-red-400">
-                <h6 className="font-bold text-xl tablet:text-2xl sm:text-3xl md:text-4xl mb-4 typed-text w-fit bg-red-400">Thank You for connecting with us.</h6>
+                <h6 className="text-periwinkle font-bold text-xl tablet:text-2xl sm:text-3xl md:text-4xl mb-4 w-fit bg-red-400">Thank You for connecting with us.</h6>
             </div>
 
             {/* Further details informing user that he/she will be contacted. This too slides from left to right */}
             <div className='flex flex-col items-center'>
-                <p className='text-sm mb-2 typed-text2'>One of our executives will get in touch with you.</p>
-                <p className='text-sm mb-8 typed-text2'>In the meanwhile, you can call us at <Link href={`tel:+91 9794604278`} target='_blank'><span>+91 9794604278</span></Link></p>
+                <p className='text-sm mb-2'>One of our executives will get in touch with you.</p>
+                <p className='text-sm mb-8'>In the meanwhile, you can call us at <Link href={`tel:+91 9794604278`} target='_blank'><span>+91 9794604278</span></Link></p>
             </div>
 
             {/* Button to redirect to home page */}

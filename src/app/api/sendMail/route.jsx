@@ -55,6 +55,7 @@ export async function POST(req) {
 
     // Build the HTML content dynamically based on the existence of fields
     let htmlContent = `<div>
+                      <p>Hi Manish, You have a query from below person. Please reach out as soon as possible.</p>
                             <h4>Name : ${name}</h4>
                             <h4>Phone: ${phone}</h4>`;
 
@@ -75,7 +76,7 @@ export async function POST(req) {
     }
 
     if (comment) {
-    htmlContent += `<h4>Comment: ${comment}</h4>`;
+    htmlContent += `<h4>Comment:</h4> <p> ${comment} </p>`;
     }
 
     htmlContent += `<h4>Form filled at: ${new Date().toLocaleString()}</h4></div>`;
@@ -84,8 +85,7 @@ export async function POST(req) {
     const mailOptions = {
       from: process.env.EMAIL,  // Sender address
       to: 'vanshika.travelinfo@gmail.com',     // Recipient's email address (Business owner's email)
-      subject: 'New Contact Form Submission',  // Subject line
-      text: `You have a new message from ${name} (${email}):\n\n`, // Email body
+      subject: `New Query Received from ${name}`,  // Subject line
       html : htmlContent,
     };
 
