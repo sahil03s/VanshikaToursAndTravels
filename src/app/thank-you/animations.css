@@ -27,12 +27,12 @@
     color: #735DA5 ;
     white-space: nowrap;
     border-right: 2px solid black;
-    animation: slide 4s ease-in-out, blink 0.75s infinite;
+    animation: slide 2s ease-in-out, blink 0.75s infinite;
 }
 
 .typed-text2 {
     overflow: hidden;
     white-space: nowrap;
-    animation: appear 4.5s ease-in, slide-ltr 2s ease-in-out 4s;
+    animation: appear 2s ease-in, slide-ltr 2s ease-in-out 2s;
 }
 

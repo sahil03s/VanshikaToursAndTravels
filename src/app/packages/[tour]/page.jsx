@@ -88,14 +88,14 @@ export default async function Page({ params }) {
                 <p className='text-sm'><span className='text-sm font-bold'>Note:</span> We can customize the package according to your preferences and interests.</p>
             </div>
                     
-            <div className='lg:col-span-7 sm:mx-2 mt-2 lg:mt-1 max-h-fit'>
+            <Link className='lg:col-span-7 sm:mx-2 mt-2 lg:mt-1 max-h-fit' href={`/enquire-now?package=${tour.heading}&duration=${tour.duration}`}>
                 <div className='flex w-fit border-box border-periwinkle rounded-sm border-2 items-center px-2 py-1 md:py-1.5'>
                     <h6 className='sm:max-md:mr-2 mr-4 text-red sm:max-md:text-sm text-base font-semibold'>Price on Request</h6>
-                    <Link 
-                    className='px-4 py-1 border-2 border-periwinkle rounded-full mr-1 lg:mr-4 sm:max-md:text-xs text-sm font-bold bg-periwinkle hover:bg-white text-white hover:text-periwinkle duration-300' 
-                    href={`/enquire-now?package=${tour.heading}&duration=${tour.duration}`}>Enquire Now</Link>
+                    <div className='px-4 py-1 border-2 border-periwinkle rounded-full mr-1 lg:mr-4 sm:max-md:text-xs text-sm font-bold bg-periwinkle hover:bg-white text-white hover:text-periwinkle duration-300'>
+                        Enquire Now
+                    </div>
                 </div>
-            </div>
+            </Link> 
 
             <div className='sm:col-span-2 lg:col-span-7 lg:mx-2'>
                 {tour.overview.length!==0 && <Overview tour={tour}/>}
